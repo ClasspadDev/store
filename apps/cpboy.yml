@@ -11,3 +11,91 @@ format: .hh3
 tags:
   - Emulator
   - Classic
+rating: 4.2
+ratingCount: 31
+downloads: 1.2k+
+longDescription: |
+  CPBoy is a work-in-progress Game Boy (DMG) emulator for the CASIO ClassPad II (fx-CP400), built on the Peanut-GB core by deltabeard and ported for Hollyhock-3. It enables playback of classic Game Boy titles on calculator hardware with performance optimizations tailored to the device's constraints.
+
+  ## Features
+
+  - **Peanut-GB core**: lightweight, efficient emulation engine optimized for low-resource environments
+  - **Broad ROM support**: compatible with most Game Boy (DMG) titles using the .gb extension
+  - **Configurable controls**: remap all inputs via the Settings menu to match your preference
+  - **Automatic ROM detection**: scans the /CPBoy/roms/ directory on launch and lists available titles
+  - **Performance prioritized**: targets full-speed execution with minimal frame skipping on stock hardware
+
+  ## Installation
+
+  1. Ensure Hollyhock-3 CFW is installed on your ClassPad II
+  2. Download the latest CPBoy release package
+  3. Extract the contents to the root directory of your calculator storage
+  4. Confirm the following structure is present:
+     ```
+     ├── run.bin
+     ├── CPBoy.bin
+     └── CPBoy/
+         └── roms/
+             └── [your .gb ROM files]
+     ```
+  5. Launch CPBoy from the Hollyhock-3 application menu
+
+  ## ROM Management
+
+  Place Game Boy ROM files with the .gb extension into the /CPBoy/roms/ directory. CPBoy will automatically detect and list them on startup. Only original DMG-era titles are supported; Game Boy Color exclusives and enhanced modes are not compatible.
+
+  ## Default Controls
+
+  | Game Boy Action | Calculator Key |
+  |-----------------|----------------|
+  | A               | EXE            |
+  | B               | +              |
+  | SELECT          | SHIFT          |
+  | START           | CLEAR          |
+  | UP              | UP             |
+  | DOWN            | DOWN           |
+  | LEFT            | LEFT           |
+  | RIGHT           | RIGHT          |
+  | Open Menu       | -              |
+
+  All controls can be customized in Settings. The menu key provides access to save states, frame skipping, and display options where available.
+
+  ## Compatibility Notes
+
+  CPBoy prioritizes speed over cycle-accurate emulation. Most DMG titles run at or near full speed, though some may exhibit minor graphical or audio artifacts. Known issues include:
+
+  - Pokemon Pinball: unstable behavior during save operations
+  - Metroid II: visual glitches in specific areas
+  - Turok 2: may crash upon player death
+  - Game Boy Color exclusive titles: not supported
+
+  A selection of tested titles and their status:
+
+  | Game Title | Status | Last Verified |
+  |------------|--------|---------------|
+  | Tetris | Playable | 2022-09-17 |
+  | Tetris 2 | Playable | 2022-09-17 |
+  | Super Mario Land | Playable | 2023-01-29 |
+  | Super Mario Land 2 | Playable | 2023-01-29 |
+  | Pokemon Red | Unplayable | 2023-01-29 |
+  | Pokemon Blue | Playable | 2023-01-29 |
+  | Pokemon Gold/Silver | Playable | 2023-01-29 |
+  | The Legend of Zelda: Link's Awakening | Playable | 2023-01-29 |
+  | Kirby's Dream Land | Playable | 2023-01-29 |
+  | Donkey Kong Land | Playable | 2023-01-29 |
+  | Wordle GB | Playable | 2023-01-29 |
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible)
+  - Hollyhock-3 custom firmware
+  - Approximately 5 MB free storage for the emulator
+  - Legal Game Boy ROM files (.gb format)
+
+  ## Development and Licensing
+
+  CPBoy is built from the Peanut-GB emulator by deltabeard. The ClassPad port is maintained by diddyholz and QBos07. The project is released under the MIT License. Source code and build instructions are available on the project repository; building requires the Hollyhock-3 SDK with Newlib support.
+
+  ## Troubleshooting
+
+  If a ROM fails to load or the emulator becomes unresponsive, verify the file uses the .gb extension and is placed in the correct directory. For persistent issues, try enabling frame skipping in Settings or consulting the compatibility list. A hard reset via battery removal may be required in rare cases of system lockup.

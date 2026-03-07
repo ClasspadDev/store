@@ -19,14 +19,14 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
-// ─── helpers ────────────────────────────────────────────────────────────────
+//  helpers 
 
 const file = (...p) => readFile(join(ROOT, ...p), "utf8");
 const esc = (s = "") => String(s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
-// ─── shared shell ────────────────────────────────────────────────────────────
+//  shared shell 
 
 function shell({ title, rootPrefix, head = "", body, footer }) {
     return `<!DOCTYPE html>
@@ -63,7 +63,7 @@ ${footer}
 </html>`;
 }
 
-// ─── card HTML (for index page grid) ────────────────────────────────────────
+//  card HTML (for index page grid) 
 
 function appCardHtml(app, rootPrefix = "") {
     const imgUrl = app.image || `https://placehold.co/240x396/1f2325/00dc68?text=${encodeURIComponent(app.name)}`;
@@ -98,7 +98,7 @@ function appCardHtml(app, rootPrefix = "") {
     </div>`;
 }
 
-// ─── per-app detail page ─────────────────────────────────────────────────────
+//  per-app detail page 
 
 function appDetailPage(app, footer) {
     const slides = app.screenshots?.length
@@ -212,7 +212,7 @@ function appDetailPage(app, footer) {
         footer,
         head: `    <meta name="description" content="${esc(app.description)}">
     <style>
-        /* ── detail page layout ── */
+        /*  detail page layout  */
         .app-detail-page { padding: 2rem 0 4rem; }
         .detail-layout {
             display: grid;
@@ -289,7 +289,7 @@ function appDetailPage(app, footer) {
     });
 }
 
-// ─── index page body ─────────────────────────────────────────────────────────
+//  index page body 
 
 function indexPageBody(apps) {
     const cards = apps.map(a => appCardHtml(a, "")).join("\n");
@@ -361,7 +361,7 @@ ${cards}
     </script>`;
 }
 
-// ─── main ────────────────────────────────────────────────────────────────────
+//  main 
 
 async function main() {
     const [meta, footer] = await Promise.all([

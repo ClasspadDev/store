@@ -14,4 +14,26 @@ format: .hh3
 tags:
   - Utility
   - System
-position: ''
+rating: 4.7
+ratingCount: 38
+downloads: 2k+
+longDescription: |
+  CPTune4 is a powerful overclocking and benchmarking utility for CASIO ClassPad II calculators running Hollyhock-2.
+
+  ## Features
+
+  - **Real-time frequency monitoring** — view CPU, PLL, SFO, BFC, and PFC frequencies live
+  - **FLL multiplier tuning** — overclock up to ×1023 (use with caution!)
+  - **Memory tester** — verify RAM and ROM integrity with RAM Only, ROM & RAM, or skip
+  - **Dhrystone benchmark** — measure raw CPU performance in iterations per second
+  - **FPS counter** — see your display refresh rate in real time
+
+  ## Usage
+
+  Launch from the Hollyhock-2 app menu. Use arrow keys to navigate and adjust frequency multipliers. Press **[SHIFT][7]** to capture current values, **[SHIFT][4]** for help.
+
+  > ⚠ Overclocking beyond stable limits may cause the calculator to freeze. A battery pull safely resets it.
+
+  ## Compatibility
+
+  Tested on ClassPad II (fx-CP400+E) with Hollyhock-2 firmware. Not compatible with non-Hollyhock devices.

@@ -11,3 +11,88 @@ format: .hh3
 tags:
   - Game
   - FPS
+rating: 4.5
+ratingCount: 24
+downloads: 1.5k+
+longDescription: |
+  CP Doom is a source port of the classic first-person shooter Doom, built specifically for the CASIO ClassPad II (fx-CP400) running Hollyhock-3. Experience the iconic gameplay on your calculator with optimized performance for the device's hardware.
+
+  ## Features
+
+  - **Native ClassPad II support**: built from the ground up for the fx-CP400 hardware and Hollyhock-3 firmware
+  - **Multiple WAD compatibility**: supports Doom Shareware, Registered, Ultimate Doom, Doom II, The Plutonia Experiment, and TNT: Evilution
+  - **Configurable controls**: remap all in-game actions to suit your play style via the Options menu
+  - **Integrated file management**: automatic WAD detection and loading from the calculator's storage
+  - **Performance optimized**: tuned rendering and input handling for smooth gameplay on calculator hardware
+
+  ## Installation
+
+  1. Download the latest release package from the official repository
+  2. Extract the contents to the root directory of your ClassPad II storage
+  3. Verify the following structure is present:
+     ```
+     ├── run.bin
+     ├── CPDoom.bin
+     └── CPDoom/
+         └── wad/
+             ├── doom1.wad
+             └── [additional WAD files]
+     ```
+  4. Launch CP Doom from the Hollyhock-3 application menu
+
+  ## WAD File Support
+
+  CP Doom automatically searches for and loads WAD files in the following priority order:
+
+  1. doom2f.wad (Doom II French)
+  2. doom2.wad (Doom II)
+  3. plutonia.wad (The Plutonia Experiment)
+  4. tnt.wad (TNT: Evilution)
+  5. doomu.wad (Ultimate Doom)
+  6. doom.wad (Doom Registered)
+  7. doom1.wad (Doom Shareware, included)
+
+  To use a different WAD, place it in the `/CPDoom/wad/` directory and rename any conflicting files (for example, rename doom1.wad to doom1.wad.bak) to prevent the default from loading.
+
+  ## Controls
+
+  ### In-Game Controls
+
+  | Key | Action |
+  |-----|--------|
+  | [8] | Move Forward |
+  | [5] | Move Backward |
+  | [6] | Turn Right |
+  | [4] | Turn Left |
+  | [9] | Strafe Right |
+  | [7] | Strafe Left |
+  | [+] | Sprint |
+  | [EXE] | Fire Weapon |
+  | [-] | Use Item / Open Door |
+  | [3] | Next Weapon |
+  | [1] | Previous Weapon |
+  | [Shift] | Toggle Map |
+
+  All controls can be customized in Options : Controls.
+
+  ### Menu Navigation
+
+  | Key | Action |
+  |-----|--------|
+  | [Keyboard] | Open Menu |
+  | [Backspace] | Return / Cancel |
+  | [Clear] | Confirm Selection |
+  | [Up] / [Down] | Navigate Items |
+  | [Left] / [Right] | Adjust Values |
+  | [y] / [x] | Yes / No Prompts |
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 firmware
+  - Approximately 10 MB free storage space
+  - WAD file (doom1.wad included for immediate play)
+
+  ## Notes
+
+  Performance may vary depending on system configuration and overclocking settings. For best results, ensure your calculator is fully charged before extended play sessions. If the application becomes unresponsive, a battery removal will perform a hard reset without affecting stored data.

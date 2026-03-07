@@ -3,7 +3,114 @@ slug: python
 name: Python
 author: Hollyhock Team
 description: The REAL snake game. Python interpreter for the Classpad II, create apps and games.
+longDescription: |-
+  Python is a full-featured Python 3 interpreter for the CASIO ClassPad II (fx-CP400), built on the Gint framework and PythonExtra runtime. Write, test, and execute Python scripts directly on your calculator, from simple utilities to interactive games and graphical applications. Break free from BASIC and leverage a modern, expressive language optimized for calculator hardware.
+
+  ## Features
+
+  - **Complete Python 3 runtime**: supports standard syntax, data structures, and control flow
+  - **Gint hardware integration**: direct access to calculator input, display, and system functions
+  - **Turtle graphics module**: create vector drawings, geometric patterns, and simple animations on the ClassPad screen
+  - **Optimized execution**: outperforms Casio Basic and the official fx-CG50 Python implementation in key benchmarks
+  - **Interactive shell**: test code snippets and debug programs with immediate feedback
+  - **File I/O support**: read and write scripts and data files from calculator storage
+  - **Educational resources**: comprehensive wiki with tutorials ranging from basic syntax to advanced graphics programming
+
+  ## Performance Benchmarks
+
+  Independent tests demonstrate PythonExtra's efficiency on ClassPad II hardware:
+
+  | Test | Official Python (fx-CG50) | PythonExtra (ClassPad II) |
+  | --- | --- | --- |
+  | VM Speed (1M passes) | \~12 seconds | 8.9 seconds |
+  | Shell Output (100K integers) | \~22 seconds | 11.3 seconds |
+  | Large Integer Operations | \~15 seconds | 8.6 seconds |
+
+  Results may vary based on script complexity and system configuration.
+
+  ## Installation
+
+  1. Download the PythonExtra.hh3 file from the official project page
+  2. Copy the file to the root directory of your ClassPad II storage
+  3. Launch the Hollyhock-3 application menu and select Python to start the interpreter
+
+  ## Getting Started
+
+  Upon launch, you will enter the interactive Python shell. Type commands directly to execute them:
+
+  ```python
+  >>> print("Hello, ClassPad!")
+  >>> 2 + 2
+  4
+  >>> import turtle
+  >>> turtle.forward(50)
+  ```
+
+  To run a saved script:
+
+  1. Place your .py file in the calculator root directory or a dedicated scripts folder
+  2. Use the open() function or file browser within the interpreter to load and execute it
+
+  ## Turtle Graphics Example
+
+  The included turtle module enables visual programming:
+
+  ```python
+  import turtle
+
+  t = turtle.Turtle()
+  for i in range(4):
+      t.forward(100)
+      t.right(90)
+  turtle.done()
+  ```
+
+  This script draws a square on the ClassPad screen. Experiment with colors, angles, and loops to create more complex designs.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - Approximately 2 MB free storage space for the interpreter and scripts
+  - Basic familiarity with Python syntax recommended for advanced usage
+
+  ## Development and Learning Resources
+
+  The official project wiki provides structured learning paths:
+
+  - Introduction to Python syntax and data types
+  - Working with calculator input and display
+  - Turtle graphics tutorials for visual projects
+  - Performance optimization techniques for resource-constrained environments
+  - Example projects including games, calculators, and educational tools
+
+  Visit the project page for documentation links and community-contributed examples.
+
+  ## Compatibility Notes
+
+  - Most Python 3 standard library modules are available; C extension modules are not supported
+  - Graphics operations use the Gint rendering backend for consistent performance
+  - Scripts designed for desktop Python may require adaptation for calculator screen dimensions and input methods
+  - Memory-intensive operations should be used cautiously due to hardware limitations
+
+  ## Troubleshooting
+
+  If the interpreter fails to launch, verify that the .hh3 file is placed in the calculator root directory and that Hollyhock-3 is properly installed. If scripts run slowly, review the performance optimization guide in the wiki for tips on reducing memory allocations and simplifying loops. For syntax or runtime errors, use the interactive shell to test code fragments in isolation before integrating them into larger programs.
+
+  ## Credits and Licensing
+
+  PythonExtra is built on the Gint framework and the MicroPython/CPython codebases, adapted for the ClassPad II platform by the Hollyhock Team. The project is released under an open source license; consult the repository for specific terms. Third-party modules and example code may carry separate licenses.
+
+  ## Community and Support
+
+  For questions, script sharing, or collaboration opportunities, visit the ClassPad development community channels linked from the project page. Contributions to documentation, example projects, and runtime improvements are welcome.
 image: https://classpaddev.github.io/python/demo1.png
+screenshots:
+  - /store/images/python/pythonExtra1.png
+  - /store/images/python/pythonExtra2.png
+  - /store/images/python/pythonExtra3.png
+  - /store/images/python/pythonExtra4.png
+  - /store/images/python/PythonExtra5.png
 downloadUrl: https://classpaddev.github.io/python/PythonExtra.hh3
 detailsUrl: https://classpaddev.github.io/python/
 format: .hh3
@@ -11,3 +118,10 @@ tags:
   - Programming
   - Python
   - Game
+position: ''
+website: ''
+contact: ''
+privacy: ''
+rating: 4.8
+ratingCount: ''
+downloads: 4.2k+

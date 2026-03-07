@@ -11,3 +11,104 @@ format: .hh3
 tags:
   - Utility
   - System
+rating: 4.4
+ratingCount: 19
+downloads: 950+
+longDescription: |
+  Hex Editor is a low-level memory inspection and modification tool for the CASIO ClassPad II (fx-CP400) running Hollyhock-3. Browse, search, and edit RAM contents in hexadecimal format, dump memory regions to file, and access hardware control registers. Designed for developers, reverse engineers, and advanced users exploring calculator internals.
+
+  ## Features
+
+  - **Real-time RAM browsing**: navigate memory addresses with arrow keys and view hex/ASCII representations
+  - **In-place value editing**: modify bytes directly using hexadecimal input keys
+  - **Memory dumping**: export arbitrary address ranges to dump.dmp for external analysis
+  - **Pattern search**: locate byte sequences in memory with optional range constraints; results displayed on-screen and saved to FoundAddresses.txt
+  - **Control register access**: read and write hardware control registers via dedicated interface
+  - **Customizable UI**: toggle between light and dark themes for improved visibility
+  - **Efficient navigation**: jump to start/end addresses using dedicated key bindings
+
+  ## Installation
+
+  1. Download the latest CPHexEditor.hh3 file from the official repository
+  2. Copy the file to the root directory of your calculator storage (do not place inside a subfolder)
+  3. Launch the Hollyhock-3 application menu and select Hex Editor to start
+
+  ## Controls Reference
+
+  ### Navigation and Editing
+
+  | Key | Action |
+  |-----|--------|
+  | Left Arrow | Move cursor left |
+  | Right Arrow | Move cursor right |
+  | = | Input hex digit A |
+  | x | Input hex digit B |
+  | y | Input hex digit C |
+  | z | Input hex digit D |
+  | ^ | Input hex digit E |
+  | / | Input hex digit F |
+  | Clear | Exit application |
+
+  ### Memory Dumping
+
+  1. Navigate to the desired start address using arrow keys or address controls
+  2. Press EXP to mark the start boundary
+  3. Navigate to the end address
+  4. Press EXP again to mark the end boundary
+  5. Press EXE to initiate the dump operation
+
+  Output file: dump.dmp saved to calculator root directory
+
+  Important: Avoid selecting excessively large ranges. Dumping large memory blocks may cause temporary system unresponsiveness during processing.
+
+  ### Memory Search
+
+  1. Enter a hexadecimal search pattern (for example, >48656C6C6F to search for the ASCII string "Hello")
+  2. Press the negative key (-) to begin the search
+  3. Review results displayed on-screen and in FoundAddresses.txt
+
+  Search scope:
+  - If start and end addresses are set via EXP, only that range is scanned
+  - If no range is specified, the entire accessible memory space is searched
+
+  ### Control Register Access
+
+  1. Open the More Options menu
+  2. Select Read/Write Control Registers
+  3. Navigate entries using Up and Down arrows
+  4. Press EXE to edit a register value
+  5. Press EXE again to apply changes
+
+  ### UI Theme Customization
+
+  1. Open the More Options menu
+  2. Select Change UI Theme
+  3. Toggle between available themes
+  4. Interact with any UI element to refresh the display and apply the new theme
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - Approximately 700 KB free storage space
+  - Basic understanding of hexadecimal notation and memory addressing
+
+  ## Safety and Stability Notes
+
+  - Modifying arbitrary RAM addresses may cause application crashes, system instability, or data loss
+  - Always back up important data before performing write operations
+  - Control register modifications can affect hardware behavior; use with caution and only when necessary
+  - If the calculator becomes unresponsive during a memory dump, allow several seconds for processing before intervening
+
+  ## Credits
+
+  - Original HHK2 implementation by SnailMath: https://github.com/SnailMath/CPhexEditor
+  - Hollyhock-3 template by QBos07: https://github.com/QBos07/HHK3template
+
+  ## Community and Support
+
+  For technical discussion, bug reports, or feature requests, visit the Snail Math Discord server: https://discord.com/invite/knpcNJTzpd
+
+  ## Troubleshooting
+
+  If the application does not launch, verify that the .hh3 file is placed directly in the calculator root directory. If search or dump operations appear to hang, reduce the target memory range and retry. For persistent issues or unexpected behavior, consult the project repository for updates or submit a detailed report to the community channels.

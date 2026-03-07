@@ -1,3 +1,11 @@
-refs
+# refs
 # build-time generated pages (built by CI)
-p/
+/p/
+/refs/
+
+# SvelteKit
+.svelte-kit/
+build/
+
+# Node / Bun
+node_modules/

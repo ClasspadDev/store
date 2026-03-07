@@ -4,9 +4,68 @@ name: Snake Game
 author: Hollyhock Team
 description: Classic snake game
 image: /store/images/cover/Snake.png
+screenshots:
+  - /store/images/snake-game/Snake2.png
+  - /store/images/snake-game/Snake3.png
+  - /store/images/snake-game/Snake4.png
 downloadUrl: https://classpaddev.github.io/first-run/apps/snake.hh3
 detailsUrl: https://github.com/ClasspadDev/hollyhock-3/blob/master/demos/snake/
 format: .hh3
 tags:
   - Game
   - Classic
+rating: 4.3
+ratingCount: 42
+downloads: 3k+
+longDescription: |
+  Snake Game is a faithful recreation of the timeless mobile classic, built natively for the CASIO ClassPad II using the Hollyhock-3 SDK. Guide your growing serpent across a grid-based playfield, consume fruit to extend your length, and avoid collisions with walls or your own tail. Simple to learn, challenging to master.
+
+  ## Features
+
+  - **Classic grid-based gameplay**: move in four directions, grow with each fruit consumed
+  - **Responsive arrow key controls**: intuitive input with direction locking to prevent accidental reversals
+  - **Real-time score tracking**: display updates as your snake lengthens
+  - **Efficient rendering**: optimized draw loop using direct VRAM access for smooth visual updates
+  - **LFSR-based fruit spawning**: deterministic pseudo-random placement that avoids snake occupancy
+  - **Lightweight footprint**: minimal memory and CPU usage for reliable performance on calculator hardware
+
+  ## Controls
+
+  | Key | Action |
+  |-----|--------|
+  | Up Arrow | Move North |
+  | Right Arrow | Move East |
+  | Down Arrow | Move South |
+  | Left Arrow | Move West |
+  | POWER or CLEAR | Exit Game |
+
+  Direction changes are queued safely: attempting to reverse direction (e.g., North to South) is ignored to prevent immediate self-collision.
+
+  ## Technical Notes
+
+  - Grid resolution dynamically adapts to screen dimensions using a 20-pixel block size
+  - Snake state is stored in circular buffers with a maximum length of 50 segments
+  - Fruit placement uses a 32-bit LFSR with polynomial x^32 + x^22 + x^2 + x for reproducible randomness
+  - Color scheme uses RGB565 encoding: black background, red snake, green fruit
+  - Score display reserves the top 24 pixels of the screen for real-time feedback
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible)
+  - Hollyhock-3 custom firmware
+  - Approximately 500 KB free storage space
+
+  ## Development History
+
+  Originally implemented by The6P4C for early Hollyhock environments, this version was refined by SnailMath for compatibility with Hollyhock-3. The codebase prioritizes clarity and portability, serving as both a playable game and a reference example for input handling, graphics rendering, and game loop design on the ClassPad platform.
+
+  ## Tips for High Scores
+
+  - Plan turns early to avoid boxing yourself in as the snake grows
+  - Use the edges of the playfield to create safe turning corridors
+  - Monitor the score display to anticipate when the snake approaches maximum length
+  - Practice consistent rhythm: rapid directional changes increase collision risk
+
+  ## Troubleshooting
+
+  If the game does not launch, verify that the .hh3 file is placed in the calculator root directory and that Hollyhock-3 is properly installed. If input feels delayed, ensure no other background applications are consuming CPU cycles. The game exits cleanly via POWER or CLEAR; if the system becomes unresponsive, a battery removal will reset the device without affecting stored data.

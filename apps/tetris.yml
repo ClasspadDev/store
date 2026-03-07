@@ -3,10 +3,96 @@ slug: tetris
 name: Tetris
 author: Hollyhock Team
 description: Simple Tetris game.
+longDescription: |-
+  Tetris is a minimalist implementation of the iconic block-stacking puzzle game, built natively for the CASIO ClassPad II using the Hollyhock-3 SDK. Arrange falling tetrominoes to complete horizontal lines, clear them from the playfield, and rack up points as the pace gradually increases. A faithful, no-frills experience optimized for calculator hardware.
+
+  ## Features
+
+  - **Classic tetromino mechanics**: all seven standard piece types with four-way rotation
+  - **Responsive controls**: move, rotate, and soft-drop with immediate input response
+  - **Dynamic difficulty**: drop speed increases as your score grows
+  - **Line-clear detection**: automatic row removal with cascading block updates
+  - **Efficient rendering**: palette-based drawing with direct LCD access for smooth updates
+  - **Lightweight design**: minimal memory footprint suitable for embedded calculator environments
+
+  ## Controls
+
+  | Key | Action |
+  | --- | --- |
+  | ( | Rotate Piece Counter-Clockwise |
+  | \* | Rotate Piece Clockwise |
+  | 4 | Move Left |
+  | 6 | Move Right |
+  | 5 | Soft Drop (hold to accelerate descent) |
+  | POWER or CLEAR | Exit Game |
+
+  Rotation includes collision validation: if a rotated piece would intersect walls or placed blocks, the rotation is reverted to maintain gameplay integrity.
+
+  ## Playfield Specifications
+
+  - Grid dimensions: 12 columns by 22 rows
+  - Block size: 20x20 pixels with 1-pixel grid lines
+  - Visible play area offset: 40 pixels from screen edges
+  - Color palette: 8 entries, with piece types mapped to distinct colors and white used for erasure during animation
+
+  ## Scoring and Progression
+
+  - +1 point for each piece successfully placed
+  - +10 points for each completed line
+  - Drop interval decreases as score increases: base wait of 16 frames reduced by score divided by 64
+  - Game ends when a new piece spawns into an occupied position at the top row
+
+  ## Installation
+
+  1. Download the tetris.hh3 file from the official repository
+  2. Copy the file to the root directory of your ClassPad II storage
+  3. Launch the Hollyhock-3 application menu and select Tetris to begin
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - Approximately 600 KB free storage space
+
+  ## Technical Implementation
+
+  - Piece definitions stored as coordinate offsets relative to a pivot point
+  - Rotation performed via 2D coordinate transformation with collision rollback
+  - Pseudo-random number generator uses a simple XOR-based algorithm seeded by initial key presses
+  - Screen updates use double-buffer style erase-and-redraw to prevent visual artifacts
+  - Score display rendered via debug console overlay at screen top
+
+  ## Tips for High Scores
+
+  - Keep the playfield flat to maximize placement options
+  - Reserve the soft-drop key for precise positioning in tight spaces
+  - Plan rotations early to avoid last-second collisions
+  - Monitor the increasing drop speed and adjust your rhythm accordingly
+
+  ## Troubleshooting
+
+  If the game does not appear in the launcher, confirm the .hh3 file is placed in the calculator root directory and not within a subfolder. If input responsiveness seems inconsistent, ensure no background processes are interfering with the input handler. The game exits cleanly via POWER or CLEAR; in rare cases of system lockup, a battery removal will reset the device without affecting stored user data.
+
+  ## Development Notes
+
+  This implementation was authored by De_Coder as a demonstration application for the Hollyhock-3 SDK. The code prioritizes readability and educational value, serving as a reference for game loop design, collision detection, and direct hardware rendering on the ClassPad platform. Source code is available in the official repository for study and modification.
 image: /store/images/cover/Tetris.png
+screenshots:
+  - /store/images/tetris/tetris2.png
+  - /store/images/tetris/tetris3.png
+  - /store/images/tetris/tetris4.png
+  - /store/images/tetris/tetris5.png
+  - /store/images/tetris/tetris6.png
 downloadUrl: https://classpaddev.github.io/first-run/apps/tetris.hh3
 detailsUrl: https://github.com/ClasspadDev/hollyhock-3/tree/master/demos/tetris
 format: .hh3
 tags:
   - Game
   - Puzzle
+position: ''
+website: ''
+contact: ''
+privacy: ''
+rating: 4.6
+ratingCount: ''
+downloads: 2.8k+
