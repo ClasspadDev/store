@@ -6,6 +6,11 @@
         "author": "Hollyhock Team",
         "description": "Classic snake game",
         "image": "/store/images/cover/Snake.png",
+        "screenshots": [
+            "/store/images/snake-game/Snake2.png",
+            "/store/images/snake-game/Snake3.png",
+            "/store/images/snake-game/Snake4.png"
+        ],
         "downloadUrl": "https://classpaddev.github.io/first-run/apps/snake.hh3",
         "detailsUrl": "https://github.com/ClasspadDev/hollyhock-3/blob/master/demos/snake/",
         "format": ".hh3",
@@ -21,6 +26,13 @@
         "author": "Hollyhock Team",
         "description": "The REAL snake game. Python interpreter for the Classpad II, create apps and games.",
         "image": "https://classpaddev.github.io/python/demo1.png",
+        "screenshots": [
+            "/store/images/python/pythonExtra1.png",
+            "/store/images/python/pythonExtra2.png",
+            "/store/images/python/pythonExtra3.png",
+            "/store/images/python/pythonExtra4.png",
+            "/store/images/python/PythonExtra5.png"
+        ],
         "downloadUrl": "https://classpaddev.github.io/python/PythonExtra.hh3",
         "detailsUrl": "https://classpaddev.github.io/python/",
         "format": ".hh3",
@@ -120,6 +132,13 @@
         "author": "Hollyhock Team",
         "description": "Simple Tetris game.",
         "image": "/store/images/cover/Tetris.png",
+        "screenshots": [
+            "/store/images/tetris/tetris2.png",
+            "/store/images/tetris/tetris3.png",
+            "/store/images/tetris/tetris4.png",
+            "/store/images/tetris/tetris5.png",
+            "/store/images/tetris/tetris6.png"
+        ],
         "downloadUrl": "https://classpaddev.github.io/first-run/apps/tetris.hh3",
         "detailsUrl": "https://github.com/ClasspadDev/hollyhock-3/tree/master/demos/tetris",
         "format": ".hh3",
