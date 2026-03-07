@@ -1,0 +1,13 @@
+id: 6
+slug: hex-editor
+name: Hex Editor
+author: PyCSharp
+description: A hex editor that can modify values in the RAM of the calculator.
+image: https://raw.githubusercontent.com/PyCSharp/HexEditor-For-HHK3/refs/heads/main/image.png
+downloadUrl: https://github.com/PyCSharp/CPHexEditor-For-HHK3/releases/latest/download/CPHexEditor.hh3
+detailsUrl: https://github.com/PyCSharp/CPHexEditor-For-HHK3
+position: top
+format: .hh3
+tags:
+  - Utility
+  - System

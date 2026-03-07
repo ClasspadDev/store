@@ -1,0 +1,12 @@
+id: 3
+slug: cp-pong
+name: CP Pong
+author: PyCSharp
+description: A simple Ping Pong Game for the Casio FX-CP400.
+image: https://raw.githubusercontent.com/PyCSharp/CPPong-For-HHK3/refs/heads/main/image.jpg
+downloadUrl: https://github.com/PyCSharp/CPPong-For-HHK3/releases/latest/download/CPPong.hh3
+detailsUrl: https://github.com/PyCSharp/CPPong-For-HHK3
+format: .hh3
+tags:
+  - Game
+  - Sports

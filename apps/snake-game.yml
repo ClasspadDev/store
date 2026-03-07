@@ -1,0 +1,12 @@
+id: 1
+slug: snake-game
+name: Snake Game
+author: Hollyhock Team
+description: Classic snake game
+image: /store/images/cover/Snake.png
+downloadUrl: https://classpaddev.github.io/first-run/apps/snake.hh3
+detailsUrl: https://github.com/ClasspadDev/hollyhock-3/blob/master/demos/snake/
+format: .hh3
+tags:
+  - Game
+  - Classic

@@ -1,0 +1,42 @@
+name: Build site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/**"
+      - "meta.json"
+      - "scripts/**"
+      - "_parts/**"
+      - "common.css"
+      - ".github/workflows/build-site.yml"
+  workflow_dispatch: # allow manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build meta.json from apps/
+        run: node scripts/build-meta.js
+
+      - name: Build site (index.html + p/*.html)
+        run: node scripts/build-site.js
+
+      - name: Commit generated files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci: rebuild site from apps/"
+          # Commit meta.json + index.html; p/ is gitignored so pages are
+          # served directly from the GitHub Pages build artifact, not committed.
+          file_pattern: "meta.json index.html"

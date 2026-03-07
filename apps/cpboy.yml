@@ -1,0 +1,13 @@
+id: 5
+slug: cpboy
+name: CPBoy
+author: QBos07
+description: A Game Boy (DMG) emulator for the Classpad II. You need roms. Check the details
+image: https://classpaddev.github.io/img/gb.png
+downloadUrl: https://classpaddev.github.io/first-run/apps/CPBoy.hh3
+detailsUrl: https://github.com/QBos07/CPBoy/
+position: 0 28%
+format: .hh3
+tags:
+  - Emulator
+  - Classic

@@ -1,344 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Store | HollyHock on ClassPad II</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <style>
-        :root {
-            --cp-white: #f4f4f5;
-            --cp-text: #a1a1aa;
-            --cp-bg: #1f2325;
-            --cp-accent: #00dc68;
-            --cp-accent-hover: #2bfd87;
-            --cp-disabled: #3f3f46;
-            --cp-text-black: #003719;
-            --cp-dark: #18181b;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./common.css" type="text/css" />
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-            background-color: var(--cp-bg);
-            color: var(--cp-white);
-            line-height: 1.6;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'Archivo Black', Arial, Helvetica, sans-serif;
-            font-weight: 900;
-            line-height: 1.2;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .section {
-            padding: 1rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--cp-text);
-            margin-bottom: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: var(--cp-accent);
-            color: var(--cp-text-black);
-        }
-
-        .btn-primary:hover {
-            background: var(--cp-accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 220, 104, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--cp-white);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        /* Filter Tags */
-        .filter-container {
-            margin-bottom: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .filter-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.8rem;
-        }
-
-        .filter-label {
-            width: 100%;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--cp-text);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .filter-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--cp-text);
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 0.9rem;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--cp-accent);
-            color: var(--cp-text-black);
-            border-color: var(--cp-accent);
-        }
-
-        /* App Grid (Reused) */
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .app-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 1rem;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .app-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .app-header {
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .app-title {
-            margin: 0;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .app-author {
-            font-size: 0.8rem;
-            color: var(--cp-text);
-        }
-
-        .app-body {
-            display: flex;
-            padding: 1rem;
-            gap: 1.5rem;
-            flex: 1;
-        }
-
-        .app-image {
-            width: 240px;
-            height: 396px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 2px;
-            flex-shrink: 0;
-            background-color: #333;
-        }
-
-        .app-details {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .app-description {
-            font-size: 0.9rem;
-            color: var(--cp-text);
-            margin-bottom: 1rem;
-            flex: 1;
-            display: -webkit-box;
-            -webkit-line-clamp: 14;
-            line-clamp: 14;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .app-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .app-tag {
-            font-size: 0.7rem;
-            padding: 0.2rem 0.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-            color: #d1d5db;
-        }
-
-        .app-actions {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .app-btn {
-            padding: 0.5rem 1rem;
-            font-size: 0.8rem;
-            text-align: center;
-            flex: 1;
-            min-width: 80px;
-        }
-
-        /* Footer (Simplified) */
-        .footer {
-            padding: 3rem 0;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 4rem;
-        }
-
-        .footer a {
-            color: var(--cp-text);
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-
-        .footer a:hover {
-            color: var(--cp-accent);
-        }
-
-        @media (max-width: 600px) {
-            .app-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .app-body {
-                flex-direction: column;
-            }
-
-            .app-image {
-                width: 100%;
-                height: 300px;
-                background-position: top center;
-            }
-        }
-
-        /* Header */
-        header {
-            padding: 1.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: var(--cp-white);
-        }
-
-        .logo span {
-            color: var(--cp-accent);
-        }
-
-        .back-button {
-            display: flex;
-            align-items: center;
-            color: var(--cp-text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .back-button:hover {
-            color: var(--cp-white);
-        }
-
-        .back-button svg {
-            margin-right: 0.5rem;
-        }
-    </style>
 </head>
-
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="../index.html" class="logo">ClassPad<span>.Dev</span></a>
-                <a href="../index.html" class="back-button">
+                <a href="./index.html" class="logo">ClassPad<span>.Dev</span></a>
+                <a href="./index.html" class="back-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -350,189 +25,321 @@
         </div>
     </header>
 
-    <div class="container section">
-        <!-- div class="section-header">
-            <h1 class="section-title">App Store</h1>
-            <p class="section-subtitle">Discover and install amazing Python apps for your ClassPad II</p>
-        </div -->
 
+    <div class="container section">
         <div class="filter-container">
-            <div style="width: 100%;">
+            <div style="width:100%">
                 <div class="filter-label">Categories</div>
                 <div class="filter-group" id="filter-categories">
                     <button class="filter-btn active" data-filter="all">All</button>
-                    <!-- Games -->
                     <button class="filter-btn" data-filter="Game">Games</button>
                     <button class="filter-btn" data-filter="Action">Action</button>
                     <button class="filter-btn" data-filter="Strategy">Strategy</button>
                     <button class="filter-btn" data-filter="RPG">RPG</button>
                     <button class="filter-btn" data-filter="Puzzle">Puzzle</button>
                     <button class="filter-btn" data-filter="Classic">Classic</button>
-                    <!-- Education -->
                     <button class="filter-btn" data-filter="Education">Education</button>
                     <button class="filter-btn" data-filter="Math">Math</button>
                     <button class="filter-btn" data-filter="Physics_Chemistry">Physics/Chemistry</button>
                     <button class="filter-btn" data-filter="AI">AI</button>
-                    <!-- Apps -->
                     <button class="filter-btn" data-filter="Utility">Utilities</button>
                     <button class="filter-btn" data-filter="Graphics">Graphics</button>
+                    <button class="filter-btn" data-filter="Emulator">Emulators</button>
+                    <button class="filter-btn" data-filter="Programming">Programming</button>
                 </div>
             </div>
         </div>
 
         <div id="apps-container">
-            <div class="loading">Loading apps...</div>
+            <div class="app-grid" id="apps-grid">
+
+    <div class="app-card" data-tags="Game,Classic">
+        <div class="app-header">
+            <div>
+                <div class="app-title">Snake Game</div>
+                <div class="app-author">by Hollyhock Team</div>
+            </div>
+        </div>
+        <div class="app-body">
+            <div class="app-image" style="background-image:url('/store/images/cover/Snake.png');"></div>
+            <div class="app-details">
+                <div class="app-tags"><span class="app-tag">Game</span><span class="app-tag">Classic</span></div>
+                <p class="app-description">Classic snake game</p>
+                <div class="app-actions">
+                    <a href="https://classpaddev.github.io/first-run/apps/snake.hh3" class="btn btn-primary app-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                            <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"></path>
+                        </svg>
+                        Download
+                    </a>
+                    <a href="p/snake-game.html" class="btn btn-secondary app-btn">Details</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <a href="/">Home</a>
-            <a href="https://discord.gg/knpcNJTzpd">Community</a>
-            <a href="https://github.com/classpaddev">GitHub</a>
-            <a href="/wiki">Wiki</a>
-            <p style="margin-top: 2rem; color: #666; font-size: 0.8rem;">ClassPad.Dev is not affiliated with Casio.</p>
+    <div class="app-card" data-tags="Programming,Python,Game">
+        <div class="app-header">
+            <div>
+                <div class="app-title">Python</div>
+                <div class="app-author">by Hollyhock Team</div>
+            </div>
         </div>
-    </footer>
+        <div class="app-body">
+            <div class="app-image" style="background-image:url('https://classpaddev.github.io/python/demo1.png');"></div>
+            <div class="app-details">
+                <div class="app-tags"><span class="app-tag">Programming</span><span class="app-tag">Python</span><span class="app-tag">Game</span></div>
+                <p class="app-description">The REAL snake game. Python interpreter for the Classpad II, create apps and games.</p>
+                <div class="app-actions">
+                    <a href="https://classpaddev.github.io/python/PythonExtra.hh3" class="btn btn-primary app-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                            <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"></path>
+                        </svg>
+                        Download
+                    </a>
+                    <a href="p/python.html" class="btn btn-secondary app-btn">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-card" data-tags="Game,Sports">
+        <div class="app-header">
+            <div>
+                <div class="app-title">CP Pong</div>
+                <div class="app-author">by PyCSharp</div>
+            </div>
+        </div>
+        <div class="app-body">
+            <div class="app-image" style="background-image:url('https://raw.githubusercontent.com/PyCSharp/CPPong-For-HHK3/refs/heads/main/image.jpg');"></div>
+            <div class="app-details">
+                <div class="app-tags"><span class="app-tag">Game</span><span class="app-tag">Sports</span></div>
+                <p class="app-description">A simple Ping Pong Game for the Casio FX-CP400.</p>
+                <div class="app-actions">
+                    <a href="https://github.com/PyCSharp/CPPong-For-HHK3/releases/latest/download/CPPong.hh3" class="btn btn-primary app-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                            <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"></path>
+                        </svg>
+                        Download
+                    </a>
+                    <a href="p/cp-pong.html" class="btn btn-secondary app-btn">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-card" data-tags="Game,FPS">
+        <div class="app-header">
+            <div>
+                <div class="app-title">CP Doom</div>
+                <div class="app-author">by QBos07</div>
+            </div>
+        </div>
+        <div class="app-body">
+            <div class="app-image" style="background-image:url('https://classpaddev.github.io/img/doom.png');background-position:0 19%"></div>
+            <div class="app-details">
+                <div class="app-tags"><span class="app-tag">Game</span><span class="app-tag">FPS</span></div>
+                <p class="app-description">A Doom source port for the Classpad II. You also need the WAD. Check the details</p>
+                <div class="app-actions">
+                    <a href="https://github.com/QBos07/CPDoom/releases/download/v1.1.0/CPDoom.hh3" class="btn btn-primary app-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                            <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"></path>
+                        </svg>
+                        Download
+                    </a>
+                    <a href="p/cp-doom.html" class="btn btn-secondary app-btn">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-card" data-tags="Emulator,Classic">
+        <div class="app-header">
+            <div>
+                <div class="app-title">CPBoy</div>
+                <div class="app-author">by QBos07</div>
+            </div>
+        </div>
+        <div class="app-body">
+            <div class="app-image" style="background-image:url('https://classpaddev.github.io/img/gb.png');background-position:0 28%"></div>
+            <div class="app-details">
+                <div class="app-tags"><span class="app-tag">Emulator</span><span class="app-tag">Classic</span></div>
+                <p class="app-description">A Game Boy (DMG) emulator for the Classpad II. You need roms. Check the details</p>
+                <div class="app-actions">
+                    <a href="https://classpaddev.github.io/first-run/apps/CPBoy.hh3" class="btn btn-primary app-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                            <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"></path>
+                        </svg>
+                        Download
+                    </a>
+                    <a href="p/cpboy.html" class="btn btn-secondary app-btn">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-card" data-tags="Utility,System">
+        <div class="app-header">
+            <div>
+                <div class="app-title">Hex Editor</div>
+                <div class="app-author">by PyCSharp</div>
+            </div>
+        </div>
+        <div class="app-body">
+            <div class="app-image" style="background-image:url('https://raw.githubusercontent.com/PyCSharp/HexEditor-For-HHK3/refs/heads/main/image.png');background-position:top"></div>
+            <div class="app-details">
+                <div class="app-tags"><span class="app-tag">Utility</span><span class="app-tag">System</span></div>
+                <p class="app-description">A hex editor that can modify values in the RAM of the calculator.</p>
+                <div class="app-actions">
+                    <a href="https://github.com/PyCSharp/CPHexEditor-For-HHK3/releases/latest/download/CPHexEditor.hh3" class="btn btn-primary app-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                            <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"></path>
+                        </svg>
+                        Download
+                    </a>
+                    <a href="p/hex-editor.html" class="btn btn-secondary app-btn">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-card" data-tags="Utility,System">
+        <div class="app-header">
+            <div>
+                <div class="app-title">CPTune4</div>
+                <div class="app-author">by CalcLoverHK</div>
+            </div>
+        </div>
+        <div class="app-body">
+            <div class="app-image" style="background-image:url('/store/images/cover/CPTune4.png');"></div>
+            <div class="app-details">
+                <div class="app-tags"><span class="app-tag">Utility</span><span class="app-tag">System</span></div>
+                <p class="app-description">Overclocking utility for CASIO calculators.</p>
+                <div class="app-actions">
+                    <a href="https://git.planet-casio.com/CalcLoverHK/Xtune/releases/download/latest/CPtune4.hh3" class="btn btn-primary app-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                            <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"></path>
+                        </svg>
+                        Download
+                    </a>
+                    <a href="p/cptune4.html" class="btn btn-secondary app-btn">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-card" data-tags="Game,Puzzle">
+        <div class="app-header">
+            <div>
+                <div class="app-title">Tetris</div>
+                <div class="app-author">by Hollyhock Team</div>
+            </div>
+        </div>
+        <div class="app-body">
+            <div class="app-image" style="background-image:url('/store/images/cover/Tetris.png');"></div>
+            <div class="app-details">
+                <div class="app-tags"><span class="app-tag">Game</span><span class="app-tag">Puzzle</span></div>
+                <p class="app-description">Simple Tetris game.</p>
+                <div class="app-actions">
+                    <a href="https://classpaddev.github.io/first-run/apps/tetris.hh3" class="btn btn-primary app-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                            <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"></path>
+                        </svg>
+                        Download
+                    </a>
+                    <a href="p/tetris.html" class="btn btn-secondary app-btn">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        let allApps = []; // Global state
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Filter Buttons Setup
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const filter = e.target.getAttribute('data-filter');
-                    setFilter(filter);
-                });
-            });
-
-            // Intercept downloads for GitHub raw Python files
-            document.addEventListener('click', function (e) {
-                const link = e.target.closest('a');
-                if (!link) return;
-
-                const href = link.getAttribute('href');
-                if (href && href.startsWith('https://raw.githubusercontent.com/') && href.endsWith('.py')) {
-                    e.preventDefault();
-                    downloadFile(href);
-                }
-            });
-
-            // Initial Load
-            fetch('meta.json')
-                .then(response => response.json())
-                .then(data => {
-                    allApps = data;
-
-                    // Check URL for initial filter
-                    const urlParams = new URLSearchParams(window.location.search);
-                    const typeParam = urlParams.get('type');
-
-                    if (typeParam) {
-                        // Map url param to filter label format if needed, simplistic match for now
-                        // e.g. ?type=classic -> Classic
-                        const mapped = typeParam.charAt(0).toUpperCase() + typeParam.slice(1);
-                        setFilter(mapped);
-                    } else {
-                        renderApps(allApps);
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        });
-
-        async function downloadFile(url) {
-            try {
-                const response = await fetch(url);
-                const blob = await response.blob();
-                const downloadUrl = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = downloadUrl;
-                // Extract filename from URL
-                const filename = url.split('/').pop() || 'download.hh3';
-                a.download = filename;
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(downloadUrl);
-                a.remove();
-            } catch (error) {
-                console.error('Download failed:', error);
-                // Fallback to default behavior if fetch fails
-                window.open(url, '_blank');
-            }
-        }
+    (function() {
+        const grid  = document.getElementById('apps-grid');
+        const cards = Array.from(grid.querySelectorAll('.app-card'));
 
         function setFilter(filter) {
-            // UI Update
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                if (btn.getAttribute('data-filter') === filter) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.filter === filter);
             });
-
-            if (filter === 'all' || !filter) {
-                renderApps(allApps);
-                return;
-            }
-
-            // Filtering Logic
-            const filtered = allApps.filter(app => {
-                if (!app.tags) return false;
-                // Loose matching
-                return app.tags.some(tag => tag.toLowerCase() === filter.toLowerCase());
+            let visible = 0;
+            cards.forEach(c => {
+                const tags = (c.dataset.tags || '').toLowerCase().split(',');
+                const show = filter === 'all' || tags.includes(filter.toLowerCase());
+                c.style.display = show ? '' : 'none';
+                if (show) visible++;
             });
-
-            renderApps(filtered);
+            // empty state
+            let msg = grid.querySelector('.no-results');
+            if (visible === 0) {
+                if (!msg) { msg = document.createElement('div'); msg.className = 'no-results'; msg.style = 'text-align:center;padding:3rem;color:#888;grid-column:1/-1'; grid.appendChild(msg); }
+                msg.textContent = 'No apps found in this category.';
+            } else if (msg) msg.remove();
         }
 
-        function renderApps(apps) {
-            const container = document.getElementById('apps-container');
-            container.innerHTML = '';
+        document.querySelectorAll('.filter-btn').forEach(btn =>
+            btn.addEventListener('click', () => setFilter(btn.dataset.filter))
+        );
 
-            if (apps.length === 0) {
-                container.innerHTML = '<div style="text-align: center; padding: 3rem; color: #888;">No apps found in this category.</div>';
-                return;
-            }
-
-            const grid = document.createElement('div');
-            grid.className = 'app-grid';
-
-            apps.forEach(app => {
-                const card = document.createElement('div');
-                card.className = 'app-card';
-
-                // Image handling: check if relative path needs adjustment or is absolute
-                // Simpler: assume images are relative to current page location unless http
-                let imgUrl = app.image || `https://placehold.co/320x528/333/00dc68?text=${encodeURIComponent(app.name)}`;
-
-                // Tags
-                const tagsHtml = (app.tags || []).map(t => `<span class="app-tag" style="background:#333; padding:2px 6px; border-radius:4px; font-size:0.7em; margin-right:4px;">${t}</span>`).join('');
-
-                card.innerHTML = `
-                    <div class="app-header">
-                        <span class="app-title" style="font-weight:bold;">${app.name}</span>
-                        <span class="app-author" style="font-size:0.8em; color:#aaa;">by ${app.author}</span>
-                    </div>
-                    <div class="app-body">
-                         <div class="app-image" style="background-image: url('${imgUrl}');"></div>
-                         <div class="app-details">
-                            <div style="margin-bottom:0.5rem;">${tagsHtml}</div>
-                            <p class="app-description">${app.description}</p>
-                            <div class="app-actions">
-                                <a href="${app.downloadUrl}" class="btn btn-primary app-btn">Download</a>
-                                <a href="${app.detailsUrl}" class="btn btn-secondary app-btn" target="_blank">Details</a>
-                            </div>
-                         </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-
-            container.appendChild(grid);
-        }
+        // URL param
+        const p = new URLSearchParams(location.search).get('type');
+        if (p) setFilter(p.charAt(0).toUpperCase() + p.slice(1));
+    })();
     </script>
-</body>
 
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="/" class="footer-link">Home</a>
+            <a href="https://discord.gg/knpcNJTzpd" class="footer-link">Community</a>
+            <a href="https://github.com/classpaddev" class="footer-link">GitHub</a>
+            <a href="/python/" class="footer-link">Python</a>
+            <a href="/wiki/" class="footer-link">Wiki</a>
+            <a href="/python/store/" class="footer-link">Python Apps</a>
+        </div>
+        <div class="social-links">
+            <a href="https://classpaddev.github.io/" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://discord.gg/knpcNJTzpd" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20.3 4.1c-1.5-.7-3.1-1.2-4.8-1.5-.2-.1-.4 0-.5.1-.1.1-.2.3-.1.5 1.7 3.3 2.1 5.7 2.1 5.7-2.5-1.3-4.3-1.6-6.1-1.6-1.3 0-2.5.3-3.7.9-.1 0-.2 0-.3.1-.1 0-.2-.1-.2-.2 0 0 .4-2.7 2.2-5.9-.1-.1-.3-.1-.4-.1-1.7.3-3.3.8-4.8 1.5-.1 0-.2.1-.2.2-.1.3-.3.9-.2 1.5.1.6.3 1.3.5 1.9.1.2.1.4.1.6-.1.6-.2 1.2-.2 1.8 0 .6.1 1.2.2 1.8 0 .2 0 .4-.1.6-.2.6-.4 1.2-.5 1.9-.1.6 0 1.2.2 1.5.1.1.2.2.4.2 1.5.7 3.1 1.2 4.8 1.5.2.1.4 0 .5-.1.1-.1.2-.3.1-.5-1.7-3.3-2.1-5.7-2.1-5.7 2.5 1.3 4.3 1.6 6.1 1.6 1.3 0 2.5-.3 3.7-.9.1 0 .2 0 .3-.1.1 0 .2.1.2.2 0 0-.4 2.7-2.2 5.9.1.1.3.1.4.1 1.7-.3 3.3-.8 4.8-1.5.1-.1.2-.2.2-.4.3-1.2.5-2.4.5-3.6 0-1.2-.2-2.4-.5-3.6-.1-.3-.2-.6-.4-.8zM8.7 14.7c-.8 0-1.4-.7-1.4-1.5s.6-1.5 1.4-1.5 1.4.7 1.4 1.5-.6 1.5-1.4 1.5zm6.6 0c-.8 0-1.4-.7-1.4-1.5s.6-1.5 1.4-1.5 1.4.7 1.4 1.5-.6 1.5-1.4 1.5z" />
+                </svg>
+            </a>
+            <a href="https://github.com/classpaddev" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+            </a>
+            <a href="/wiki" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </a>
+        </div>
+        <p>ClassPad.Dev - Hollyhock for fx-CP400</p>
+        <p class="copyright">ClassPad.Dev is a community project not affiliated with Casio.<br>
+            The programs and other online content on ClassPad.Dev remain the property of their authors and may be
+            subject to licenses or copyrights.<br>
+            CASIO is a registered trademark of CASIO Computer Co., Ltd. in Japan.</p>
+    </div>
+</footer>
+</body>
 </html>

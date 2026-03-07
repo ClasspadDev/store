@@ -1,0 +1,17 @@
+id: 7
+slug: cptune4
+name: CPTune4
+author: CalcLoverHK
+description: Overclocking utility for CASIO calculators.
+image: /store/images/cover/CPTune4.png
+screenshots:
+  - /store/images/cptune4/CPTuna4_BSC2.jpg
+  - /store/images/cptune4/CPTuna4_MemoryData.jpg
+  - /store/images/cptune4/CPTuna4_BSC.jpg
+downloadUrl: https://git.planet-casio.com/CalcLoverHK/Xtune/releases/download/latest/CPtune4.hh3
+detailsUrl: https://git.planet-casio.com/CalcLoverHK/Xtune/releases
+format: .hh3
+tags:
+  - Utility
+  - System
+position: ''

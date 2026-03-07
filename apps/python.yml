@@ -1,0 +1,13 @@
+id: 2
+slug: python
+name: Python
+author: Hollyhock Team
+description: The REAL snake game. Python interpreter for the Classpad II, create apps and games.
+image: https://classpaddev.github.io/python/demo1.png
+downloadUrl: https://classpaddev.github.io/python/PythonExtra.hh3
+detailsUrl: https://classpaddev.github.io/python/
+format: .hh3
+tags:
+  - Programming
+  - Python
+  - Game

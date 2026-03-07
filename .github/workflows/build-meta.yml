@@ -1,0 +1,34 @@
+name: Build meta.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/**"
+      - "scripts/build-meta.js"
+      - ".github/workflows/build-meta.yml"
+  workflow_dispatch: # allow manual trigger from Actions tab
+
+permissions:
+  contents: write # need write access to commit meta.json back
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build meta.json
+        run: node scripts/build-meta.js
+
+      - name: Commit updated meta.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci: rebuild meta.json from apps/"
+          file_pattern: meta.json
