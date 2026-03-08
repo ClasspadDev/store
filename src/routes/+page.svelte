@@ -1,6 +1,7 @@
 <script>
 	import { base } from '$app/paths';
-	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 	import Header from '$lib/Header.svelte';
 	import AppCard from '$lib/AppCard.svelte';
 
@@ -24,27 +25,35 @@
 		{ label: 'Graphics', value: 'Graphics' }
 	];
 
-	// Active filter — starts as 'all', overridden client-side from ?tag= param
-	let activeFilter = $state('all');
-
-	onMount(() => {
-		const param = new URLSearchParams(window.location.search).get('tag');
-		if (param) activeFilter = param;
-	});
+	// Reactively bind to URL using page store
+	const activeFilter = $derived($page.url.searchParams.get('tag') || 'all');
+	const activeType = $derived($page.url.searchParams.get('type') || 'all');
 
 	/** @param {string} value */
 	function setFilter(value) {
-		activeFilter = value;
-		const url = new URL(window.location.href);
+		const url = new URL($page.url);
 		if (value === 'all') {
 			url.searchParams.delete('tag');
 		} else {
 			url.searchParams.set('tag', value);
 		}
-		history.replaceState(null, '', url.toString());
+		url.hash = 't=' + Date.now();
+		goto(url, { keepFocus: true, noScroll: true });
 	}
 
-	const filtered = $derived(
+	/** @param {string} value */
+	function setType(value) {
+		const url = new URL($page.url);
+		if (activeType === value) {
+			url.searchParams.delete('type');
+		} else {
+			url.searchParams.set('type', value);
+		}
+		url.hash = 't=' + Date.now();
+		goto(url, { keepFocus: true, noScroll: true });
+	}
+
+	const baseFiltered = $derived(
 		activeFilter === 'all'
 			? data.apps
 			: data.apps.filter((a) =>
@@ -52,8 +61,16 @@
 				)
 	);
 
-	const hh3Apps = $derived(filtered.filter((app) => !app.format?.endsWith('.py')));
-	const pyApps = $derived(filtered.filter((app) => app.format?.endsWith('.py')));
+	const typeFiltered = $derived(
+		activeType === 'all'
+			? baseFiltered
+			: activeType === 'hh3'
+				? baseFiltered.filter((app) => !app.format?.endsWith('.py'))
+				: baseFiltered.filter((app) => app.format?.endsWith('.py'))
+	);
+
+	const hh3Apps = $derived(typeFiltered.filter((app) => !app.format?.endsWith('.py')));
+	const pyApps = $derived(typeFiltered.filter((app) => app.format?.endsWith('.py')));
 </script>
 
 <svelte:head>
@@ -69,8 +86,25 @@
 <div class="container section">
 	<div class="filter-container">
 		<div style="width:100%">
-			<div class="filter-label">Categories</div>
+			<!-- <div class="filter-label">Categories</div> -->
 			<div class="filter-group">
+				<button
+					class="filter-btn type-filter"
+					class:active={activeType === 'hh3'}
+					onclick={() => setType('hh3')}
+				>
+					HollyHock (hh3)
+				</button>
+				<button
+					class="filter-btn type-filter python-filter"
+					class:active={activeType === 'py'}
+					onclick={() => setType('py')}
+				>
+					Python (.py)
+				</button>
+
+				<div class="filter-divider"></div>
+
 				{#each ALL_TAGS as tag}
 					<button
 						class="filter-btn"
@@ -142,5 +176,31 @@
 	.python-banner p {
 		margin: 0 0 1rem;
 		color: rgba(255, 255, 255, 0.85);
+	}
+
+	.type-filter {
+		border-color: rgba(255, 255, 255, 0.3);
+		color: #ddd;
+	}
+	.type-filter.active {
+		background: #fff;
+		color: #080808;
+	}
+
+	.type-filter.python-filter {
+		border-color: rgba(0, 220, 104, 0.4);
+		color: var(--cp-accent);
+	}
+	.type-filter.python-filter.active {
+		background: var(--cp-accent);
+		color: #080808;
+	}
+
+	.filter-divider {
+		width: 1px;
+		height: 20px;
+		background: rgba(255, 255, 255, 0.2);
+		margin: 0 0.5rem;
+		align-self: center;
 	}
 </style>
