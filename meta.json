@@ -49,6 +49,11 @@
         "author": "PyCSharp",
         "description": "A simple Ping Pong Game for the Casio FX-CP400.",
         "image": "https://raw.githubusercontent.com/PyCSharp/CPPong-For-HHK3/refs/heads/main/image.jpg",
+        "screenshots": [
+            "/store/images/cp-pong/CPPong1.png",
+            "/store/images/cp-pong/CPPong2.png",
+            "/store/images/cp-pong/CPPong3.png"
+        ],
         "downloadUrl": "https://github.com/PyCSharp/CPPong-For-HHK3/releases/latest/download/CPPong.hh3",
         "detailsUrl": "https://github.com/PyCSharp/CPPong-For-HHK3",
         "format": ".hh3",
@@ -64,6 +69,12 @@
         "author": "QBos07",
         "description": "A Doom source port for the Classpad II. You also need the WAD. Check the details",
         "image": "https://classpaddev.github.io/img/doom.png",
+        "screenshots": [
+            "/store/images/cp-doom/CPDoom1.png",
+            "/store/images/cp-doom/CPDoom2.png",
+            "/store/images/cp-doom/CPDoom3.png",
+            "/store/images/cp-doom/CPDoom4.png"
+        ],
         "downloadUrl": "https://github.com/QBos07/CPDoom/releases/download/v1.1.0/CPDoom.hh3",
         "detailsUrl": "https://github.com/QBos07/CPDoom/",
         "position": "0 19%",
@@ -145,6 +156,37 @@
         "tags": [
             "Game",
             "Puzzle"
+        ]
+    },
+    {
+        "id": 9,
+        "slug": "cp-flappy-bird",
+        "name": "CP Flappy Bird",
+        "author": "s3ansh33p",
+        "description": "The Flappy Bird game, to the classpad.",
+        "image": "https://raw.githubusercontent.com/TheRainbowPhoenix/CPFlappyBird/refs/heads/main/cover.png",
+        "downloadUrl": "https://github.com/TheRainbowPhoenix/CPFlappyBird/releases/download/1.0.0-v3/CPFlappyBird-Bundle.zip",
+        "detailsUrl": "https://github.com/TheRainbowPhoenix/CPFlappyBird",
+        "format": ".hh3",
+        "tags": [
+            "Game",
+            "Arcade"
+        ]
+    },
+    {
+        "id": 10,
+        "slug": "cpshell",
+        "name": "CPShell",
+        "author": "s3ansh33p",
+        "description": "A busybox-style shell interpreter for the ClassPad fx-CP400.",
+        "image": "https://raw.githubusercontent.com/TheRainbowPhoenix/CPShell/refs/heads/master/cover.png",
+        "downloadUrl": "https://github.com/TheRainbowPhoenix/CPShell/releases/download/0.1.0-v3/CPShell.zip",
+        "detailsUrl": "https://github.com/TheRainbowPhoenix/CPShell",
+        "format": ".hhk",
+        "tags": [
+            "Utility",
+            "System",
+            "Shell"
         ]
     }
 ]
