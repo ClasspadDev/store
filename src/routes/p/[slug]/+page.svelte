@@ -9,6 +9,13 @@
 	import RelCard from '$lib/RelCard.svelte';
 	import { getImageUrl } from '$lib/utils.js';
 
+	$effect(() => {
+		const w = /** @type {any} */ (window);
+		if (typeof window !== 'undefined' && w.AhrefsAnalytics?.sendEvent) {
+			w.AhrefsAnalytics.sendEvent('app_view', { app: app.slug });
+		}
+	});
+
 	const slides = $derived(app.screenshots?.length ? app.screenshots : app.image ? [app.image] : []);
 
 	const isPy = $derived(app.format?.endsWith('.py') ?? false);
@@ -282,7 +289,10 @@
 					{/if}
 
 					<div class="sidebar-actions">
-						<a href={app.downloadUrl} class="btn btn-primary sidebar-download-btn">
+						<a
+							href={app.downloadUrl}
+							class="btn btn-primary sidebar-download-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-{app.slug}"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								height="20"

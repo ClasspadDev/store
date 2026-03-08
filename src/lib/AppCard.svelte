@@ -51,7 +51,10 @@
 			</div>
 			<p class="app-description">{app.description}</p>
 			<div class="app-actions">
-				<a href={app.downloadUrl} class="btn btn-primary app-btn">
+				<a
+					href={app.downloadUrl}
+					class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-{app.slug}"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						height="18"
