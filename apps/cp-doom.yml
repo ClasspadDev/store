@@ -21,7 +21,7 @@ longDescription: |-
   3. Verify the following structure is present:
 
   ```plain
-     ├── run.bin
+    ├── run.bin
      ├── CPDoom.bin
      └── CPDoom/
          └── wad/
@@ -104,5 +104,5 @@ website: ''
 contact: ''
 privacy: ''
 rating: 4.5
-ratingCount: ''
+ratingCount: '43'
 downloads: 1.5k+
