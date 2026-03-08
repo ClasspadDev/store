@@ -709,6 +709,7 @@
 		font-size: 0.93rem;
 		line-height: 1.8;
 		max-width: 68ch;
+		overflow-x: hidden;
 	}
 	.long-desc-body :global(h2),
 	.long-desc-body :global(h3) {
@@ -771,6 +772,12 @@
 		border: none;
 		border-top: 1px solid rgba(255, 255, 255, 0.08);
 		margin: 1.5em 0;
+	}
+	.long-desc-body :global(img) {
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+		margin: 0.8em 0;
 	}
 
 	/*  Related apps  */

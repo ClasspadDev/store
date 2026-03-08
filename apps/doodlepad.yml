@@ -1,0 +1,46 @@
+id: 12
+slug: doodlepad
+name: Doodlepad
+author: Declan-Reid
+description: A drawing app for the Casio Classpad II (fx-CP400).
+longDescription: |-
+  # Doodlepad 
+
+  A drawing app for the Casio Classpad II (fx-CP400). Runs on [Hollyhock 2](https://github.com/SnailMath/hollyhock-2/).
+
+  ## Features
+
+  - Draws
+  - Adjustable line width
+  - Adjustable line colour from given palette
+
+  ## Controls
+
+  | Key | Action |
+  | --- | --- |
+  | [←] | Erase Drawing |
+  | [Clear] | Exit App |
+
+  ## To-Do
+
+  - Drawing tools (such as a circle tool, gradient, etc.)
+  - History (allowing undo and redo)
+  - Saving of drawings (.bmp, maybe other formats?)
+image: https://raw.githubusercontent.com/Declan-Reid/Doodlepad/master/images/v1.0.1_example.jpg
+screenshots:
+  - /store/images/doodlepad/doodlepad1.png
+  - /store/images/doodlepad/doodlepad2.png
+  - /store/images/doodlepad/doodlepad3.png
+downloadUrl: https://github.com/TheRainbowPhoenix/Doodlepad/releases/latest/download/Doodlepad.hh3
+detailsUrl: https://github.com/TheRainbowPhoenix/Doodlepad
+format: .hhk
+tags:
+  - App
+  - Drawing
+position: ''
+website: ''
+contact: ''
+privacy: ''
+rating: 4.8
+ratingCount: '1'
+downloads: 50+

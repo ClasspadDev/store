@@ -8,7 +8,7 @@ longDescription: |-
 
   ## Features
 
-  - **Classic tetromino mechanics**: all seven standard piece types with four-way rotation
+  - **Classic tetris mechanics**: all seven standard piece types with four-way rotation
   - **Responsive controls**: move, rotate, and soft-drop with immediate input response
   - **Dynamic difficulty**: drop speed increases as your score grows
   - **Line-clear detection**: automatic row removal with cascading block updates

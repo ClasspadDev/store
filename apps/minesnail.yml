@@ -1,0 +1,60 @@
+id: 13
+slug: minesnail
+name: CPMineSnail
+author: SnailMath
+description: CPMineSnail is a Minesweeper-clone for the calculator Classpad II using the hollyhock-launcher.
+longDescription: |-
+  # CPMineSnail
+
+  CPMineSnail is a Minesweeper-clone for the calculator Classpad II using the hollyhock-launcher.
+
+  ## How to use.
+
+  - Download the latest file `MineSnail.hh3` from [here](https://github.com/TheRainbowPhoenix/CPMineSnail/releases) and place it onto the calculator. Use hollyhock-3 to start it.
+  - Use the touchscreen to click and move the board.
+  - use + and - to zoom (you can also use 1 and 2 respectively, because of German-computer-keyboard-layouts-that-I-don't-like).
+  - use 7, 8 and 9 to start a new game (easy, intermediate, expert)
+  - use `<-` to start a new game without changing the difficulty
+  - don't use 3, 4, 5 or 6 for other difficulty presets (I always play '3')
+  - Use `.`, `EXP` and `EXE` to select flag mode, question mark mode or click mode to set flags or open fields.
+  - You can click the top bar on the scren to change the mode as well.
+  - There is a bomb counter at the top, but it does not affect the game at all.
+  - To win, you have to open all non-bomb-fields.
+  - "Just a standard Minesweeper clone, you know?"
+
+  ## Licence
+
+  - This minesweeper is based on my CPapp_template, which is based on the template by The6P4C, which is under the GPL Licence (as part of hollyhock).
+  - This program uses a RNG based on the simple_rng by Qqwy, which is under the MIT Licence. https://github.com/Qqwy/SimpleRNG/blob/master/c/simple_rng.c
+
+  ## How to compile
+
+  - Fork the repo
+  - Create the devcontainer / use github codespaces
+  - Run `make` to compile the calculator version
+
+  ## Questions?
+
+  ask here: https://discord.gg/y8Mr8tDA
+image: /store/images/cover/MineSnail.png
+screenshots:
+  - /store/images/minesnail/minesnail1.png
+  - /store/images/minesnail/minesnail2.png
+  - /store/images/minesnail/minesnail3.png
+  - /store/images/minesnail/minesnail4.png
+  - /store/images/minesnail/minesnail5.png
+  - /store/images/minesnail/minesnail6.png
+  - /store/images/minesnail/minesnail7.png
+downloadUrl: https://github.com/TheRainbowPhoenix/CPMineSnail/releases/latest/download/MineSnail.hh3
+detailsUrl: https://github.com/TheRainbowPhoenix/CPMineSnail
+format: .hh3
+tags:
+  - Game
+  - Puzzle
+position: ''
+website: ''
+contact: ''
+privacy: ''
+rating: 4.5
+ratingCount: '1'
+downloads: 100+
