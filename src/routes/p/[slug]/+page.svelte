@@ -11,8 +11,11 @@
 
 	$effect(() => {
 		const w = /** @type {any} */ (window);
-		if (typeof window !== 'undefined' && w.AhrefsAnalytics?.sendEvent) {
-			w.AhrefsAnalytics.sendEvent('app_view', { app: app.slug });
+		if (typeof window !== 'undefined') {
+			if (w.AhrefsAnalytics?.sendEvent) {
+				w.AhrefsAnalytics.sendEvent('app_view', { app: app.slug });
+			}
+			fetch(`https://stats.classpad.dev/view/${app.slug}`, { method: 'POST' }).catch(() => {});
 		}
 	});
 
@@ -292,6 +295,10 @@
 						<a
 							href={app.downloadUrl}
 							class="btn btn-primary sidebar-download-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-{app.slug}"
+							onclick={() =>
+								fetch(`https://stats.classpad.dev/download/${app.slug}`, { method: 'POST' }).catch(
+									() => {}
+								)}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

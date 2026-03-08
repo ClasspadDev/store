@@ -64,7 +64,10 @@
 								<a
 									href={app.downloadUrl}
 									class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-{app.slug}"
-									>Download</a
+									onclick={() =>
+										fetch(`https://stats.classpad.dev/download/${app.slug}`, {
+											method: 'POST'
+										}).catch(() => {})}>Download</a
 								>
 								{#if app.slug}
 									<a href="{base}/p/{app.slug}" class="btn btn-secondary app-btn">Details</a>
