@@ -106,6 +106,7 @@ longDescription: |-
   For questions, script sharing, or collaboration opportunities, visit the ClassPad development community channels linked from the project page. Contributions to documentation, example projects, and runtime improvements are welcome.
 image: https://classpaddev.github.io/python/demo1.png
 screenshots:
+  - /store/images/python/pythonExtra0.png
   - /store/images/python/pythonExtra1.png
   - /store/images/python/pythonExtra2.png
   - /store/images/python/pythonExtra3.png
