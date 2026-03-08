@@ -3,18 +3,7 @@ slug: cpboy
 name: CPBoy
 author: QBos07
 description: A Game Boy (DMG) emulator for the Classpad II. You need roms. Check the details
-image: https://classpaddev.github.io/img/gb.png
-downloadUrl: https://classpaddev.github.io/first-run/apps/CPBoy.hh3
-detailsUrl: https://github.com/QBos07/CPBoy/
-position: 0 28%
-format: .hh3
-tags:
-  - Emulator
-  - Classic
-rating: 4.2
-ratingCount: 31
-downloads: 1.2k+
-longDescription: |
+longDescription: |-
   CPBoy is a work-in-progress Game Boy (DMG) emulator for the CASIO ClassPad II (fx-CP400), built on the Peanut-GB core by deltabeard and ported for Hollyhock-3. It enables playback of classic Game Boy titles on calculator hardware with performance optimizations tailored to the device's constraints.
 
   ## Features
@@ -31,13 +20,15 @@ longDescription: |
   2. Download the latest CPBoy release package
   3. Extract the contents to the root directory of your calculator storage
   4. Confirm the following structure is present:
-     ```
-     ├── run.bin
+
+  ```plain
+    ├── run.bin
      ├── CPBoy.bin
      └── CPBoy/
          └── roms/
              └── [your .gb ROM files]
-     ```
+  ```
+
   5. Launch CPBoy from the Hollyhock-3 application menu
 
   ## ROM Management
@@ -47,16 +38,16 @@ longDescription: |
   ## Default Controls
 
   | Game Boy Action | Calculator Key |
-  |-----------------|----------------|
-  | A               | EXE            |
-  | B               | +              |
-  | SELECT          | SHIFT          |
-  | START           | CLEAR          |
-  | UP              | UP             |
-  | DOWN            | DOWN           |
-  | LEFT            | LEFT           |
-  | RIGHT           | RIGHT          |
-  | Open Menu       | -              |
+  | --- | --- |
+  | A | EXE |
+  | B | + |
+  | SELECT | SHIFT |
+  | START | CLEAR |
+  | UP | UP |
+  | DOWN | DOWN |
+  | LEFT | LEFT |
+  | RIGHT | RIGHT |
+  | Open Menu | - |
 
   All controls can be customized in Settings. The menu key provides access to save states, frame skipping, and display options where available.
 
@@ -72,7 +63,7 @@ longDescription: |
   A selection of tested titles and their status:
 
   | Game Title | Status | Last Verified |
-  |------------|--------|---------------|
+  | --- | --- | --- |
   | Tetris | Playable | 2022-09-17 |
   | Tetris 2 | Playable | 2022-09-17 |
   | Super Mario Land | Playable | 2023-01-29 |
@@ -99,3 +90,17 @@ longDescription: |
   ## Troubleshooting
 
   If a ROM fails to load or the emulator becomes unresponsive, verify the file uses the .gb extension and is placed in the correct directory. For persistent issues, try enabling frame skipping in Settings or consulting the compatibility list. A hard reset via battery removal may be required in rare cases of system lockup.
+image: https://classpaddev.github.io/img/gb.png
+downloadUrl: https://classpaddev.github.io/first-run/apps/CPBoy.hh3
+detailsUrl: https://github.com/QBos07/CPBoy/
+format: .hh3
+tags:
+  - Emulator
+  - Classic
+position: 0 28%
+website: ''
+contact: ''
+privacy: ''
+rating: 4.2
+ratingCount: ''
+downloads: 1.2k+
