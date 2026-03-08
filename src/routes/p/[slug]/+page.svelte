@@ -541,7 +541,13 @@
 	/*  Main flex row  */
 	.detail-layout {
 		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
+	}
+	@media (min-width: 768px) {
+		.detail-layout {
+			flex-direction: row;
+		}
 	}
 	.detail-main {
 		flex: 1 1 0;
@@ -790,8 +796,7 @@
 		gap: 0.8rem;
 		width: 100%;
 		margin-top: 1.5rem;
-		position: sticky;
-		top: 1.25rem;
+		position: static;
 		align-self: flex-start;
 	}
 	@media (min-width: 768px) {
@@ -799,6 +804,8 @@
 			width: 256px;
 			margin-top: 0;
 			margin-left: 32px;
+			position: sticky;
+			top: 1.25rem;
 		}
 	}
 	@media (min-width: 1024px) {
