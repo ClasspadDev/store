@@ -1,0 +1,12 @@
+id: 15
+slug: templewarriors
+name: "TempleWarriors"
+author: "Farhi"
+description: "Your mission is clear: protect the three crystals hidden in the temple at all costs."
+image: "https://classpaddev.github.io/python/store/images/TempleWarriors/cover.png"
+downloadUrl: "https://www.planet-casio.com/Fr/programmes/programme4546-1-templewarriors-farhi-jeux-strategie.html"
+detailsUrl: "https://www.planet-casio.com/Fr/programmes/programme4546-1-templewarriors-farhi-jeux-strategie.html"
+format: ".py"
+tags:
+  - Game
+  - Strategy

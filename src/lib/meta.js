@@ -97,27 +97,37 @@ const FIELDS = [
 
 /** @returns {Record<string, any>[]} */
 export function loadApps() {
-    const appsDir = resolve('apps');
-    const files = readdirSync(appsDir)
-        .filter((f) => f.endsWith('.yml') || f.endsWith('.yaml'))
-        .sort();
+    const dirs = ['apps', 'python'];
+    /** @type {Record<string, any>[]} */
+    let allApps = [];
 
-    const apps = files.map((file) => {
-        const raw = readFileSync(join(appsDir, file), 'utf-8');
-        const parsed = parseYaml(raw);
-        /** @type {Record<string, any>} */
-        const entry = {};
-        for (const field of FIELDS) {
-            const val = parsed[field];
-            if (val === undefined || val === '') continue;
-            if (Array.isArray(val) && val.length === 0) continue;
-            entry[field] = val;
-        }
-        return entry;
-    });
+    for (const dirName of dirs) {
+        const dirPath = resolve(dirName);
+        let files = [];
+        try {
+            files = readdirSync(dirPath)
+                .filter((f) => f.endsWith('.yml') || f.endsWith('.yaml'))
+                .sort();
+        } catch { continue; }
 
-    apps.sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
-    return apps;
+        const apps = files.map((file) => {
+            const raw = readFileSync(join(dirPath, file), 'utf-8');
+            const parsed = parseYaml(raw);
+            /** @type {Record<string, any>} */
+            const entry = {};
+            for (const field of FIELDS) {
+                const val = parsed[field];
+                if (val === undefined || val === '') continue;
+                if (Array.isArray(val) && val.length === 0) continue;
+                entry[field] = val;
+            }
+            return entry;
+        });
+        allApps = allApps.concat(apps);
+    }
+
+    allApps.sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
+    return allApps;
 }
 
 const DEV_FIELDS = ['name', 'headline', 'featuredApp'];

@@ -1,0 +1,12 @@
+id: 23
+slug: cinput
+name: "CInput"
+author: "Phoebe"
+description: "Standalone library to add touchscreen keyboard. Check the wiki for more details"
+image: "https://classpaddev.github.io/python/store/images/CInput/cover.png"
+downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cinput.py"
+detailsUrl: "https://classpaddev.github.io/wiki/python/reference/cinput/"
+format: ".py"
+tags:
+  - Utility
+  - Development

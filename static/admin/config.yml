@@ -106,3 +106,101 @@ collections:
         widget: string
         required: false
         hint: "Download count as display string, e.g. '500+' or '2k+'"
+
+  - name: python
+    label: Python Apps
+    label_singular: Python App
+    folder: python
+    format: yaml
+    extension: yml
+    create: true
+    identifier_field: name
+    slug: "{{fields.slug}}"
+    fields:
+      - { label: ID, name: id, widget: number, value_type: int }
+      - { label: Slug, name: slug, widget: string, hint: "URL-friendly identifier (e.g. cp-doom). Also becomes the screenshot subfolder name." }
+      - { label: Name, name: name, widget: string }
+      - { label: Author, name: author, widget: string }
+      - { label: Short Description, name: description, widget: text, hint: "One-liner shown on the card and info panel." }
+
+      - label: Long Description
+        name: longDescription
+        widget: markdown
+        required: false
+        hint: "Full Markdown description shown below the carousel on the detail page."
+
+      - label: Cover Image
+        name: image
+        widget: image
+        media_folder: /static/images/cover
+        public_folder: /store/images/cover
+        required: false
+
+      - label: Screenshots / Gallery
+        name: screenshots
+        widget: list
+        required: false
+        hint: "Per-app screenshots stored in static/images/<slug>/"
+        field:
+          label: Screenshot
+          name: screenshot
+          widget: image
+          media_folder: "/static/images/{{fields.slug}}"
+          public_folder: "/store/images/{{fields.slug}}"
+
+      - { label: Download URL, name: downloadUrl, widget: string }
+      - { label: Details / Source URL, name: detailsUrl, widget: string }
+      - { label: File Format, name: format, widget: string, default: ".py" }
+
+      - label: Tags
+        name: tags
+        widget: list
+        field: { label: Tag, name: tag, widget: string }
+
+      - label: Image Position
+        name: position
+        widget: string
+        required: false
+        hint: "CSS background-position for the cover card, e.g. '0 19%'"
+
+      #  Developer / support info 
+      - label: Developer Website
+        name: website
+        widget: string
+        required: false
+        hint: "Developer or project homepage URL"
+
+      - label: Support Email
+        name: contact
+        widget: string
+        required: false
+        hint: "Support / contact email address"
+
+      - label: Privacy Policy URL
+        name: privacy
+        widget: string
+        required: false
+        hint: "Link to the app's privacy policy"
+
+      #  Stats 
+      - label: Rating
+        name: rating
+        widget: number
+        value_type: float
+        min: 0
+        max: 5
+        step: 0.1
+        required: false
+        hint: "Average rating (0–5)"
+
+      - label: Rating Count
+        name: ratingCount
+        widget: string
+        required: false
+        hint: "Number of ratings as display string, e.g. '42' or '1.2k'"
+
+      - label: Downloads
+        name: downloads
+        widget: string
+        required: false
+        hint: "Download count as display string, e.g. '500+' or '2k+'"

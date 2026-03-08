@@ -1,0 +1,12 @@
+id: 31
+slug: physchem
+name: "PhysChem"
+author: "Phoebe"
+description: "Physics/Chemistry solver app. Needs CInput."
+image: "https://classpaddev.github.io/python/store/images/PhysChem/cover.png"
+downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/physchem.py"
+detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/physchem.py"
+format: ".py"
+tags:
+  - Physics_Chemistry
+  - Education

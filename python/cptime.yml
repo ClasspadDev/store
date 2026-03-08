@@ -1,0 +1,139 @@
+id: 27
+slug: cptime
+name: CPTime
+author: Phoebe
+description: A Clock (StopWatch, Timer) for Classpad.
+image: https://classpaddev.github.io/python/store/images/CPTime/cover.png
+screenshots:
+  - /store/images/cptime/cptime.png
+  - /store/images/cptime/cptime2.png
+  - /store/images/cptime/cptime3.png
+  - /store/images/cptime/cptime4.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/refs/heads/master/cptime_view.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/cptime_view.py
+format: .py
+tags:
+  - Utility
+  - Education
+rating: 4.7
+ratingCount: 41
+downloads: 1.6k+
+longDescription: |
+  > Requires PythonExtra runtime to execute. Install PythonExtra before using this application.
+
+  CPTime is a dual-function timekeeping application for the CASIO ClassPad II (fx-CP400), featuring a precision stopwatch with lap timing and a fully-featured countdown timer. Built with Python and the Gint library, it delivers reliable time tracking for sports, cooking, studying, or any activity requiring accurate time measurement. Tested for stability during extended sessions exceeding 40 minutes.
+
+  ## Features
+
+  - **Precision stopwatch**: track elapsed time with centisecond (1/100s) resolution
+  - **Lap timing**: record unlimited lap times with individual and cumulative displays
+  - **Countdown timer**: set hours, minutes, and seconds for precise countdowns
+  - **Visual alert**: full-screen flashing notification when timer completes
+  - **7-segment display**: classic digital clock aesthetic with smooth rendering
+  - **Touch-optimized interface**: responsive buttons and tab navigation
+  - **Pause and resume**: control timer progression without losing remaining time
+  - **Color-coded controls**: intuitive button coloring (green for start, red for stop, orange for pause)
+
+  ## Installation
+
+  1. Download the cptime_view.py file from the official repository
+  2. Copy the file to your calculator storage via USB mass storage mode
+     Place it in an accessible location such as the root directory or a scripts folder
+  3. Launch PythonExtra from the Hollyhock launcher
+  4. Navigate the application list using arrow keys
+  5. Select cptime_view.py and press EXE to launch CPTime
+
+  No additional dependencies required beyond the PythonExtra runtime.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - PythonExtra runtime environment (must be installed separately)
+  - Approximately 100 KB free storage space for the application file
+  - Gint library (included with PythonExtra)
+
+  ## Usage Guide
+
+  ### Stopwatch Mode
+
+  Navigate to the Stopwatch tab to access timing functions:
+
+  **Starting and Stopping**
+  - Press the green Start button to begin timing
+  - Press the red Stop button to pause the stopwatch
+  - The display shows elapsed time in MM:SS.CC format (minutes, seconds, centiseconds)
+
+  **Recording Laps**
+  - While the stopwatch is running, press the Lap button to record a lap time
+  - Each lap displays:
+    - Lap number (in blue)
+    - Individual lap duration
+    - Total elapsed time since start
+  - Laps are listed with most recent at the top
+  - Press Reset (when stopped) to clear all lap data and reset the timer
+
+  **Display Format**
+  - Main display: Hours:Minutes:Seconds with centiseconds shown smaller
+  - Lap list: Shows lap number, lap time, and cumulative time for each entry
+  - Scrolling: Additional laps beyond screen space can be viewed by scrolling
+
+  ### Timer Mode
+
+  Navigate to the Timer tab to set up a countdown:
+
+  **Setting Time**
+  - Use the numeric keypad to enter hours, minutes, and seconds
+  - Digits shift left as you enter values (similar to calculator input)
+  - Press DEL to clear the most recent digit
+  - Maximum time: 99 hours, 59 minutes, 59 seconds
+
+  **Starting the Countdown**
+  - Press the green START button to begin the countdown
+  - The display switches to show remaining time
+  - Press Pause to temporarily halt the countdown
+  - Press Resume to continue from where you paused
+  - Press Cancel to abort and return to input mode
+
+  **Timer Completion**
+  - When the timer reaches zero, the screen flashes alternately white and dark
+  - "TIME'S UP!" message displays in large text
+  - Tap anywhere on the screen to dismiss the alert and reset the timer
+
+  ## Technical Implementation
+
+  - **Time precision**: Uses millisecond-accurate ticks from the system clock
+  - **7-segment rendering**: Custom polygon-based drawing for authentic digital display appearance
+  - **Touch input handling**: Latched touch events prevent accidental repeated triggers
+  - **Memory efficiency**: Lap data stored as tuples of (lap_time, total_time)
+  - **Power management**: 20ms frame delay reduces CPU usage during idle periods
+  - **Alert system**: Time comparison using ticks_diff for reliable countdown accuracy
+
+  ## Performance Notes
+
+  - Tested for reliable operation during sessions exceeding 40 minutes
+  - Stopwatch maintains accuracy even with numerous lap recordings
+  - Timer countdown remains precise regardless of background processing
+  - Display updates at approximately 50 FPS for smooth visual feedback
+  - Memory usage remains stable during extended use
+  - Lap list rendering optimized to handle dozens of entries without slowdown
+
+  ## Display Specifications
+
+  - Main time display: 320x100 pixel 7-segment digits
+  - Centisecond display: Smaller format for secondary precision
+  - Button layout: 130x50 pixel touch targets for reliable input
+  - Color scheme: Dark background (RGB 3,3,4) with white digits and colored accents
+  - Tab navigation: Top bar with orange highlight for active selection
+
+  ## Troubleshooting
+
+  If CPTime fails to launch, verify that PythonExtra is properly installed and that the Gint library is accessible. If touch controls feel unresponsive, ensure you are tapping within the button boundaries (130x50 pixels each). If the timer alert does not trigger at zero, check that the calculator did not enter sleep mode during countdown. For stopwatch accuracy concerns, note that centisecond precision depends on system clock stability; brief variations of a few milliseconds may occur but are imperceptible for typical use cases. If lap data appears corrupted or missing, avoid rapidly tapping the Lap button (faster than 150ms intervals) as the visual press detection may filter rapid inputs.
+
+  ## Development and Licensing
+
+  CPTime is developed by Phoebe as part of the MiscPythonExtra collection for the ClassPad community. The application demonstrates advanced Python programming techniques including custom graphics rendering, touch input handling, and real-time timekeeping on resource-constrained calculator hardware. Source code is available in the project repository for educational purposes and community contributions.
+
+  ## Community and Support
+
+  For bug reports, feature suggestions, or discussion about CPTime and other Python-based ClassPad applications, visit the MiscPythonExtra repository on GitHub. Community contributions, usage tips, and feature requests are welcome to help expand the application's capabilities and inspire other developers working on calculator-based timekeeping solutions.

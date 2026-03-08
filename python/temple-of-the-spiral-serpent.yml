@@ -1,0 +1,150 @@
+id: 16
+slug: temple-of-the-spiral-serpent
+name: Temple of the Spiral Serpent
+author: Phoebe
+description: DOS-like exploration game
+image: https://classpaddev.github.io/python/store/images/Temple_of_the_Spiral_Serpent/cover.png
+downloadUrl: https://github.com/TheRainbowPhoenix/ruins-explorer/releases/download/1.0/TOSS.zip
+detailsUrl: https://github.com/TheRainbowPhoenix/ruins-explorer
+format: .py
+tags:
+  - Game
+  - Exploration
+  - RPG
+  - Adventure
+rating: 4.7
+ratingCount: 41
+downloads: 1.5k+
+longDescription: |
+  > Requires PythonExtra runtime to execute. Install PythonExtra before using this application.
+
+  Temple of the Spiral Serpent is a first-person 3D exploration game for the CASIO ClassPad II (fx-CP400), inspired by classic DOS-era dungeon crawlers. Navigate procedurally generated maze temples, collect ancient Relic Runes, and evade roaming sentries in an atmospheric adventure rendered with polygon-based 3D graphics. As Dr. John Hawkstone, archaeologist and relic hunter, you must brave the shifting halls of the Temple of the Spiral Serpent hidden deep in the jungle of Xul'Kara.
+
+  ## Features
+
+  - **First-person 3D raycasting engine**: polygon-based perspective rendering reminiscent of classic DOS games
+  - **Procedural dungeon generation**: unique maze layouts seeded for reproducibility or random exploration
+  - **Relic collection quest**: recover all 10 Relic Runes scattered throughout each temple level
+  - **Enemy AI**: patrol sentries that move through the maze and must be avoided or outsmarted
+  - **Dynamic lighting**: depth-based shading creates atmospheric darkness as you venture deeper
+  - **Minimap system**: real-time radar showing explored areas, items, enemies, and player position
+  - **Multi-level progression**: complete dungeons to advance to new procedurally generated temples
+  - **Intro cinematic**: typewriter-style story introduction with narrative context
+  - **Seed system**: use custom seeds to share dungeons or replay specific layouts
+  - **Score tracking**: points for collected relics, defeated enemies, and completed levels
+
+  ## Story
+
+  Long ago, the Spiral Serpent hid its power in Relic Runes, sealing them within the shifting halls of the Temple of the Spiral Serpent. Many have tried to recover them… all have failed. Deep in the heart of Xul'Kara's emerald canopy, ancient ruins lie hidden beneath vines. Forgotten altars echo with distant chants, and shadows shift as if alive. Hints of serpent glyphs glimmer on stones, drawing explorers deeper into peril.
+
+  ## Installation
+
+  1. Download the TOSS.zip file from the official repository
+  2. Extract the archive to access its contents
+  3. Copy all extracted files to the root directory of your calculator storage
+     The archive includes the main game script, maze generator, and GUI resources
+  4. Launch PythonExtra from the Hollyhock launcher
+  5. Navigate the file browser using arrow keys and press EXE to enter folders
+  6. Select the main game script and press EXE to launch Temple of the Spiral Serpent
+
+  ## Controls
+
+  | Key | Action |
+  |-----|--------|
+  | Up Arrow | Move forward |
+  | Down Arrow | Move backward |
+  | Left Arrow | Strafe/move left |
+  | Right Arrow | Strafe/move right |
+  | SHIFT | Rotate camera direction (cycles through 4 orientations) |
+  | EXE | Examine/collect items, confirm dialogues, interact with objects |
+  | EXIT | Return to menu, cancel dialogue, quit game |
+  | Up/Down (in menu) | Navigate menu options |
+  | EXE (in menu) | Select menu option |
+
+  ## Gameplay Mechanics
+
+  ### Main Menu Options
+  - **Start Game**: Play through the intro cinematic and begin your adventure
+  - **Free Play**: Skip intro and jump directly into gameplay with current seed
+  - **Random Seed**: Generate a new random dungeon seed
+  - **Custom Seed**: Enter a specific seed number (0-99999) for reproducible dungeons
+  - **Exit Game**: Return to calculator home screen
+
+  ### Exploration
+  Navigate the first-person 3D maze using arrow keys. The camera faces one of four cardinal directions (North, East, South, West), rotated with SHIFT. Walls block movement; open corridors allow passage. The perspective rendering creates depth with vanishing-point projection and depth-based shading.
+
+  ### Objectives
+  - Collect all 10 Relic Runes (cyan markers) scattered throughout the dungeon
+  - Locate the exit door (marked on minimap) to advance to the next level
+  - Avoid or evade enemy sentries (red markers on minimap)
+  - Bonus points for collecting keys (yellow markers) and defeating enemies
+
+  ### Combat and Interaction
+  Press EXE when standing on an item to collect it. Standing on an enemy allows you to defeat it for bonus points. Enemies patrol the maze automatically, moving every 2 seconds to adjacent open tiles. Contact with enemies does not cause damage but requires manual defeat via EXE.
+
+  ### Minimap
+  The lower UI panel displays:
+  - Real-time minimap showing explored areas (discovered 3x3 radius around player)
+  - Player position and facing direction (arrow indicator)
+  - Item locations (cyan squares)
+  - Enemy positions (red squares)
+  - Key locations (yellow squares)
+  - Item counter (I: XX/10) showing collected relics
+  - Total score (T: XXX)
+
+  ### Scoring
+  - Relic Rune collected: +1 to item counter
+  - Key collected: +5 points
+  - Enemy defeated: +2 points
+  - Level completion: bonus points equal to remaining item counter value
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - PythonExtra runtime environment (must be installed separately)
+  - Approximately 300 KB free storage space for game files and modules
+  - Gint library (included with PythonExtra)
+  - Maze builder and GUI modules (included in download package)
+
+  ## Technical Implementation
+
+  - **Raycasting renderer**: polygon-based 3D projection using perspective interpolation
+  - **Depth shading**: 5-level depth buffer with color gradient from light to dark
+  - **Procedural generation**: maze builder creates solvable dungeons with guaranteed paths
+  - **Fog of war**: 3x3 discovery radius reveals explored tiles on minimap
+  - **Enemy AI**: random-walk patrol system with collision avoidance
+  - **Seed reproducibility**: custom seeds generate identical dungeons for sharing
+  - **State machine**: scene-based architecture with push/pop navigation
+  - **Frame capping**: 20 FPS target with delta-time calculations for smooth gameplay
+
+  ## Strategy Tips
+
+  - Use the minimap to track explored areas and plan efficient routes
+  - Rotate camera with SHIFT to survey corridors before committing to movement
+  - Memorize enemy patrol patterns to avoid detection
+  - Collect relics systematically rather than randomly to minimize backtracking
+  - Use the custom seed feature to practice difficult dungeons
+  - Watch the depth shading: darker areas indicate greater distance from your position
+  - Press EXE when standing on markers to collect items or defeat enemies
+  - The exit door appears only after all relics are collected
+
+  ## Performance Notes
+
+  - Renderer maintains 20 FPS target on stock ClassPad II hardware
+  - Polygon count optimized for calculator processing limitations
+  - Minimap updates only on state changes to reduce redraw overhead
+  - Enemy AI runs on 2-second intervals to minimize CPU usage
+  - Maze size balanced (15x10 tiles) for performance and playability
+
+  ## Troubleshooting
+
+  If the game fails to launch, verify that PythonExtra is properly installed and that all extracted files (maze.py, gui.py, main script) are present in the calculator storage. If rendering appears corrupted, ensure the calculator has sufficient battery power for sustained graphics processing. If minimap does not update, confirm that exploration radius is functioning by moving at least one tile from spawn. If enemies do not move, allow several seconds for AI tick intervals. For persistent issues, re-download the TOSS.zip archive and re-extract all files to the calculator root directory.
+
+  ## Development Notes
+
+  Temple of the Spiral Serpent was developed by Phoebe as a demonstration of 3D raycasting techniques on calculator hardware using PythonExtra. The game showcases polygon-based perspective rendering, procedural dungeon generation, and real-time AI pathfinding within the constraints of embedded calculator systems. The codebase serves as a reference for first-person game engines, state-based scene management, and resource-efficient graphics programming. Source code and additional resources are available in the project repository.
+
+  ## Community and Support
+
+  For bug reports, seed sharing, speedrun submissions, or discussion about Temple of the Spiral Serpent and other Python-based ClassPad games, visit the ruins-explorer repository on GitHub. Community contributions, custom seed challenges, and exploration strategy discussions are welcome to help celebrate classic DOS-style gaming on calculator hardware.

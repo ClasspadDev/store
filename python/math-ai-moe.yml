@@ -1,0 +1,14 @@
+id: 29
+slug: math-ai-moe
+name: "Math AI MoE"
+author: "Phoebe"
+description: "A Mixture of Experts LLM for Classpad. Made to explain how MoE works. Needs CInput."
+image: "https://classpaddev.github.io/python/store/images/MathGPT/cover.png"
+downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/MathGPT.py"
+detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/MathGPT.py"
+format: ".py"
+tags:
+  - Math
+  - Demo
+  - AI
+  - Education

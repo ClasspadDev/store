@@ -1,0 +1,13 @@
+id: 18
+slug: meroes-golem
+name: "Meroes Golem"
+author: "Killfaeh"
+description: "Small paltformer game"
+image: "https://classpaddev.github.io/python/store/images/MeroesGolem/cover.png"
+downloadUrl: "https://github.com/Killfaeh/MeroesGolem/raw/refs/heads/main/meroe2.zip"
+detailsUrl: "https://github.com/Killfaeh/MeroesGolem/tree/main"
+format: ".py"
+tags:
+  - Game
+  - Platformer
+  - Action

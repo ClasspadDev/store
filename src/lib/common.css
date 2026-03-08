@@ -368,6 +368,27 @@ h3 {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
+.app-card.python-card {
+    background: rgba(0, 220, 104, 0.03);
+    border-color: rgba(0, 220, 104, 0.15);
+}
+
+.app-card.python-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 220, 104, 0.15);
+    border-color: rgba(0, 220, 104, 0.35);
+}
+
+.app-card.python-card .app-header {
+    background: rgba(0, 220, 104, 0.12);
+    border-bottom: 1px solid rgba(0, 220, 104, 0.2);
+}
+
+.app-card.python-card .app-format-icon {
+    display: flex;
+    align-items: center;
+    color: var(--cp-accent);
+}
+
 .app-header {
     padding: 1rem;
     background: rgba(0, 0, 0, 0.2);

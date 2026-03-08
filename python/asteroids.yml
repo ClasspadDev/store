@@ -1,0 +1,67 @@
+id: 22
+slug: asteroids
+name: Asteroids
+author: Phoebe
+description: The game is ultra minimalistic (white and black with only wireframe) but kinda fast and addictive.
+image: https://classpaddev.github.io/python/store/images/Asteroids/cover.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/asteroids.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/asteroids.py
+format: .py
+tags:
+  - Game
+  - Action
+  - Classic
+screenshots:
+  - /store/images/asteroids/asteroids1.png
+  - /store/images/asteroids/asteroids2.png
+  - /store/images/asteroids/asteroids3.png
+  - /store/images/asteroids/asteroids4.png
+rating: 4.6
+ratingCount: 35
+downloads: 1.2k+
+longDescription: |
+  > Requires PythonExtra runtime to execute.
+
+  Asteroids is a minimalist wireframe recreation of the classic arcade shooter for the CASIO ClassPad II. Pilot a triangular ship, dodge and destroy rotating asteroids, and chain splits for high scores. Built with fixed-point math and lookup tables for smooth performance on calculator hardware.
+
+  ## Features
+
+  - **Fixed-point physics**: integer-based movement and collision for consistent speed
+  - **Precomputed trig tables**: sin/cos LUTs eliminate runtime math overhead
+  - **Asteroid splitting**: large rocks break into smaller, faster fragments
+  - **Screen wrapping**: exit one edge, enter the opposite
+  - **Particle effects**: exhaust trails and explosion debris
+  - **Screenshot capture**: press EQUALS to save vram to screenshot.png
+
+  ## Controls
+
+  | Key | Action |
+  |-----|--------|
+  | Up / 8 | Thrust forward |
+  | Left / 4 | Rotate counter-clockwise |
+  | Right / 6 | Rotate clockwise |
+  | SHIFT / EXE | Fire bullet |
+  | EXE (game over) | Restart |
+  | EQUALS | Save screenshot |
+  | EXIT | Quit |
+
+  ## Usage
+
+  1. Copy asteroids.py to your calculator
+  2. Launch via PythonExtra from Hollyhock launcher
+  3. Destroy asteroids, avoid collisions, survive
+
+  ## Technical Notes
+
+  - 64-entry sin/cos lookup tables for 360-degree rotation
+  - Fixed-point coordinates with 8-bit fractional precision
+  - Collision via squared-distance checks (no sqrt at runtime)
+  - Entity pooling with pending-add queue for spawn safety
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+
+  A performance-focused tribute to arcade classics, optimized for embedded constraints.

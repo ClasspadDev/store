@@ -1,0 +1,12 @@
+id: 24
+slug: ced
+name: "CED"
+author: "Phoebe"
+description: "Classpad Editor - A Python code editor for the calculator. Needs CInput."
+image: "https://classpaddev.github.io/python/store/images/CED/cover.png"
+downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/ced_new.py"
+detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/ced_new.py"
+format: ".py"
+tags:
+  - Utility
+  - Development

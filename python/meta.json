@@ -1,0 +1,294 @@
+[
+    {
+        "name": "EndlessBrickBreakerPlus",
+        "description": "An endless brick breaker game that has also upgrades",
+        "author": "Henry",
+        "releaseDate": "2025-04-18",
+        "installation": "https://github.com/ClasspadDev/EndlessBrickBreakerPlus/",
+        "download": "https://raw.githubusercontent.com/ClasspadDev/EndlessBrickBreakerPlus/refs/heads/main/EndlessBrickBreakerPlus.py",
+        "image": "images/EndlessBrickBreakerPlus/cover.png",
+        "tags": [
+            "Game",
+            "Action",
+            "Classic"
+        ]
+    },
+    {
+        "name": "Templar",
+        "description": "The knight guardian of the temple does not want to turn into an undead creature and must therefore keep himself in shape.",
+        "author": "Lephenixnoir",
+        "releaseDate": "2025-04-27",
+        "installation": "https://www.planet-casio.com/Fr/programmes/programme4545-1-templar-lephenixnoir-jeux-actionsport.html",
+        "download": "https://www.planet-casio.com/Fr/programmes/dl.php?id=4545&num=1",
+        "image": "images/Templar/cover.png",
+        "tags": [
+            "Game",
+            "Adventure",
+            "RPG"
+        ]
+    },
+    {
+        "name": "Lento pero seguro",
+        "description": "Slow but Steady",
+        "author": "Vitucho",
+        "releaseDate": "2025-04-27",
+        "installation": "https://www.planet-casio.com/Fr/programmes/programme4585-last-lento-pero-seguro-vitucho-jeux-actionsport.html",
+        "download": "https://www.planet-casio.com/Fr/programmes/programme4585-last-lento-pero-seguro-vitucho-jeux-actionsport.html",
+        "image": "images/Lento_pero_seguro/cover.png",
+        "tags": [
+            "Game",
+            "Platformer",
+            "Action"
+        ]
+    },
+    {
+        "name": "EncloseHorse",
+        "description": "Enclose the horse in the biggest possible pen! Click grass tiles to place walls. You have limited walls. Horses can't move diagonally or over water. Enclosed golden apples give +10! Portals connect distant cells - the horse can teleport through them! Bigger enclosure = bigger score, but you only have one chance to submit!",
+        "author": "Phoebe",
+        "releaseDate": "2025-05-15",
+        "installation": "https://github.com/TheRainbowPhoenix/enclose.horse",
+        "download": "https://github.com/TheRainbowPhoenix/enclose.horse/releases/download/1.0/mhorse.py",
+        "image": "images/EncloseHorse/cover.png",
+        "tags": [
+            "Game",
+            "Puzzle",
+            "Strategy"
+        ]
+    },
+    {
+        "name": "TempleWarriors",
+        "description": "Your mission is clear: protect the three crystals hidden in the temple at all costs.",
+        "author": "Farhi",
+        "releaseDate": "2025-04-27",
+        "installation": "https://www.planet-casio.com/Fr/programmes/programme4546-1-templewarriors-farhi-jeux-strategie.html",
+        "download": "https://www.planet-casio.com/Fr/programmes/programme4546-1-templewarriors-farhi-jeux-strategie.html",
+        "image": "images/TempleWarriors/cover.png",
+        "tags": [
+            "Game",
+            "Strategy"
+        ]
+    },
+    {
+        "name": "Temple of the Spiral Serpent",
+        "description": "DOS-like exploration game",
+        "author": "Phoebe",
+        "releaseDate": "2025-04-27",
+        "installation": "Hollyhock-2",
+        "download": "https://github.com/TheRainbowPhoenix/ruins-explorer/releases/download/1.0/TOSS.zip",
+        "image": "images/Temple_of_the_Spiral_Serpent/cover.png",
+        "tags": [
+            "Game",
+            "Exploration",
+            "RPG"
+        ]
+    },
+    {
+        "name": "PickCross",
+        "description": "Picross game",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-08",
+        "installation": "https://github.com/TheRainbowPhoenix/PickCross",
+        "download": "https://github.com/TheRainbowPhoenix/PickCross/releases/download/1.0/pickcross.py",
+        "image": "images/PickCross/cover.png",
+        "tags": [
+            "Game",
+            "Puzzle"
+        ]
+    },
+    {
+        "name": "Meroes Golem",
+        "description": "Small paltformer game",
+        "author": "Killfaeh",
+        "releaseDate": "2025-04-27",
+        "installation": "https://github.com/Killfaeh/MeroesGolem/tree/main",
+        "download": "https://github.com/Killfaeh/MeroesGolem/raw/refs/heads/main/meroe2.zip",
+        "image": "images/MeroesGolem/cover.png",
+        "tags": [
+            "Game",
+            "Platformer",
+            "Action"
+        ]
+    },
+    {
+        "name": "Mandelbrot",
+        "description": "A Mandelbrot set renderer for ClassPad, visualizing the famous fractal.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-08",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/render_mandelbrot.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/render_mandelbrot.py",
+        "image": "images/Mandelbrot/cover.png",
+        "tags": [
+            "Graphics",
+            "Math",
+            "Demo",
+            "Education"
+        ]
+    },
+    {
+        "name": "Raytracer",
+        "description": "A simple raytracer implemented in Python, demonstrating 3D rendering capabilities.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-08",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/render_raytracer.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/render_raytracer.py",
+        "image": "images/Raytracer/cover.png",
+        "tags": [
+            "Graphics",
+            "Math",
+            "Demo",
+            "Education"
+        ]
+    },
+    {
+        "name": "PocketNN",
+        "description": "A simple neural network that learns to solve the XOR problem visually. It uses a pre-calculated Float Lookup Table (LUT) for the Sigmoid function and unrolled loops for the forward/backward propagation to maximize speed on the SH4 CPU.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-08",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/neuro.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/neuro.py",
+        "image": "images/PocketNN/cover.png",
+        "tags": [
+            "Math",
+            "Demo",
+            "AI",
+            "Education"
+        ]
+    },
+    {
+        "name": "Asteroids",
+        "description": "The game is ultra minimalistic (white and black with only wireframe) but kinda fast and addictive.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-08",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/asteroids.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/asteroids.py",
+        "image": "images/Asteroids/cover.png",
+        "tags": [
+            "Game",
+            "Action",
+            "Classic"
+        ]
+    },
+    {
+        "name": "CInput",
+        "description": "Standalone library to add touchscreen keyboard. Check the wiki for more details",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-08",
+        "installation": "https://classpaddev.github.io/wiki/python/reference/cinput/",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cinput.py",
+        "image": "images/CInput/cover.png",
+        "tags": [
+            "Utility",
+            "Development"
+        ]
+    },
+    {
+        "name": "CED",
+        "description": "Classpad Editor - A Python code editor for the calculator. Needs CInput.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-09",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/ced_new.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/ced_new.py",
+        "image": "images/CED/cover.png",
+        "tags": [
+            "Utility",
+            "Development"
+        ]
+    },
+    {
+        "name": "HarmoniExtra",
+        "description": "A music chord viewer for Classpad. Needs CInput.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-15",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/HarmoniExtra.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/HarmoniExtra.py",
+        "image": "images/HarmoniExtra/cover.png",
+        "tags": [
+            "Utility",
+            "Music",
+            "Education"
+        ]
+    },
+    {
+        "name": "CPaint",
+        "description": "A paint program for Classpad. Needs cinput and cgui.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-14",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/CPaint.md#cpaint",
+        "download": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/releases/download/rolling-releases/cpaint-beta.zip",
+        "image": "images/CPaint/cover.png",
+        "tags": [
+            "Utility",
+            "Art",
+            "Graphics",
+            "Education"
+        ]
+    },
+    {
+        "name": "CPTime",
+        "description": "A Clock (StopWatch, Timer) for Classpad. ",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-20",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/cptime_view.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/refs/heads/master/cptime_view.py",
+        "image": "images/CPTime/cover.png",
+        "tags": [
+            "Utility",
+            "Education"
+        ]
+    },
+    {
+        "name": "CDateInput",
+        "description": "Standalone library to add date and time picking. Needs CInput.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-22",
+        "installation": "https://classpaddev.github.io/wiki/python/reference/cinput/",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cdateinput.py",
+        "image": "images/CDateInput/cover.png",
+        "tags": [
+            "Utility",
+            "Development"
+        ]
+    },
+    {
+        "name": "Math AI MoE",
+        "description": "A Mixture of Experts LLM for Classpad. Made to explain how MoE works. Needs CInput.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-20",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/MathGPT.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/MathGPT.py",
+        "image": "images/MathGPT/cover.png",
+        "tags": [
+            "Math",
+            "Demo",
+            "AI",
+            "Education"
+        ]
+    },
+    {
+        "name": "QR Code Generator",
+        "description": "Pocket QR Code generator for the Classpad. Needs CInput.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-22",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/qr_gen.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/refs/heads/master/qr_gen.py",
+        "image": "images/QRGen/cover.png",
+        "tags": [
+            "Utility",
+            "Demo",
+            "Education"
+        ]
+    },
+    {
+        "name": "PhysChem",
+        "description": "Physics/Chemistry solver app. Needs CInput.",
+        "author": "Phoebe",
+        "releaseDate": "2026-02-22",
+        "installation": "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/physchem.py",
+        "download": "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/physchem.py",
+        "image": "images/PhysChem/cover.png",
+        "tags": [
+            "Physics_Chemistry",
+            "Education"
+        ]
+    }
+]

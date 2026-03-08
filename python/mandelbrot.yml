@@ -1,0 +1,50 @@
+id: 19
+slug: mandelbrot
+name: Mandelbrot
+author: Phoebe
+description: A Mandelbrot set renderer for ClassPad, visualizing the famous fractal.
+image: https://classpaddev.github.io/python/store/images/Mandelbrot/cover.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/render_mandelbrot.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/render_mandelbrot.py
+format: .py
+tags:
+  - Graphics
+  - Math
+  - Demo
+  - Education
+rating: 4.4
+ratingCount: 27
+downloads: 890+
+longDescription: |
+  > Requires PythonExtra runtime to execute.
+
+  Mandelbrot renders the iconic fractal set directly on your ClassPad II screen. Watch as the algorithm iterates complex numbers to reveal the infinite boundary patterns that make this mathematical object famous.
+
+  ## Features
+
+  - **Real-time rendering**: progressive display with partial screen updates
+  - **Escape-time coloring**: green gradient based on iteration count
+  - **Vertical symmetry optimization**: renders top half, mirrors to bottom for speed
+  - **Minimal footprint**: single-file implementation, no dependencies beyond PythonExtra
+
+  ## Usage
+
+  1. Copy render_mandelbrot.py to your calculator
+  2. Launch via PythonExtra from the Hollyhock launcher
+  3. Wait for render completion (~30-60 seconds)
+  4. Press any key to exit
+
+  ## Technical Notes
+
+  - Viewport: 320x528 pixels, scaled to complex plane region [-2, 1] × [-1.76, 1.76]
+  - Iteration limit: 12 (adjustable in source for detail vs. speed tradeoff)
+  - Escape radius: 2 (standard for Mandelbrot computation)
+  - Color mapping: green channel proportional to escape iteration
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+
+  A compact demonstration of complex dynamics, optimized for calculator constraints.

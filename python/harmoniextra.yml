@@ -1,0 +1,13 @@
+id: 25
+slug: harmoniextra
+name: "HarmoniExtra"
+author: "Phoebe"
+description: "A music chord viewer for Classpad. Needs CInput."
+image: "https://classpaddev.github.io/python/store/images/HarmoniExtra/cover.png"
+downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/HarmoniExtra.py"
+detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/HarmoniExtra.py"
+format: ".py"
+tags:
+  - Utility
+  - Music
+  - Education

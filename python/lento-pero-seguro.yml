@@ -1,0 +1,107 @@
+id: 13
+slug: lento-pero-seguro
+name: Lento pero seguro
+author: Vitucho
+description: Slow but Steady
+image: https://classpaddev.github.io/python/store/images/Lento_pero_seguro/cover.png
+screenshots:
+  - /store/images/lento-pero-seguro/lento4.png
+  - /store/images/lento-pero-seguro/lento1.png
+  - /store/images/lento-pero-seguro/lento2.png
+  - /store/images/lento-pero-seguro/lento3.png
+  - /store/images/lento-pero-seguro/lento5.png
+  - /store/images/lento-pero-seguro/lento6.png
+downloadUrl: https://www.planet-casio.com/Fr/programmes/programme4585-last-lento-pero-seguro-vitucho-jeux-actionsport.html
+detailsUrl: https://www.planet-casio.com/Fr/programmes/programme4585-last-lento-pero-seguro-vitucho-jeux-actionsport.html
+format: .py
+tags:
+  - Game
+  - Platformer
+  - Action
+  - Adventure
+rating: 4.3
+ratingCount: 18
+downloads: 620+
+position: 0 0%
+longDescription: |
+  > Requires PythonExtra runtime version 0.4.0 or later to execute. Install PythonExtra before using this application.
+
+  Slow but Steady is a narrative-driven platformer for the CASIO ClassPad II (fx-CP400), set in a world where pollution has manifested as toxic monsters threatening all life. As the last hope for restoration, you must recover stolen plants and confront the fearsome King CO₂ to cleanse the planet and restore ecological balance. A concise, focused experience designed for 10 to 15 minutes of intense gameplay.
+
+  ## Story
+
+  Pollution has awakened. Toxic creatures roam the land, stealing and destroying the plants that once purified the Earth. These monsters serve King CO₂, a villain determined to shroud the world in his dark cloud. Your mission is to recover the stolen plants, overcome environmental hazards, and defeat King CO₂ before life disappears forever. Patience and perseverance are your greatest allies.
+
+  ## Features
+
+  - **Story-driven platforming**: clear narrative objective with environmental themes
+  - **Tight controls**: responsive movement and jumping optimized for calculator input
+  - **Multi-language support**: available in English, Spanish, and French
+  - **Pixel art visuals**: custom "pixelXD" texture pack for distinctive retro aesthetics
+  - **Focused experience**: designed for short, impactful play sessions
+  - **Python-powered**: built with PythonExtra 0.4.0 and the Gint library
+
+  ## Controls
+
+  | Key | Action |
+  | --- | --- |
+  | Left Arrow / D-pad Left | Move left |
+  | Right Arrow / D-pad Right | Move right |
+  | EXE | Jump |
+  | CLEAR or POWER | Exit game immediately |
+
+  ## Installation
+
+  1. Download the game package from the official Planet Casio page
+  2. Download the accompanying "pixelXD" texture pack (required for graphics)
+  3. Extract both archives and place all files in the same folder on your calculator
+     The game will not function correctly if the texture pack is missing or in a different location
+  4. Launch PythonExtra from the Hollyhock launcher
+  5. Navigate to the game file and press EXE to start
+
+  Important: The game and the pixelXD texture pack must reside in the same directory. Verify both are present before launching.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - PythonExtra runtime version 0.4.0 or later (must be installed separately)
+  - pixelXD texture pack (included with download or available separately)
+  - Approximately 500 KB free storage space for game files and assets
+
+  ## Gameplay Tips
+
+  - Move deliberately: the game rewards careful positioning over rushed actions
+  - Time your jumps: platforming challenges require precise EXE button timing
+  - Explore thoroughly: hidden plants may be tucked away in less obvious locations
+  - Learn enemy patterns: toxic monsters follow predictable movement cycles
+  - Save progress mentally: the game is short but does not include mid-session saves
+
+  ## Language Support
+
+  Slow but Steady includes full text localization for three languages:
+
+  - English
+  - Spanish (Español)
+  - French (Français)
+
+  Language selection is typically automatic based on system settings or available via an in-game menu. Consult the game's start screen for options.
+
+  ## Technical Notes
+
+  - Built with PythonExtra 0.4.0 for compatibility with ClassPad II hardware
+  - Graphics rendered using the pixelXD texture pack for consistent visual style
+  - Input handling optimized for calculator keypad and touch interface
+  - Game state managed in memory; no save files written to storage
+
+  ## Troubleshooting
+
+  If the game fails to launch, verify that PythonExtra version 0.4.0 or later is installed. If graphics appear missing or corrupted, confirm that the pixelXD texture pack is present in the same folder as the game file. If controls feel unresponsive, ensure no background applications are interfering with input handling. For persistent issues, re-download both the game and texture pack from the official Planet Casio page and repeat the installation steps.
+
+  ## Development and Credits
+
+  Slow but Steady was developed by Vitucho as an entry for the ClassPad homebrew community. The game demonstrates narrative design, platformer mechanics, and multi-language support using the PythonExtra runtime. The pixelXD texture pack provides custom artwork optimized for the ClassPad display. Source files and additional resources are available through Planet Casio.
+
+  ## Community and Support
+
+  For bug reports, feedback, or discussion about Slow but Steady and other Python-based ClassPad games, visit the Planet Casio forum. Community contributions, speedrun attempts, and creative interpretations of the game's environmental themes are welcome to help celebrate calculator-based storytelling and gameplay.

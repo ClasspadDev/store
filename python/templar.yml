@@ -1,0 +1,98 @@
+id: 12
+slug: templar
+name: Templar
+author: Lephenixnoir
+description: The knight guardian of the temple does not want to turn into an undead creature and must therefore keep himself in shape.
+image: https://classpaddev.github.io/python/store/images/Templar/cover.png
+downloadUrl: https://www.planet-casio.com/Fr/programmes/dl.php?id=4545&num=1
+detailsUrl: https://www.planet-casio.com/Fr/programmes/programme4545-1-templar-lephenixnoir-jeux-actionsport.html
+format: .py
+tags:
+  - Game
+  - Adventure
+  - RPG
+  - Platformer
+rating: 4.4
+ratingCount: 26
+position: 0 3%
+downloads: 780+
+longDescription: |
+  > Requires PythonExtra runtime to execute. Install PythonExtra before using this application.
+
+  Templar is a precision platformer created for Python Jam #2, featuring a knight guardian who must maintain his physical condition to resist transformation into an undead creature. Navigate the temple chamber, collect flags, and master advanced movement mechanics to achieve the fastest completion time.
+
+  ## Features
+
+  - **Precision platforming**: tight controls designed for skill-based movement and timing
+  - **Advanced bounce mechanics**: ground and wall bouncing techniques for speedrunning
+  - **Flag collection objective**: simple goal with room for optimization and mastery
+  - **Minimalist design**: focused gameplay without unnecessary complexity
+  - **Python-powered**: built with PythonExtra and the Gint library for smooth performance
+
+  ## Controls
+
+  | Key | Action |
+  |-----|--------|
+  | Left Arrow | Move left |
+  | Right Arrow | Move right |
+  | SHIFT | Jump / Bounce |
+
+  ## Movement Mechanics
+
+  ### Basic Jump
+  Press SHIFT while standing to perform a standard jump.
+
+  ### Ground Bounce (Double Jump Technique)
+  While falling, press SHIFT just before touching the ground to execute a bounce. This functions as a double jump for extended aerial mobility.
+
+  Important: Ground bouncing requires non-zero horizontal velocity. You must be moving left or right to trigger the bounce. The trajectory follows a V-shaped pattern similar to advanced jump techniques in classic platformers.
+
+  ### Wall Bounce
+  While ascending near a wall, press SHIFT to bounce off the vertical surface. This can be repeated rapidly for vertical climbing or directional changes. Position yourself close to the wall and maintain upward momentum for reliable activation.
+
+  ## Objective
+
+  Collect all flags scattered throughout the temple chamber as quickly as possible. Your completion time is tracked for personal bests and community comparison.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - PythonExtra runtime environment (must be installed separately)
+  - Approximately 100 KB free storage space for the application file
+  - Gint library (included with PythonExtra)
+
+  ## Installation
+
+  1. Download the Templar.py file from the official Planet Casio page
+  2. Copy the file to your calculator storage via USB mass storage mode
+  3. Launch PythonExtra from the Hollyhock launcher
+  4. Navigate the application list using arrow keys
+  5. Select the Templar script and press EXE to launch the game
+
+  ## Strategy Tips
+
+  - Maintain horizontal momentum to enable ground bounce mechanics
+  - Practice timing for ground bounces: press SHIFT slightly before impact, not after
+  - Use wall bounces to recover from misjudged jumps or to reach elevated flags
+  - Plan routes that chain bounces efficiently to minimize travel time
+  - Study the chamber layout to identify optimal flag collection sequences
+
+  ## Performance Notes
+
+  - Developer record: 20.6 seconds completion time with zero deaths
+  - Movement physics designed for consistent, predictable behavior
+  - Input responsiveness optimized for precise timing-based mechanics
+  - Frame rate maintained for smooth visual feedback during fast sequences
+
+  ## Troubleshooting
+
+  If the game fails to launch, verify that PythonExtra is properly installed and that the Gint library is accessible. If bounce mechanics do not trigger, ensure you have horizontal velocity when attempting ground bounces and that you are positioned close to walls for wall bounces. If input feels delayed, ensure no background applications are consuming CPU resources. For persistent issues, re-download the source file and confirm it was transferred completely to calculator storage.
+
+  ## Development and Licensing
+
+  Templar was developed by Lephenixnoir as an entry for Python Jam #2, demonstrating creative game design within the constraints of calculator hardware and the PythonExtra runtime. The project serves as an example of physics-based platformer implementation using Python on embedded systems. Source code and additional details are available on Planet Casio.
+
+  ## Community and Support
+
+  For bug reports, speedrun submissions, or discussion about Templar and other Python-based ClassPad games, visit the Planet Casio forum or the PythonExtra community channels. Community feedback, technique sharing, and challenge runs are welcome to help celebrate creative calculator gaming.

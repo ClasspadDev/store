@@ -1,0 +1,112 @@
+id: 17
+slug: pickcross
+name: PickCross
+author: Phoebe
+description: Picross game
+image: https://classpaddev.github.io/python/store/images/PickCross/cover.png
+screenshots:
+  - /store/images/pickcross/pick0.png
+  - /store/images/pickcross/pick1.png
+  - /store/images/pickcross/pick2.png
+  - /store/images/pickcross/pick3.png
+downloadUrl: https://github.com/TheRainbowPhoenix/PickCross/releases/download/1.0/pickcross.py
+detailsUrl: https://github.com/TheRainbowPhoenix/PickCross
+format: .py
+tags:
+  - Game
+  - Puzzle
+rating: 4.5
+ratingCount: 33
+downloads: 1.1k+
+longDescription: |
+  > Requires PythonExtra runtime to execute. Install PythonExtra before using this application.
+
+  PickCross is a classic nonogram puzzle game for the CASIO ClassPad II (fx-CP400), featuring ten unique 10x10 logic puzzles. Use row and column number clues to determine which cells to fill, revealing hidden pixel art images. With dual input modes, time pressure, and penalty mechanics, PickCross delivers a focused puzzle experience optimized for calculator hardware.
+
+  ## Features
+
+  - **Ten curated puzzles**: each with distinct solutions and creative titles like "Don't Eat", "Mirror", and "We'll Sea"
+  - **Dual input modes**: Hammer mode fills cells to reveal the image, Mark mode places X markers for planning
+  - **Hint-based logic**: row and column number clues guide deduction without guesswork
+  - **Time challenge**: 30-minute limit per level with visible countdown timer
+  - **Penalty system**: incorrect hammer placements add time penalties (120s, 240s, 480s) to encourage careful play
+  - **Visual feedback**: error indicators and color-coded UI elements for clear game state communication
+  - **Help system**: in-game rules reference accessible via dedicated button
+
+  ## Installation
+
+  1. Download the pickcross.py file from the official repository
+  2. Copy the file to your calculator storage via USB mass storage mode
+  3. Launch PythonExtra from the Hollyhock launcher
+  4. Navigate the file browser using arrow keys and press EXE to enter folders
+  5. Select pickcross.py and press EXE to launch the game
+
+  ## Controls
+
+  | Input | Action |
+  |-------|--------|
+  | Touch on grid cell | Fill with Hammer or place X Mark depending on mode |
+  | Mode toggle button | Switch between Hammer and Mark input modes |
+  | Top-left "<" button | Load previous puzzle |
+  | Top-right ">" button | Load next puzzle |
+  | Top-right "?" button | Open help modal with rules |
+  | EXIT key | Quit game |
+  | Tap after victory/game over | Advance to next puzzle |
+
+  ## Gameplay Mechanics
+
+  ### Puzzle Logic
+  Each row and column displays number clues indicating consecutive filled cell groups. For example, clues "2 3" mean two filled cells, at least one empty cell, then three filled cells. Deduce cell states by cross-referencing row and column constraints.
+
+  ### Input Modes
+  - **Hammer mode**: tapping an empty cell fills it permanently. If the filled cell matches the solution, progress advances. If incorrect, a time penalty is applied.
+  - **Mark mode**: tapping an empty cell places an X marker. X markers have no effect on solution checking and can be toggled off by tapping again in Mark mode.
+
+  ### Scoring and Penalties
+  - Complete the puzzle before the timer reaches zero to win
+  - Each incorrect hammer placement adds penalty time: first error +120s, second +240s, third +480s
+  - Visual "ERR!" feedback appears briefly at the error location
+  - Victory is achieved when all solution cells are correctly filled
+
+  ### Level Progression
+  Puzzles are played in sequence but can be navigated freely using the top bar buttons. Completing a puzzle automatically offers advancement to the next level.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - PythonExtra runtime environment (must be installed separately)
+  - Approximately 100 KB free storage space for the application file
+  - Gint library (included with PythonExtra)
+
+  ## Strategy Tips
+
+  - Start with rows or columns that have large clues or single values for easier deductions
+  - Use Mark mode to flag cells you are uncertain about before committing with Hammer
+  - Cross-reference intersecting row and column clues to eliminate possibilities
+  - Watch the timer and minimize unnecessary hammer attempts to avoid penalty accumulation
+  - If stuck, toggle to Mark mode and map out definite empty cells to narrow options
+
+  ## Technical Implementation
+
+  - **Hint generation**: solution grids are parsed at load time to produce row and column clue lists
+  - **Touch input handling**: latched event processing prevents accidental multi-taps during fast play
+  - **Time management**: uses time.ticks_ms() for millisecond-accurate countdown with penalty adjustments
+  - **Selective rendering**: grid cells redraw only when state changes to maintain performance
+  - **Modal system**: help and end-state overlays drawn atop the game grid without full screen clears
+
+  ## Puzzle Design
+
+  All ten included puzzles are 10x10 grids with carefully balanced clue sets to ensure logical solvability without guessing. Puzzle themes range from abstract patterns to recognizable silhouettes, providing variety while maintaining consistent difficulty progression.
+
+  ## Troubleshooting
+
+  If the game fails to launch, verify that PythonExtra is properly installed and that the Gint library is accessible. If touch input does not register on grid cells, ensure taps are within the visible grid boundaries (offset from screen edges). If timer behavior seems inconsistent, confirm that no background processes are interfering with system time functions. For persistent issues, re-download the source file and ensure it was transferred completely to calculator storage.
+
+  ## Development Notes
+
+  PickCross was developed by Phoebe as part of the PythonExtra ecosystem for the ClassPad community. The application demonstrates logic puzzle implementation, touch-based UI design, and time management mechanics using Python on resource-constrained calculator hardware. Source code is available in the project repository for educational purposes and community contributions.
+
+  ## Community and Support
+
+  For bug reports, puzzle suggestions, or discussion about PickCross and other Python-based ClassPad games, visit the PickCross repository on GitHub. Community contributions, custom puzzle submissions, and solution strategy sharing are welcome to help expand the puzzle experience and inspire other developers working on calculator-based logic games.

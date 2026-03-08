@@ -1,0 +1,113 @@
+id: 11
+slug: endlessbrickbreakerplus
+name: Endless Brick Breaker Plus
+author: Henry
+description: An endless brick breaker game with upgrades
+image: https://classpaddev.github.io/python/store/images/EndlessBrickBreakerPlus/cover.png
+downloadUrl: https://raw.githubusercontent.com/ClasspadDev/EndlessBrickBreakerPlus/refs/heads/main/EndlessBrickBreakerPlus.py
+detailsUrl: https://github.com/ClasspadDev/EndlessBrickBreakerPlus/
+format: .py
+tags:
+  - Game
+  - Arcade
+  - Action
+  - Classic
+rating: 4.5
+ratingCount: 37
+downloads: 1.4k+
+longDescription: |
+  > Requires PythonExtra runtime to execute. Install PythonExtra before using this application.
+
+  Endless Brick Breaker Plus is an addictive arcade-style brick breaker for the CASIO ClassPad II (fx-CP400). Break falling bricks, earn money, and purchase upgrades to survive increasingly difficult waves. With smooth ball physics, responsive paddle controls, and a strategic upgrade system, this game offers endless replayability on calculator hardware.
+
+  ## Features
+
+  - **Endless gameplay**: bricks continuously descend with escalating difficulty
+  - **Upgrade shop**: spend earned money on paddle size, ball speed, ball power, or extra balls
+  - **Multi-ball support**: launch additional balls to clear bricks faster
+  - **Angle-based physics**: ball trajectory responds to paddle hit position for skillful shots
+  - **Brick health system**: tougher bricks require multiple hits as difficulty increases
+  - **Real-time stats**: display shows current money, score, and difficulty level
+  - **Optimized rendering**: efficient drawing routines maintain smooth performance
+
+  ## Installation
+
+  1. Download the endless_brick_breaker_plus.py file from the official repository
+  2. Copy the file to your calculator storage via USB mass storage mode
+  3. Launch PythonExtra from the Hollyhock launcher
+  4. Navigate the application list using arrow keys
+  5. Select endless_brick_breaker_plus.py and press EXE to launch the game
+
+  ## Controls
+
+  | Key | Action |
+  |-----|--------|
+  | Left Arrow | Move paddle left |
+  | Right Arrow | Move paddle right |
+  | EXE | Toggle upgrade shop |
+  | EXIT | Exit game |
+  | 1-4 | Purchase upgrades (when shop is open) |
+
+  ## Upgrade System
+
+  Earn money by breaking bricks, then press EXE to open the shop. Available upgrades:
+
+  | Upgrade | Effect | Cost | Max Stacks |
+  |---------|--------|------|------------|
+  | Paddle Size | +10 pixels width | $30 | Unlimited |
+  | Ball Speed | +1 unit velocity | $50 | Unlimited |
+  | Ball Power | +1 damage per hit | $50 | Unlimited |
+  | Extra Ball | Add one active ball | $70 | Multiple |
+
+  Upgrades persist through gameplay sessions. Strategic investment is key to surviving higher difficulties.
+
+  ## Gameplay Mechanics
+
+  - **Ball physics**: angle of reflection depends on where the ball strikes the paddle
+  - **Brick health**: bricks display different colors based on remaining hits (blue=1, green=2, red=3)
+  - **Difficulty scaling**: brick spawn rate and health increase as your score grows
+  - **Money economy**: +$10 per brick destroyed, used exclusively for shop upgrades
+  - **Game over**: triggered when all balls fall below the paddle
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - PythonExtra runtime environment (must be installed separately)
+  - Approximately 150 KB free storage space for the application file
+  - Gint library (included with PythonExtra)
+
+  ## Technical Implementation
+
+  - **Efficient rendering**: selective clearing of paddle and brick regions reduces redraw overhead
+  - **Sub-stepped ball movement**: physics calculations split into multiple steps for collision accuracy at high speeds
+  - **Vector normalization**: ball direction vectors normalized each frame to maintain consistent speed
+  - **Object pooling**: brick objects recycled from a queue to minimize memory allocations
+  - **Input latching**: touch and key events processed with state tracking to prevent input spam
+
+  ## Performance Notes
+
+  - Game maintains target frame rate even with multiple active balls and dense brick fields
+  - Brick rendering optimized to skip off-screen or destroyed elements
+  - Memory usage remains stable during extended play sessions
+  - Ball collision detection uses bounding box checks for reliable hit registration
+
+  ## Strategy Tips
+
+  - Aim for the paddle edges to create sharp rebound angles for hard-to-reach bricks
+  - Invest in ball power early to handle high-health bricks at later difficulties
+  - Save money for extra balls when facing dense brick formations
+  - Use the shop toggle strategically: pause during intense moments to plan upgrades
+  - Prioritize paddle size if you struggle with ball control
+
+  ## Troubleshooting
+
+  If the game fails to launch, verify that PythonExtra is properly installed and that the Gint library is accessible. If ball movement appears jittery, ensure no background applications are consuming CPU resources. If upgrades do not apply after purchase, confirm sufficient funds were available and that the correct key (1-4) was pressed. For persistent issues, re-download the source file and ensure it was transferred completely to calculator storage.
+
+  ## Development Notes
+
+  Endless Brick Breaker Plus was developed by Phoebe as part of the MiscPythonExtra collection to demonstrate Python game development on the ClassPad platform. The code balances gameplay depth with performance constraints, serving as a reference for physics simulation, upgrade systems, and efficient rendering in calculator-based games. Source code is available in the project repository for educational purposes and community contributions.
+
+  ## Community and Support
+
+  For bug reports, balance feedback, or discussion about Endless Brick Breaker Plus and other Python-based ClassPad games, visit the MiscPythonExtra repository on GitHub. Community contributions, high score submissions, and gameplay suggestions are welcome to help refine the experience and inspire future arcade-style projects.

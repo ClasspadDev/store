@@ -1,0 +1,23 @@
+id: 30
+slug: qr-code-generator
+name: QR Code Generator
+author: Phoebe
+description: Pocket QR Code generator for the Classpad. Needs CInput.
+longDescription: ''
+image: https://classpaddev.github.io/python/store/images/QRGen/cover.png
+screenshots:
+  - /store/images/qr-code-generator/qrcode.png
+  - /store/images/qr-code-generator/qrcode2.png
+  - /store/images/qr-code-generator/qrcode3.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/refs/heads/master/qr_gen.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/qr_gen.py
+format: .py
+tags:
+  - Utility
+  - Demo
+  - Education
+position: ''
+website: ''
+contact: ''
+privacy: ''
+rating: null

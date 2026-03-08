@@ -1,0 +1,113 @@
+id: 3
+slug: cpaint
+name: CPaint
+author: Phoebe
+description: A paint program for Classpad. Needs cinput and cgui.
+image: https://classpaddev.github.io/python/store/images/CPaint/cover.png
+screenshots:
+  - /store/images/cpaint/cpaint1.png
+  - /store/images/cpaint/cpaint2.png
+  - /store/images/cpaint/cpaint3.png
+downloadUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/releases/download/rolling-releases/cpaint-beta.zip
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/CPaint.md#cpaint
+format: .py
+tags:
+  - Utility
+  - Art
+  - Graphics
+  - Education
+rating: 4.6
+ratingCount: 34
+downloads: 1.3k+
+longDescription: |
+  > Requires PythonExtra runtime to execute. Install PythonExtra before using this application.
+
+  CPaint is a full-featured digital painting application for the CASIO ClassPad II (fx-CP400), written in Python and powered by the PythonExtra runtime. Create artwork, sketch ideas, or edit images with an intuitive interface featuring comprehensive brush controls and a professional-grade color picker. Export your creations as standard BMP files for use on other devices.
+
+  ## Features
+
+  - **Advanced brush settings**: configure size, spacing, spread, flow, and opacity for precise control
+  - **Professional color picker**: select colors using RGB, HSB, palette, CMYK, or hexadecimal input modes
+  - **Multiple brush shapes**: choose from round, square, vertical line, and horizontal line brushes
+  - **BMP import and export**: load existing bitmap images and save your artwork in standard BMP format
+  - **Real-time preview**: see brush stroke previews and color selections before applying
+  - **Intuitive interface**: menu-driven controls with visual feedback and clear labeling
+
+  ## Installation
+
+  1. Download the cpaint-beta.zip file from the official repository
+  2. Extract the archive to access its contents
+  3. Copy all extracted files to the root directory of your calculator storage
+     The archive includes the cinput dependency and required resources
+  4. Launch PythonExtra from the Hollyhock launcher
+  5. Navigate the application list using arrow keys
+  6. Select cpaint_demo.py and press EXE to launch CPaint
+
+  Ensure all files from the zip archive are copied to maintain proper functionality.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - PythonExtra runtime environment (must be installed separately)
+  - Approximately 1 MB free storage space for application files and artwork
+  - cinput and cgui libraries (included in the download package)
+
+  ## Usage Guide
+
+  ### Brush Configuration
+
+  Access brush settings through the settings menu. Adjust the following parameters:
+
+  - Size: brush diameter in pixels (1px to 10px range shown in interface)
+  - Spacing: distance between brush stamps during strokes
+  - Spread: randomization of brush placement for textured effects
+  - Flow: rate of paint application (0% to 100%)
+  - Opacity: transparency level of brush strokes (0% to 100%)
+
+  Select brush shape using the shape selector: round dot, square, vertical line, or horizontal line.
+
+  ### Color Selection
+
+  The color picker provides multiple input methods:
+
+  - RGB mode: adjust red, green, and blue channel values
+  - HSB mode: control hue, saturation, and brightness
+  - Palette mode: select from predefined color swatches
+  - CMYK mode: specify cyan, magenta, yellow, and key values
+  - Hex mode: enter hexadecimal color codes directly
+
+  Use the gradient field to visually select hues and the saturation-value square for fine-tuning.
+
+  ### File Operations
+
+  - Export: save your artwork as a BMP file (approximately 30 seconds processing time)
+  - Import: load existing BMP images for editing or reference
+  - Patience is required during file operations due to calculator processing limitations
+
+  ## Technical Notes
+
+  - BMP export uses standard 24-bit color depth for maximum compatibility
+  - File I/O operations are optimized for calculator storage constraints
+  - Brush rendering uses anti-aliasing techniques for smooth edges
+  - Color picker supports full 24-bit RGB color space (16.7 million colors)
+  - Application state is maintained during session but not persisted across launches
+
+  ## Performance Considerations
+
+  - BMP file operations require approximately 30 seconds due to calculator I/O speed
+  - Complex brush settings with high spread values may reduce rendering speed
+  - Large canvas sizes consume significant memory; monitor available resources
+  - For best performance, limit brush size and spacing when working on detailed sections
+
+  ## Troubleshooting
+
+  If CPaint fails to launch, verify that PythonExtra is properly installed and that all files from the zip archive were copied to the calculator root directory. If the cinput or cgui modules are missing, re-extract the archive and ensure all dependency files are present. If BMP export appears to hang, allow at least 60 seconds for completion before intervening. For color picker or brush settings that do not respond, restart the application to reset the interface state.
+
+  ## Development and Licensing
+
+  CPaint is developed by Phoebe as part of the MiscPythonExtra collection for the ClassPad community. The application demonstrates advanced Python programming techniques including custom UI construction, graphics rendering, and file format handling on resource-constrained hardware. Source code and documentation are available in the project repository for educational purposes.
+
+  ## Community and Support
+
+  For bug reports, feature suggestions, or discussion about CPaint and other Python-based ClassPad applications, visit the MiscPythonExtra repository on GitHub. Community contributions, artwork samples, and usage tips are welcome to help expand the application's capabilities and inspire other developers.

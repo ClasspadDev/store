@@ -1,0 +1,134 @@
+id: 14
+slug: enclosehorse
+name: Enclose the Horse
+author: Phoebe
+description: Enclose the horse in the biggest possible pen! Click grass tiles to place walls. You have limited walls. Horses can't move diagonally or over water. Enclosed golden apples give +10! Bigger enclosure = bigger score, but you only have one chance to submit!
+longDescription: |-
+  > Requires PythonExtra runtime to execute. Install PythonExtra before using this application.
+
+  Enclose the Horse is a strategic puzzle game for the CASIO ClassPad II (fx-CP400) where you must trap a wandering horse using a limited supply of walls. Plan your placements carefully, collect cherries for bonus points, and achieve optimal scores across nine progressively challenging levels. A thoughtful, methodical experience that rewards planning over reflexes.
+
+  ## Features
+
+  - **Nine unique levels**: each with distinct terrain, water hazards, and wall budgets
+  - **Flood-fill pathfinding**: real-time validation of enclosure status using efficient graph traversal
+  - **Cherry collection**: bonus points for enclosing tiles containing cherries (+3 per cherry)
+  - **Optimal score targets**: beat developer-set benchmarks for maximum satisfaction
+  - **High score persistence**: save your best results to horse.dat for later comparison
+  - **Optimized rendering**: selective tile redraws maintain smooth performance during puzzle solving
+  - **Clean visual design**: distinct colors for grass, water, walls, enclosed areas, and objectives
+
+  ## Installation
+
+  1. Download the mhorse.py file from the official repository
+  2. Copy the file to your calculator storage via USB mass storage mode
+  3. Launch PythonExtra from the Hollyhock launcher
+  4. Navigate the file browser using arrow keys and press EXE to enter folders
+  5. Select mhorse.py and press EXE to launch the game
+
+  ## Controls
+
+  | Input | Action |
+  | --- | --- |
+  | Touch on grass tile | Place or remove a wall |
+  | SHIFT key | Reset all walls on current level |
+  | EXIT key | Quit game |
+  | Top-left "?" button | Open help modal |
+  | Top-right ">" button | Advance to next level |
+  | Save button | Save current high score |
+
+  Water tiles (\~) cannot have walls placed on them. The horse (H) and cherries (C) are fixed obstacles.
+
+  ## Gameplay Mechanics
+
+  ### Objective
+
+  Place walls to completely enclose the horse, preventing any path from the horse to the grid edge. Once enclosed, your score is calculated based on:
+
+  - Number of tiles in the enclosed region
+  - +3 bonus points for each cherry within the enclosed area
+
+  If the horse can still reach the edge, your score is zero.
+
+  ### Scoring
+
+  - Enclosed tile count: +1 point per tile
+  - Enclosed cherry: +3 points per cherry
+  - Failed enclosure: 0 points regardless of progress
+
+  ### Level Progression
+
+  Each level provides:
+
+  - A unique map layout with grass, water, and fixed elements
+  - A wall budget limiting total placements
+  - An optimal score target set by the developer
+
+  Complete levels in order or use the next-level button to skip ahead.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - PythonExtra runtime environment (must be installed separately)
+  - Approximately 150 KB free storage space for the application file and save data
+  - Gint library (included with PythonExtra)
+
+  ## Strategy Tips
+
+  - Start from the horse and work outward to minimize wall usage
+  - Use water tiles as natural barriers to reduce wall requirements
+  - Prioritize enclosing cherries early to maximize bonus potential
+  - Test partial enclosures before committing your full wall budget
+  - If stuck, use SHIFT to reset and approach the puzzle from a new angle
+
+  ## Technical Implementation
+
+  - **Flood-fill algorithm**: breadth-first search determines enclosure status in real time
+  - **Selective rendering**: only modified tiles are redrawn each frame for performance
+  - **Pseudo-random detailing**: grass tiles use seeded variation for visual interest without overhead
+  - **Water tile optimization**: complex border rendering only occurs on initial load or level change
+  - **Save system**: simple key-value storage in horse.dat for persistent high scores
+
+  ## Save Data Management
+
+  High scores are stored in horse.dat using a semicolon-delimited format:
+
+  ```plain
+  LEVEL_ID:SCORE;LEVEL_ID:SCORE;...
+  ```
+
+  The file is automatically created on first save and updated when you confirm saving a new high score. Deleting horse.dat resets all progress.
+
+  ## Troubleshooting
+
+  If the game fails to launch, verify that PythonExtra is properly installed and that the Gint library is accessible. If touch input does not register wall placements, ensure you are tapping on grass tiles (not water, horse, or cherries). If scores do not save, confirm that the calculator has write access to the storage directory. For persistent issues, re-download the source file and ensure it was transferred completely to calculator storage.
+
+  ## Development Notes
+
+  Enclose the Horse was developed by Phoebe as part of the MiscPythonExtra collection to demonstrate puzzle game design, pathfinding algorithms, and optimized rendering techniques using Python on calculator hardware. The code serves as a reference for flood-fill logic, selective screen updates, and lightweight save systems in resource-constrained environments. Source code is available in the project repository for educational purposes and community contributions.
+
+  ## Community and Support
+
+  For bug reports, level design feedback, or discussion about Enclose the Horse and other Python-based ClassPad puzzles, visit the MiscPythonExtra repository on GitHub. Community contributions, optimal solution shares, and custom level ideas are welcome to help expand the puzzle experience and inspire other developers working on calculator-based strategy games.
+image: https://classpaddev.github.io/python/store/images/EncloseHorse/cover.png
+screenshots:
+  - /store/images/enclosehorse/horse1.png
+  - /store/images/enclosehorse/horse2.png
+  - /store/images/enclosehorse/horse3.png
+  - /store/images/enclosehorse/horse4.png
+  - /store/images/enclosehorse/horse5.png
+downloadUrl: https://github.com/TheRainbowPhoenix/enclose.horse/releases/download/1.0/mhorse.py
+detailsUrl: https://github.com/TheRainbowPhoenix/enclose.horse
+format: .py
+tags:
+  - Game
+  - Puzzle
+  - Strategy
+position: 0 12%
+website: ''
+contact: ''
+privacy: ''
+rating: 4.6
+ratingCount: ''
+downloads: 920+

@@ -1,0 +1,14 @@
+id: 21
+slug: pocketnn
+name: "PocketNN"
+author: "Phoebe"
+description: "A simple neural network that learns to solve the XOR problem visually. It uses a pre-calculated Float Lookup Table (LUT) for the Sigmoid function and unrolled loops for the forward/backward propagation to maximize speed on the SH4 CPU."
+image: "https://classpaddev.github.io/python/store/images/PocketNN/cover.png"
+downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/neuro.py"
+detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/neuro.py"
+format: ".py"
+tags:
+  - Math
+  - Demo
+  - AI
+  - Education

@@ -1,0 +1,51 @@
+id: 20
+slug: raytracer
+name: Raytracer
+author: Phoebe
+description: A simple raytracer implemented in Python, demonstrating 3D rendering capabilities.
+image: https://classpaddev.github.io/python/store/images/Raytracer/cover.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/render_raytracer.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/render_raytracer.py
+format: .py
+tags:
+  - Graphics
+  - Math
+  - Demo
+  - Education
+rating: 4.5
+ratingCount: 22
+downloads: 740+
+longDescription: |
+  > Requires PythonExtra runtime to execute.
+
+  Raytracer renders a simple 3D scene using sphere tracing and diffuse lighting. Watch as rays intersect spheres and a checkerboard floor, computing normals and shading.
+
+  ## Features
+
+  - **Perspective ray casting**: projects 3D scene to 2D screen
+  - **Sphere primitives**: three colored spheres with hit detection
+  - **Diffuse lighting**: two light sources with ambient + directional shading
+  - **Dual output**: low-res preview + upscaled main render
+  - **Progressive display**: screen updates during computation
+
+  ## Usage
+
+  1. Copy render_raytracer.py to your calculator
+  2. Launch via PythonExtra from Hollyhock launcher
+  3. Wait for render (~15-30 seconds)
+  4. Press EXE, DEL, or EXIT to exit
+
+  ## Technical Notes
+
+  - Internal resolution: 64×64, upscaled 4× for display
+  - Sphere intersection via quadratic formula
+  - Floor: infinite plane at y=-1 with checkerboard pattern
+  - Colors: RGB565-compatible 0-31 channel range
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+
+  A compact demonstration of 3D rendering fundamentals on calculator hardware.

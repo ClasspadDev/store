@@ -1,0 +1,17 @@
+id: 28
+slug: cdateinput
+name: CDateInput
+author: Phoebe
+description: Standalone library to add date and time picking. Needs CInput.
+longDescription: ''
+image: https://classpaddev.github.io/python/store/images/CDateInput/cover.png
+screenshots:
+  - /store/images/cdateinput/cdateinput.png
+  - /store/images/cdateinput/cdateinput2.png
+  - /store/images/cdateinput/cdateinput3.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cdateinput.py
+detailsUrl: https://classpaddev.github.io/wiki/python/reference/cinput/
+format: .py
+tags:
+  - Utility
+  - Development
