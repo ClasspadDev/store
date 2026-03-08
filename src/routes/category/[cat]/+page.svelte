@@ -66,7 +66,8 @@
 									class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-{app.slug}"
 									onclick={() =>
 										fetch(`https://stats.classpad.dev/download/${app.slug}`, {
-											method: 'POST'
+											method: 'POST',
+											mode: 'no-cors'
 										}).catch(() => {})}>Download</a
 								>
 								{#if app.slug}

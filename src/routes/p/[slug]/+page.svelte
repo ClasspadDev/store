@@ -15,7 +15,6 @@
 			if (w.AhrefsAnalytics?.sendEvent) {
 				w.AhrefsAnalytics.sendEvent('app_view', { app: app.slug });
 			}
-			fetch(`https://stats.classpad.dev/view/${app.slug}`, { method: 'POST' }).catch(() => {});
 		}
 	});
 
@@ -90,6 +89,14 @@
 	<meta name="description" content={app.description} />
 </svelte:head>
 <svelte:window onkeydown={onKeydown} />
+
+<img
+	src="https://stats.classpad.dev/pixel/view/{app.slug}"
+	width="1"
+	height="1"
+	style="display:none;"
+	alt=""
+/>
 
 <div class="app-detail-page">
 	<div class="container">
@@ -296,9 +303,10 @@
 							href={app.downloadUrl}
 							class="btn btn-primary sidebar-download-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-{app.slug}"
 							onclick={() =>
-								fetch(`https://stats.classpad.dev/download/${app.slug}`, { method: 'POST' }).catch(
-									() => {}
-								)}
+								fetch(`https://stats.classpad.dev/download/${app.slug}`, {
+									method: 'POST',
+									mode: 'no-cors'
+								}).catch(() => {})}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

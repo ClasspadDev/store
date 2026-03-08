@@ -3,9 +3,7 @@
 	import Header from '$lib/Header.svelte';
 	import AppCard from '$lib/AppCard.svelte';
 	let { data } = $props();
-	const title = $derived(
-		`${data.type ? data.type.toUpperCase() : ''} ${data.category ? (data.category === 'game' ? 'Games' : 'Utilities') : ''} | ClassPad.Dev Store`.trim()
-	);
+	const title = $derived(`${data.type ? data.type.toUpperCase() : ''} | ClassPad.Dev Store`.trim());
 </script>
 
 <svelte:head>
