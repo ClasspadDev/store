@@ -14,20 +14,23 @@
 	let slideIndex = $state(0);
 	/** @type {ReturnType<typeof setInterval> | null} */
 	let slideInterval = null;
+	let isHoveringSteps = $state(false);
 
 	function resetInterval() {
 		if (slideInterval) clearInterval(slideInterval);
-		slideInterval = setInterval(() => {
-			slideIndex = (slideIndex + 1) % steps.length;
-		}, 3000);
+		if (!isHoveringSteps) {
+			slideInterval = setInterval(() => {
+				slideIndex = (slideIndex + 1) % steps.length;
+			}, 3000);
+		}
 	}
 
 	/** @param {number} i */
 	function setSlide(i) {
 		if (slideIndex !== i) {
 			slideIndex = i;
-			resetInterval();
 		}
+		resetInterval();
 	}
 
 	$effect(() => {
@@ -175,13 +178,27 @@
 							</div>
 						{/if}
 
-						<ul class="steps-list">
+						<ul
+							class="steps-list"
+							class:is-hovering={isHoveringSteps}
+							onmouseleave={() => {
+								isHoveringSteps = false;
+								resetInterval();
+							}}
+						>
 							{#each steps as step, i}
 								<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+								<!-- svelte-ignore a11y_no_noninteractive_element_to_interactive_role -->
 								<li
 									class:active-step={i === slideIndex}
-									onmouseenter={() => setSlide(i)}
-									onclick={() => setSlide(i)}
+									onmouseenter={() => {
+										isHoveringSteps = true;
+										setSlide(i);
+									}}
+									onclick={() => {
+										isHoveringSteps = true;
+										setSlide(i);
+									}}
 									role="button"
 									tabindex="0"
 									onkeydown={(e) => {
@@ -411,6 +428,15 @@
 		font-size: 0.9rem;
 		color: #ffd166;
 	}
+	.python-banner a {
+		color: inherit;
+		font-weight: 700;
+		text-decoration: underline;
+		transition: color 0.2s;
+	}
+	.python-banner a:hover {
+		color: #fff;
+	}
 
 	.popup-instructions {
 		color: var(--cp-text);
@@ -455,6 +481,10 @@
 	.steps-list li.active-step::before {
 		background: var(--cp-accent);
 		animation: progress-slide 3s linear forwards;
+	}
+	.steps-list.is-hovering li.active-step::before {
+		animation: none;
+		transform: scaleY(1);
 	}
 	@keyframes progress-slide {
 		from {
