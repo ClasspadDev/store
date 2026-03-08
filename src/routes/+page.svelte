@@ -1,7 +1,6 @@
 <script>
 	import { base } from '$app/paths';
-	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import Header from '$lib/Header.svelte';
 	import AppCard from '$lib/AppCard.svelte';
 
@@ -25,32 +24,43 @@
 		{ label: 'Graphics', value: 'Graphics' }
 	];
 
-	// Reactively bind to URL using page store
-	const activeFilter = $derived($page.url.searchParams.get('tag') || 'all');
-	const activeType = $derived($page.url.searchParams.get('type') || 'all');
+	let activeFilter = $state('all');
+	let activeType = $state('all');
+
+	function syncState() {
+		const searchParams = new URLSearchParams(window.location.search);
+		activeFilter = searchParams.get('tag') || 'all';
+		activeType = searchParams.get('type') || 'all';
+	}
+
+	onMount(() => {
+		syncState();
+		window.addEventListener('hashchange', syncState);
+		return () => window.removeEventListener('hashchange', syncState);
+	});
+
+	function updateUrl() {
+		const url = new URL(window.location.href);
+		if (activeFilter === 'all') url.searchParams.delete('tag');
+		else url.searchParams.set('tag', activeFilter);
+
+		if (activeType === 'all') url.searchParams.delete('type');
+		else url.searchParams.set('type', activeType);
+
+		url.hash = 't=' + Date.now();
+		window.location.href = url.toString();
+	}
 
 	/** @param {string} value */
 	function setFilter(value) {
-		const url = new URL($page.url);
-		if (value === 'all') {
-			url.searchParams.delete('tag');
-		} else {
-			url.searchParams.set('tag', value);
-		}
-		url.hash = 't=' + Date.now();
-		goto(url, { keepFocus: true, noScroll: true });
+		activeFilter = value;
+		updateUrl();
 	}
 
 	/** @param {string} value */
 	function setType(value) {
-		const url = new URL($page.url);
-		if (activeType === value) {
-			url.searchParams.delete('type');
-		} else {
-			url.searchParams.set('type', value);
-		}
-		url.hash = 't=' + Date.now();
-		goto(url, { keepFocus: true, noScroll: true });
+		activeType = activeType === value ? 'all' : value;
+		updateUrl();
 	}
 
 	const baseFiltered = $derived(
