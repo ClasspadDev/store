@@ -2,18 +2,8 @@ id: 9
 slug: cp-flappy-bird
 name: CP Flappy Bird
 author: s3ansh33p
-description: The Flappy Bird game, to the classpad.
-image: https://raw.githubusercontent.com/TheRainbowPhoenix/CPFlappyBird/refs/heads/main/cover.png
-downloadUrl: https://github.com/TheRainbowPhoenix/CPFlappyBird/releases/download/1.0.0-v3/CPFlappyBird-Bundle.zip
-detailsUrl: https://github.com/TheRainbowPhoenix/CPFlappyBird
-format: .hh3
-tags:
-  - Game
-  - Arcade
-rating: 4.5
-ratingCount: 28
-downloads: 1.1k+
-longDescription: |
+description: The Flappy Bird game, to the classpad!
+longDescription: |-
   CP Flappy Bird is a faithful port of the iconic mobile game to the CASIO ClassPad II (fx-CP400). Navigate a bird through gaps between pipes using simple one-touch controls, testing your reflexes and timing. This implementation includes custom graphics and fonts optimized for the ClassPad display, delivering an authentic arcade experience on calculator hardware.
 
   ## Features
@@ -39,7 +29,7 @@ longDescription: |
   ## Controls
 
   | Key | Action |
-  |-----|--------|
+  | --- | --- |
   | Up Arrow | Flap (jump upward) |
   | EXE | Restart game after game over |
   | POWER or CLEAR | Exit game |
@@ -68,8 +58,10 @@ longDescription: |
   1. Set up the Hollyhock-3 SDK environment (Docker or devcontainer recommended)
   2. Install Python 3 and the Pillow library: pip install Pillow
   3. Generate graphics resources:
-     - python3 convert_textures.py
-     - python3 convert_fonts.py
+
+  - python3 convert_textures.py
+  - python3 convert_fonts.py
+
   4. Compile the project using make
 
   Source code and build scripts are available in the project repository for educational purposes and community contributions.
@@ -92,3 +84,17 @@ longDescription: |
   ## Community and Support
 
   For bug reports, feature requests, or discussion about CP Flappy Bird and other ClassPad homebrew projects, visit the project repository on GitHub. Community contributions and feedback are welcome to help improve the game and inspire future projects.
+image: https://raw.githubusercontent.com/TheRainbowPhoenix/CPFlappyBird/refs/heads/main/cover.png
+downloadUrl: https://github.com/TheRainbowPhoenix/CPFlappyBird/releases/download/1.0.0-v3/CPFlappyBird-Bundle.zip
+detailsUrl: https://github.com/TheRainbowPhoenix/CPFlappyBird
+format: .hh3
+tags:
+  - Game
+  - Arcade
+position: ''
+website: ''
+contact: ''
+privacy: ''
+rating: 4.5
+ratingCount: '12'
+downloads: 1.1k+
