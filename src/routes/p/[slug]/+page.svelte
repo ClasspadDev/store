@@ -8,6 +8,7 @@
 
 	import RelCard from '$lib/RelCard.svelte';
 	import { getImageUrl } from '$lib/utils.js';
+	import { downloadApp } from '$lib/downloadStore.js';
 
 	$effect(() => {
 		const w = /** @type {any} */ (window);
@@ -302,11 +303,7 @@
 						<a
 							href={app.downloadUrl}
 							class="btn btn-primary sidebar-download-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-{app.slug}"
-							onclick={() =>
-								fetch(`https://stats.classpad.dev/download/${app.slug}`, {
-									method: 'POST',
-									mode: 'no-cors'
-								}).catch(() => {})}
+							onclick={() => ($downloadApp = app)}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

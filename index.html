@@ -9,6 +9,37 @@
         href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./common.css" type="text/css" />
+    <script>
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('https://raw.githubusercontent.com/') && href.endsWith('.py')) {
+                e.preventDefault();
+                downloadFile(href);
+            }
+        });
+
+        async function downloadFile(url) {
+            try {
+                const response = await fetch(url);
+                const blob = await response.blob();
+                const downloadUrl = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = downloadUrl;
+                const filename = url.split('/').pop() || 'download.py';
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(downloadUrl);
+                a.remove();
+            } catch (error) {
+                console.error('Download failed:', error);
+                window.open(url, '_blank');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -72,7 +103,8 @@
                             <div class="app-actions">
                                 <a href="https://classpaddev.github.io/first-run/apps/snake.hh3"
                                     class="btn btn-primary app-btn"
-                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-snake" onclick="fetch('https://stats.classpad.dev/download/snake', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
+                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-snake"
+                                    onclick="fetch('https://stats.classpad.dev/download/snake', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
                                         width="18" fill="currentColor">
                                         <path
@@ -105,7 +137,8 @@
                             <div class="app-actions">
                                 <a href="https://classpaddev.github.io/python/PythonExtra.hh3"
                                     class="btn btn-primary app-btn"
-                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-PythonExtra" onclick="fetch('https://stats.classpad.dev/download/PythonExtra', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
+                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-PythonExtra"
+                                    onclick="fetch('https://stats.classpad.dev/download/PythonExtra', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
                                         width="18" fill="currentColor">
                                         <path
@@ -138,7 +171,8 @@
                             <div class="app-actions">
                                 <a href="https://github.com/PyCSharp/CPPong-For-HHK3/releases/latest/download/CPPong.hh3"
                                     class="btn btn-primary app-btn"
-                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPPong" onclick="fetch('https://stats.classpad.dev/download/CPPong', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
+                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPPong"
+                                    onclick="fetch('https://stats.classpad.dev/download/CPPong', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
                                         width="18" fill="currentColor">
                                         <path
@@ -172,7 +206,8 @@
                             <div class="app-actions">
                                 <a href="https://github.com/QBos07/CPDoom/releases/download/v1.1.0/CPDoom.hh3"
                                     class="btn btn-primary app-btn"
-                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPDoom" onclick="fetch('https://stats.classpad.dev/download/CPDoom', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
+                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPDoom"
+                                    onclick="fetch('https://stats.classpad.dev/download/CPDoom', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
                                         width="18" fill="currentColor">
                                         <path
@@ -206,7 +241,8 @@
                             <div class="app-actions">
                                 <a href="https://classpaddev.github.io/first-run/apps/CPBoy.hh3"
                                     class="btn btn-primary app-btn"
-                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPBoy" onclick="fetch('https://stats.classpad.dev/download/CPBoy', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
+                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPBoy"
+                                    onclick="fetch('https://stats.classpad.dev/download/CPBoy', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
                                         width="18" fill="currentColor">
                                         <path
@@ -240,7 +276,8 @@
                             <div class="app-actions">
                                 <a href="https://github.com/PyCSharp/CPHexEditor-For-HHK3/releases/latest/download/CPHexEditor.hh3"
                                     class="btn btn-primary app-btn"
-                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPHexEditor" onclick="fetch('https://stats.classpad.dev/download/CPHexEditor', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
+                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPHexEditor"
+                                    onclick="fetch('https://stats.classpad.dev/download/CPHexEditor', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
                                         width="18" fill="currentColor">
                                         <path
@@ -271,7 +308,8 @@
                             <div class="app-actions">
                                 <a href="https://git.planet-casio.com/CalcLoverHK/Xtune/releases/download/latest/CPtune4.hh3"
                                     class="btn btn-primary app-btn"
-                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPtune4" onclick="fetch('https://stats.classpad.dev/download/CPtune4', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
+                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-CPtune4"
+                                    onclick="fetch('https://stats.classpad.dev/download/CPtune4', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
                                         width="18" fill="currentColor">
                                         <path
@@ -302,7 +340,8 @@
                             <div class="app-actions">
                                 <a href="https://classpaddev.github.io/first-run/apps/tetris.hh3"
                                     class="btn btn-primary app-btn"
-                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-tetris" onclick="fetch('https://stats.classpad.dev/download/tetris', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
+                                    class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-tetris"
+                                    onclick="fetch('https://stats.classpad.dev/download/tetris', {method: 'POST', mode: 'no-cors'}).catch(()=>{})">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960"
                                         width="18" fill="currentColor">
                                         <path

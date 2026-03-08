@@ -12,6 +12,40 @@
 
 	<script src="https://analytics.ahrefs.com/analytics.js" data-key="Kb2nywKkyR+dD+Av2GmerQ" async></script>
 
+	<script>
+		document.addEventListener('click', function (e) {
+			const link = e.target.closest('a');
+			if (!link) return;
+
+			const href = link.getAttribute('href');
+			if (href && href.startsWith('https://raw.githubusercontent.com/') && href.endsWith('.py')) {
+				e.preventDefault();
+				downloadFile(href);
+			}
+		});
+
+		async function downloadFile(url) {
+			try {
+				const response = await fetch(url);
+				const blob = await response.blob();
+				const downloadUrl = window.URL.createObjectURL(blob);
+				const a = document.createElement('a');
+				a.href = downloadUrl;
+				// Extract filename from URL
+				const filename = url.split('/').pop() || 'download.py';
+				a.download = filename;
+				document.body.appendChild(a);
+				a.click();
+				window.URL.revokeObjectURL(downloadUrl);
+				a.remove();
+			} catch (error) {
+				console.error('Download failed:', error);
+				// Fallback to default behavior if fetch fails
+				window.open(url, '_blank');
+			}
+		} 
+	</script>
+
 	%sveltekit.head%
 </head>
 

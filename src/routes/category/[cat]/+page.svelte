@@ -1,6 +1,7 @@
 <script>
 	import { base } from '$app/paths';
 	import Header from '$lib/Header.svelte';
+	import { downloadApp } from '$lib/downloadStore.js';
 	let { data } = $props();
 	const title = $derived(
 		`${data.category === 'game' ? 'Games' : 'Utilities'} | ClassPad.Dev Store`
@@ -64,11 +65,7 @@
 								<a
 									href={app.downloadUrl}
 									class="btn btn-primary app-btn AhrefsAnalytics-event-download AhrefsAnalytics-prop-app-{app.slug}"
-									onclick={() =>
-										fetch(`https://stats.classpad.dev/download/${app.slug}`, {
-											method: 'POST',
-											mode: 'no-cors'
-										}).catch(() => {})}>Download</a
+									onclick={() => ($downloadApp = app)}>Download</a
 								>
 								{#if app.slug}
 									<a href="{base}/p/{app.slug}" class="btn btn-secondary app-btn">Details</a>
