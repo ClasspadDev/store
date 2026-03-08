@@ -12,17 +12,17 @@ longDescription: |-
 
   - **Multiple particle types**: Sand, Water, Stone, Wall, Lava, Fire, Plant, Ice, Steam, Acid, and Air (eraser)
   - **Realistic physics**: Particles fall under gravity with different behaviors
-    - Sand: Falls and settles in piles; displaces water; sustained heat converts it to stone
-    - Water: Falls and flows sideways in a randomized direction; freezes to ice when cold; evaporates to steam when hot
-    - Stone: Falls straight down, no sideways movement; melts back to lava at extreme heat
-    - Wall: Static, used to build structures; cannot be displaced or overwritten
-    - Lava: Flows like water but slower; converts adjacent sand→stone, evaporates adjacent water→steam, melts adjacent ice to water, and burns adjacent plants→steam; occasionally emits fire sparks directly above; isolated lava slowly solidifies into stone; continuous heat source
-    - Fire: Rises upward and drifts sideways; ignites adjacent plant cells (1-in-8 chance per update); water quenches fire — both cells become steam; burns out probabilistically into steam or air (1-in-16 chance per update); created by lava emitting sparks
-    - Plant: Static; grows into adjacent empty cells when touching water (1-in-8 chance per frame); burns to air when adjacent to lava, fire, or under sustained heat
-    - Ice: Falls like sand and can displace water; pins surrounding temperature to near-freezing, converting nearby water to ice; melts to water when warm
-    - Steam: Rises upward and drifts sideways; condenses back to water when its coarse tile cools below a threshold; created by lava contacting water or by water evaporation
-    - Acid: Flows like water; dissolves Sand, Stone, and Plant (→ air) and Ice (→ water) on contact with a 1-in-4 chance per neighbour per tick; finite — also consumed by reactions with a 1-in-4 chance
-    - Air: Eraser — removes particles from the grid
+      - Sand: Falls and settles in piles; displaces water; sustained heat converts it to stone
+      - Water: Falls and flows sideways in a randomized direction; freezes to ice when cold; evaporates to steam when hot
+      - Stone: Falls straight down, no sideways movement; melts back to lava at extreme heat
+      - Wall: Static, used to build structures; cannot be displaced or overwritten
+      - Lava: Flows like water but slower; converts adjacent sand→stone, evaporates adjacent water→steam, melts adjacent ice to water, and burns adjacent plants→steam; occasionally emits fire sparks directly above; isolated lava slowly solidifies into stone; continuous heat source
+      - Fire: Rises upward and drifts sideways; ignites adjacent plant cells (1-in-8 chance per update); water quenches fire — both cells become steam; burns out probabilistically into steam or air (1-in-16 chance per update); created by lava emitting sparks
+      - Plant: Static; grows into adjacent empty cells when touching water (1-in-8 chance per frame); burns to air when adjacent to lava, fire, or under sustained heat
+      - Ice: Falls like sand and can displace water; pins surrounding temperature to near-freezing, converting nearby water to ice; melts to water when warm
+      - Steam: Rises upward and drifts sideways; condenses back to water when its coarse tile cools below a threshold; created by lava contacting water or by water evaporation
+      - Acid: Flows like water; dissolves Sand, Stone, and Plant (→ air) and Ice (→ water) on contact with a 1-in-4 chance per neighbour per tick; finite — also consumed by reactions with a 1-in-4 chance
+      - Air: Eraser — removes particles from the grid
   - **Temperature system**: Coarse 48×24 heat grid propagated every physics tick; drives particle phase changes (freezing, evaporation, melting, scorching) and provides a toggle-able heat-map overlay
   - **Adjustable brush size**: Sizes 1–9, default 3; controlled via a UI slider or the **+**/**−** keys (with key-hold repeat); persisted across sessions via MCS
   - **On-screen FPS counter**: 5×7 pixel font, up to 5 digits with leading-zero suppression, averaged over the last 30 physics frames
@@ -30,9 +30,9 @@ longDescription: |-
   - **Start menu**: Title screen with PLAY, SETTINGS, CONTROLS, and EXIT buttons; navigable by touch or keyboard
   - **Controls screen**: In-app reference screen listing all in-game and menu controls, accessible from the start menu
   - **Settings menu**: In-app settings screen with two sub-menus:
-    - **CPU Speed**: Overclock the SH7305 CPU through 6 levels (DEFAULT → LIGHT → MEDIUM → FAST → TURBO → TURBO+); live preview as you navigate; estimated speed percentage shown per level
-    - **Sim Speed**: Choose one of 5 simulation speed modes (NORMAL, X2, X3, X5, X9) controlling how many physics ticks run per rendered frame
-  - **Overclock support**: FLL-based CPU frequency scaling from ~118 MHz (default) up to ~236 MHz (+100%) via SELXM doubling (TURBO+); levels 1–4 require no BSC changes; level 5 updates CS3WCR SDRAM timing to the Ptune4 alpha-F5 preset and fully restores it on exit
+      - **CPU Speed**: Overclock the SH7305 CPU through 6 levels (DEFAULT → LIGHT → MEDIUM → FAST → TURBO → TURBO+); live preview as you navigate; estimated speed percentage shown per level
+      - **Sim Speed**: Choose one of 5 simulation speed modes (NORMAL, X2, X3, X5, X9) controlling how many physics ticks run per rendered frame
+  - **Overclock support**: FLL-based CPU frequency scaling from \~118 MHz (default) up to \~236 MHz (+100%) via SELXM doubling (TURBO+); levels 1–4 require no BSC changes; level 5 updates CS3WCR SDRAM timing to the Ptune4 alpha-F5 preset and fully restores it on exit
   - **Frame skipping**: Physics always runs at full speed; rendering is throttled according to the selected sim speed mode for a higher physics tick rate
   - **MCS persistence**: Brush size, CPU speed level, and sim speed mode are automatically saved to and restored from calculator memory (MCS folder `FSandSim`)
   - **Performance optimized**: 160×128 simulation grid with direct VRAM writes at 2×2 px per cell; hot functions placed in ILRAM; grid split across on-chip X/Y RAM
@@ -40,24 +40,29 @@ longDescription: |-
   ## Controls
 
   ### Start Menu
+
   - **Touch**: Tap PLAY, SETTINGS, CONTROLS, or EXIT buttons
   - **EXE**: Start the simulation (same as PLAY)
   - **CLEAR / Action bar ESC**: Exit the application
 
   ### Settings Menu
+
   - **Up / Down**: Navigate between CPU SPEED and SIM SPEED rows
   - **EXE**: Enter the highlighted sub-menu
   - **CLEAR / Action bar ESC**: Return to the start menu
 
   ### Controls Screen
+
   - **EXE / CLEAR / Action bar ESC**: Return to the start menu
 
   ### CPU Speed / Sim Speed Sub-Menus
+
   - **Up / Down**: Navigate levels (CPU Speed sub-menu applies the level immediately as a live preview)
   - **EXE**: Confirm and save the selection
   - **CLEAR / Action bar ESC**: Cancel and return to the settings menu
 
   ### In-Game
+
   - **Touch screen**: Draw particles on the grid
   - **Bottom UI bar**: Tap a particle swatch to select that particle type
   - **Brush size slider**: Drag (or tap) the slider track in the UI bar to set brush size
@@ -66,24 +71,9 @@ longDescription: |-
   - **CLEAR (AC) key**: Clear the entire grid and reset to walls only
   - **EXE key / Action bar ESC**: Return to the start menu
 
-  ## How to Setup
-
-  1. Clone the project
-  2. Enter the devcontainer
-  3. `make compile_commands.json` or use the vscode task
-  4. Restart clangd (e.g. via CTRL+SHIFT+P in vscode)
-
-  ## How to Build
-
-  ```sh
-  make -j
-  ```
-
-  Or execute the default vscode build task with CTRL+SHIFT+B
-
   ## How to Run
 
-  Copy `dist/FallingSandSim.hh3` to the root of the calculator when connected in USB storage mode, then select and run from the launcher.
+  Copy `FallingSandSim.hh3` to the root of the calculator when connected in USB storage mode, then select and run from the launcher.
 
   ## Technical Details
 
@@ -99,21 +89,21 @@ longDescription: |-
   ### Temperature System
 
   The temperature system uses a coarse 48×24 grid (each coarse cell covers a 4×4 block of fine cells), requiring only 1,152 bytes instead of 18 KB for a full-resolution grid. The system runs every physics tick.
+    **Each tick:**
 
-  **Each tick:**
   1. **Diffusion** — 4 passes of weighted 4-neighbour blending (`self×4 + neighbours×1, >>3`), spreading heat up to 4 coarse cells per tick
   2. **Source injection** — coarse tiles are pinned or nudged based on their contents:
-     - Lava tile → pinned to 255 (max heat)
-     - All-wall tile → pinned to 50 (ambient, thermal insulator)
-     - Ice tile → pinned to 5 (near-freezing cold source)
-     - Water present → aggressively cooled toward 20 (cold) at 3 units/tick
-     - Air exposed → slow drift toward ambient (1 unit/tick)
-     - Buried (solid, no air) → very slow drift (1-in-16 chance per tick)
 
-  **Phase-change thresholds (0–255 scale):**
+      - Lava tile → pinned to 255 (max heat)
+      - All-wall tile → pinned to 50 (ambient, thermal insulator)
+      - Ice tile → pinned to 5 (near-freezing cold source)
+      - Water present → aggressively cooled toward 20 (cold) at 3 units/tick
+      - Air exposed → slow drift toward ambient (1 unit/tick)
+      - Buried (solid, no air) → very slow drift (1-in-16 chance per tick)
+    **Phase-change thresholds (0–255 scale):**
 
   | Threshold | Value | Effect |
-  |-----------|-------|--------|
+  | --- | --- | --- |
   | `TEMP_ICE_SURFACE` | 5 | Temperature ice pins its coarse tile to |
   | `TEMP_FREEZE_WATER` | 12 | Water converts to ice at or below this |
   | `TEMP_COLD` | 20 | Cold baseline (water resting temperature) |
@@ -124,8 +114,7 @@ longDescription: |-
   | `TEMP_LAVA` | 255 | Lava source temperature |
 
   The UI-zone coarse rows are always pinned to ambient so heat cannot bleed behind the particle selector bar.
-
-  **Heat-map overlay**: Press **0** to toggle a false-colour view where every cell is coloured by its coarse-tile temperature instead of its particle type (WALL cells show ambient; all others show the heat map).
+    **Heat-map overlay**: Press **0** to toggle a false-colour view where every cell is coloured by its coarse-tile temperature instead of its particle type (WALL cells show ambient; all others show the heat map).
 
   ### CPU Overclock
 
@@ -133,16 +122,16 @@ longDescription: |-
 
   The OS-default register values are snapshotted at startup (`oclock_init()`). Level 0 never writes to the hardware. On exit the hardware is left at the last applied level (restoring to default would require writing the register again, which is unnecessary given the OS resets clocks on app exit).
 
-  | Level | Name    | FLF delta | Est. CPU speed        |
-  |-------|---------|-----------|-----------------------|
-  | 0     | DEFAULT | +0        | ~118 MHz              |
-  | 1     | LIGHT   | +50       | ~124 MHz (+6%)        |
-  | 2     | MEDIUM  | +150      | ~135 MHz (+17%)       |
-  | 3     | FAST    | +235      | ~149 MHz (+26%)       |
-  | 4     | TURBO   | +345      | ~163 MHz (+38%)       |
-  | 5     | TURBO+  | SELXM=1   | ~236 MHz (+100%)      |
+  | Level | Name | FLF delta | Est. CPU speed |
+  | --- | --- | --- | --- |
+  | 0 | DEFAULT | +0 | \~118 MHz |
+  | 1 | LIGHT | +50 | \~124 MHz (+6%) |
+  | 2 | MEDIUM | +150 | \~135 MHz (+17%) |
+  | 3 | FAST | +235 | \~149 MHz (+26%) |
+  | 4 | TURBO | +345 | \~163 MHz (+38%) |
+  | 5 | TURBO+ | SELXM=1 | \~236 MHz (+100%) |
 
-  After each `FLLFRQ` write a busy-wait is performed to allow the FLL to relock; the iteration count is scaled proportionally to the new effective FLL so the wait remains adequate regardless of overclock level. The SH7305 datasheet specifies a maximum lock time of 16,384 FLL cycles (~2.5 ms at minimum FLL output).
+  After each `FLLFRQ` write a busy-wait is performed to allow the FLL to relock; the iteration count is scaled proportionally to the new effective FLL so the wait remains adequate regardless of overclock level. The SH7305 datasheet specifies a maximum lock time of 16,384 FLL cycles (\~2.5 ms at minimum FLL output).
 
   Level 5 (TURBO+) works differently: instead of incrementing FLF it sets `SELXM=1`, switching the FLL reference from XTAL/2 to XTAL, which doubles every downstream clock at the same FLF value. Before the frequency jump, `CS3WCR` is updated to the Ptune4 alpha-F5 SDRAM timing preset (`TRP=2, TRCD=2, A3CL=CL2, TRWL=2, TRC=2`) and an MRS command is issued to re-latch CAS latency in the SDRAM chip. On any transition back to a lower level, `CS3WCR` is fully restored to the OS default and MRS is re-issued.
 
@@ -150,13 +139,13 @@ longDescription: |-
 
   The sim speed setting controls how many physics ticks execute between rendered frames. Physics input handling runs every tick regardless; only the VRAM write and `LCD_Refresh()` call are skipped.
 
-  | Mode   | Skip amount | Physics ticks per frame |
-  |--------|-------------|------------------------|
-  | NORMAL | 0           | 1                       |
-  | X2     | 1           | 2                       |
-  | X3     | 2           | 3                       |
-  | X5     | 4           | 5                       |
-  | X9     | 8           | 9                       |
+  | Mode | Skip amount | Physics ticks per frame |
+  | --- | --- | --- |
+  | NORMAL | 0 | 1 |
+  | X2 | 1 | 2 |
+  | X3 | 2 | 3 |
+  | X5 | 4 | 5 |
+  | X9 | 8 | 9 |
 
   The setting is persisted via MCS (`SimSpd` variable in folder `FSandSim`).
 
@@ -165,32 +154,42 @@ longDescription: |-
   Fall speeds are configured in `src/config.h` and control how often each particle updates per physics tick. Values must be powers of 2 so the modulo check compiles to a cheap bitwise AND on the SH4 (which has no hardware divide instruction).
 
   | Particle | `FALL_SPEED` | Update frequency |
-  |----------|-------------|-----------------|
-  | Stone    | 1           | Every frame (fastest fall) |
-  | Water    | 1           | Every frame (fast flow) |
-  | Acid     | 1           | Every frame (fast flow, like water) |
-  | Sand     | 2           | ~50% of frames |
-  | Lava     | 2           | ~50% of frames (slower than water) |
-  | Ice      | 2           | ~50% of frames (falls like sand) |
-  | Steam    | 2           | ~50% of frames (rises rather than falls) |
-  | Fire     | 2           | ~50% of frames (rises rather than falls) |
+  | --- | --- | --- |
+  | Stone | 1 | Every frame (fastest fall) |
+  | Water | 1 | Every frame (fast flow) |
+  | Acid | 1 | Every frame (fast flow, like water) |
+  | Sand | 2 | \~50% of frames |
+  | Lava | 2 | \~50% of frames (slower than water) |
+  | Ice | 2 | \~50% of frames (falls like sand) |
+  | Steam | 2 | \~50% of frames (rises rather than falls) |
+  | Fire | 2 | \~50% of frames (rises rather than falls) |
 
   ## Future Enhancements
-  
+
   - More particle types (oil, smoke, etc.)
   - Save/load simulation states
   - Color aging / weathering for particles
-image: ''
+image: /store/images/cover/FallingSand.png
+screenshots:
+  - /store/images/falling-sand-sim/fallingsand_screenshot_1.png
+  - /store/images/falling-sand-sim/fallingsand_screenshot_2.png
+  - /store/images/falling-sand-sim/fallingsand_screenshot_3.png
+  - /store/images/falling-sand-sim/fallingsand_screenshot_4.png
+  - /store/images/falling-sand-sim/fallingsand_screenshot_5.png
+  - /store/images/falling-sand-sim/fallingsand_screenshot_6.png
+  - /store/images/falling-sand-sim/fallingsand_screenshot_7.png
+  - /store/images/falling-sand-sim/fallingsand_screenshot_8.png
+  - /store/images/falling-sand-sim/fallingsand_screenshot_9.png
 downloadUrl: https://github.com/SPLATPLAYS/Falling-Sand-Sim/releases/latest/download/FallingSandSim.hh3
 detailsUrl: https://github.com/SPLATPLAYS/Falling-Sand-Sim
 format: .hh3
 tags:
   - Game
   - Simulation
-position: ''
+position: 0 15%
 website: ''
 contact: ''
 privacy: ''
-rating: 5.0
+rating: 5
 ratingCount: '1'
 downloads: 100+

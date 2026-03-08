@@ -23,14 +23,14 @@ longDescription: |
   ## Features
 
   - **Real-time frequency monitoring** — view CPU, PLL, SFO, BFC, and PFC frequencies live
-  - **FLL multiplier tuning** — overclock up to ×1023 (use with caution!)
+  - **FLL multiplier tuning** — overclock up to ×2047 (and full-range for both SELXM 1 and 1/2) (use with caution!)
   - **Memory tester** — verify RAM and ROM integrity with RAM Only, ROM & RAM, or skip
   - **Dhrystone benchmark** — measure raw CPU performance in iterations per second
   - **FPS counter** — see your display refresh rate in real time
 
   ## Usage
 
-  Launch from the Hollyhock app menu. Use arrow keys to navigate and adjust frequency multipliers. Press **[SHIFT][7]** to capture current values, **[SHIFT][4]** for help.
+  Launch from the Hollyhock app menu. Use arrow keys to navigate and adjust frequency multipliers. Press **[7]** to capture current values, **[8]** for help.
 
   > ⚠ Overclocking beyond stable limits may cause the calculator to freeze. A battery pull safely resets it.
 
