@@ -4,6 +4,7 @@ backend:
   name: github
   repo: ClasspadDev/store
   branch: main
+  base_url: https://cms.classpad.dev
 
 media_folder: /static/images
 public_folder: /store/images
