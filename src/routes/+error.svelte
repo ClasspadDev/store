@@ -240,7 +240,7 @@
 	<title>{status} | ClassPad.Dev Store</title>
 </svelte:head>
 
-<Header variant="back" backLabel="Back to All" backHref="{base}/" />
+<Header variant="back" backLabel="Back to Apps" backHref="{base}/" />
 
 <div class="error-page container">
 	<div class="error-split">

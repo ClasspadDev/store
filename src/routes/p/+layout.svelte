@@ -11,5 +11,5 @@
 	<link rel="icon" href="https://classpaddev.github.io/favicon.ico" />
 </svelte:head>
 
-<Header variant="back" backLabel="Back to All" backHref="{base}/" />
+<Header variant="back" backLabel="Back to Apps" backHref="{base}/" />
 {@render children()}

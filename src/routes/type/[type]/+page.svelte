@@ -12,7 +12,7 @@
 	<title>{title}</title>
 </svelte:head>
 
-<Header variant="back" backLabel="Back to All" backHref="{base}/" />
+<Header variant="back" backLabel="Back to Apps" backHref="{base}/" />
 
 <div class="container section">
 	<nav class="filter-breadcrumb">

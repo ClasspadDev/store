@@ -1,0 +1,94 @@
+id: 9
+slug: cp-flappy-bird
+name: CP Flappy Bird
+author: s3ansh33p
+description: The Flappy Bird game, to the classpad.
+image: https://raw.githubusercontent.com/TheRainbowPhoenix/CPFlappyBird/refs/heads/main/cover.png
+downloadUrl: https://github.com/TheRainbowPhoenix/CPFlappyBird/releases/download/1.0.0-v3/CPFlappyBird-Bundle.zip
+detailsUrl: https://github.com/TheRainbowPhoenix/CPFlappyBird
+format: .hh3
+tags:
+  - Game
+  - Arcade
+rating: 4.5
+ratingCount: 28
+downloads: 1.1k+
+longDescription: |
+  CP Flappy Bird is a faithful port of the iconic mobile game to the CASIO ClassPad II (fx-CP400). Navigate a bird through gaps between pipes using simple one-touch controls, testing your reflexes and timing. This implementation includes custom graphics and fonts optimized for the ClassPad display, delivering an authentic arcade experience on calculator hardware.
+
+  ## Features
+
+  - **Classic Flappy Bird gameplay**: tap to flap, avoid pipes, survive as long as possible
+  - **Custom graphics engine**: optimized sprite rendering with pre-converted textures for fast display
+  - **Scalable difficulty**: pipe gaps and speed calibrated for challenging but fair gameplay
+  - **Score tracking**: real-time score display with session best tracking
+  - **Responsive controls**: immediate input response for precise navigation
+  - **Efficient resource usage**: pre-rendered assets minimize runtime processing overhead
+
+  ## Installation
+
+  1. Download the CPFlappyBird-Bundle.zip file from the official repository
+  2. Extract the archive to access its contents
+  3. Copy the CPFlappyBird.hh3 file to your calculator storage via USB mass storage mode
+  4. Copy the usr folder to the root of your calculator storage, merging with any existing usr folder
+     This step installs required fonts and textures for proper rendering
+  5. Launch CPFlappyBird.hh3 from the Hollyhock-3 application menu
+
+  Note: The usr folder is required for the game to function correctly. Do not skip this step.
+
+  ## Controls
+
+  | Key | Action |
+  |-----|--------|
+  | Up Arrow | Flap (jump upward) |
+  | EXE | Restart game after game over |
+  | POWER or CLEAR | Exit game |
+
+  Gameplay is designed around single-button input. Tap the Up arrow to make the bird flap and gain altitude. Release to fall. Time your flaps to navigate through pipe gaps without collision.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400 or compatible model)
+  - Hollyhock-3 custom firmware
+  - Approximately 1.5 MB free storage space for game files and assets
+  - USB cable for file transfer to calculator
+
+  ## Technical Implementation
+
+  - Graphics assets are pre-converted using Python and Pillow for optimal runtime performance
+  - Custom font rendering system for crisp text display on calculator screen
+  - Collision detection uses bounding box checks between bird and pipe sprites
+  - Game loop runs at target frame rate with delta-time calculations for consistent physics
+  - Texture and font conversion scripts are included in source repository for modification
+
+  ## Building from Source
+
+  Developers who wish to modify or rebuild the game can do so with the following steps:
+
+  1. Set up the Hollyhock-3 SDK environment (Docker or devcontainer recommended)
+  2. Install Python 3 and the Pillow library: pip install Pillow
+  3. Generate graphics resources:
+     - python3 convert_textures.py
+     - python3 convert_fonts.py
+  4. Compile the project using make
+
+  Source code and build scripts are available in the project repository for educational purposes and community contributions.
+
+  ## Gameplay Tips
+
+  - Tap rhythmically rather than holding the button for controlled ascent
+  - Aim for the center of pipe gaps to maximize margin for error
+  - Anticipate the bird momentum: it continues falling briefly after release
+  - Practice consistent timing to develop muscle memory for flap intervals
+
+  ## Troubleshooting
+
+  If the game displays missing graphics or fails to launch, verify that the usr folder was copied to the calculator root directory and contains the font and texture files. If controls feel unresponsive, ensure no background applications are interfering with input handling. For persistent issues, re-download the bundle and repeat the installation steps, confirming that all files are transferred completely.
+
+  ## Credits
+
+  CP Flappy Bird was developed by TheRainbowPhoenix for the ClassPad II community. The game uses custom assets and a purpose-built rendering engine optimized for calculator hardware. Build tools leverage the Pillow library for image processing during the resource conversion phase.
+
+  ## Community and Support
+
+  For bug reports, feature requests, or discussion about CP Flappy Bird and other ClassPad homebrew projects, visit the project repository on GitHub. Community contributions and feedback are welcome to help improve the game and inspire future projects.

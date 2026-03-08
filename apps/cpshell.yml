@@ -1,0 +1,38 @@
+id: 10
+slug: cpshell
+name: CPShell
+author: s3ansh33p
+description: A busybox-style shell interpreter for the ClassPad fx-CP400.
+image: https://raw.githubusercontent.com/TheRainbowPhoenix/CPShell/refs/heads/master/cover.png
+downloadUrl: https://github.com/TheRainbowPhoenix/CPShell/releases/download/0.1.0-v3/CPShell.zip
+detailsUrl: https://github.com/TheRainbowPhoenix/CPShell
+format: .hhk
+tags:
+  - Utility
+  - System
+  - Shell
+rating: 4.7
+ratingCount: 22
+downloads: 850+
+longDescription: |
+  CPShell is a busybox-style command-line interpreter for the CASIO ClassPad II (fx-CP400), providing Unix-like shell functionality on calculator hardware. Execute commands, manage files, run scripts, and interact with the calculator system through a familiar terminal interface. Built for developers and power users who need direct system access.
+
+  ## Features
+
+  - **Command-line interface**: full-featured shell with command history and tab completion
+  - **File system navigation**: cd, ls, pwd, mkdir, rm, and other standard Unix commands
+  - **Script execution**: run shell scripts with support for variables, loops, and conditionals
+  - **Pipe and redirection**: chain commands together and redirect input/output
+  - **Custom font rendering**: optimized 5x6 and 7x8 pixel fonts for clear text display
+  - **Texture support**: integrated graphics rendering through Interchan's texture engine
+  - **Organized file structure**: clean directory hierarchy with support for three-level folder depth
+
+  ## Installation
+
+  1. Download the CPShell.zip file from the official repository
+  2. Extract the archive to access its contents
+  3. Copy fonts from the `./res/CPShell/fnt` directory to `/usr/fonts/` on your calculator
+     Note: If 5x6 and 7x8 font files already exist, you may skip this step
+  4. Copy the CPShell.hh3 file to the root on your calculator
+  5. Launch CPShell from the Hollyhock launcher
+

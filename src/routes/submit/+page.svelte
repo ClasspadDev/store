@@ -11,7 +11,7 @@
 	/>
 </svelte:head>
 
-<Header variant="back" backLabel="Back to All" backHref="{base}/" />
+<Header variant="back" backLabel="Back to Apps" backHref="{base}/" />
 
 <div class="container submit-page">
 	<div class="submit-hero">
