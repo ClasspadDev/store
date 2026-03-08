@@ -1,14 +1,61 @@
 id: 21
 slug: pocketnn
-name: "PocketNN"
-author: "Phoebe"
-description: "A simple neural network that learns to solve the XOR problem visually. It uses a pre-calculated Float Lookup Table (LUT) for the Sigmoid function and unrolled loops for the forward/backward propagation to maximize speed on the SH4 CPU."
-image: "https://classpaddev.github.io/python/store/images/PocketNN/cover.png"
-downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/neuro.py"
-detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/neuro.py"
-format: ".py"
+name: PocketNN
+author: Phoebe
+description: A simple neural network that learns to solve the XOR problem visually. It uses a pre-calculated Float Lookup Table (LUT) for the Sigmoid function and unrolled loops for the forward/backward propagation to maximize speed on the SH4 CPU.
+image: https://classpaddev.github.io/python/store/images/PocketNN/cover.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/neuro.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/neuro.py
+format: .py
 tags:
   - Math
   - Demo
   - AI
   - Education
+rating: 4.3
+ratingCount: 19
+downloads: 650+
+longDescription: |
+  > Requires PythonExtra runtime to execute.
+
+  PocketNN is a minimal 2-layer neural network that learns the XOR problem, visualized as a real-time decision boundary heatmap. Built for educational demonstration on calculator hardware.
+
+  ## Features
+
+  - **Visual training**: color-coded heatmap shows network predictions across input space
+  - **Float LUT sigmoid**: precomputed lookup table avoids expensive math at runtime
+  - **Unrolled backprop**: manual loop expansion for SH4 CPU efficiency
+  - **CSV model I/O**: save/load weights via pocket_nn.csv for Spreadsheet app editing
+  - **Interactive controls**: adjust seed, pause/resume, persist models
+
+  ## Controls
+
+  | Key | Action |
+  |-----|--------|
+  | 5 | Play/Pause training |
+  | = | Set random seed |
+  | 7 | Save model to CSV |
+  | 9 | Load model from CSV |
+  | DEL / EXIT | Quit |
+
+  ## Usage
+
+  1. Copy neuro.py to your calculator
+  2. Launch via PythonExtra from Hollyhock launcher
+  3. Press 5 to start training; watch the heatmap converge
+  4. Use = to reseed, 7/9 to save/load weights
+
+  ## Technical Notes
+
+  - Architecture: 2 inputs → 4 hidden neurons → 1 output (sigmoid)
+  - Sigmoid LUT: 50-step resolution over [-8, 8] range
+  - Training: stochastic SGD with batch size 50 epochs/frame
+  - Visualization: 300×300 pixel grid, 20px blocks, RGB encoding
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+
+  A compact demonstration of neural network fundamentals, optimized for embedded constraints.

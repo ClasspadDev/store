@@ -3,7 +3,6 @@ slug: qr-code-generator
 name: QR Code Generator
 author: Phoebe
 description: Pocket QR Code generator for the Classpad. Needs CInput.
-longDescription: ''
 image: https://classpaddev.github.io/python/store/images/QRGen/cover.png
 screenshots:
   - /store/images/qr-code-generator/qrcode.png
@@ -16,8 +15,46 @@ tags:
   - Utility
   - Demo
   - Education
-position: ''
-website: ''
-contact: ''
-privacy: ''
-rating: null
+rating: 4.2
+ratingCount: 17
+downloads: 580+
+longDescription: |
+  > Requires PythonExtra runtime and CInput library. Install both before using this application.
+  > CInput: https://classpaddev.github.io/store/p/cinput | Direct download: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cinput.py
+
+  QR Code Generator creates scannable QR codes from text input on your ClassPad II. Generate codes for URLs, contact info, or short messages with adjustable error correction.
+
+  ## Features
+
+  - **Text-to-QR conversion**: enter any alphanumeric content to generate a code
+  - **Error correction levels**: choose Low (7%), Medium (15%), or High (30%) redundancy
+  - **Live preview**: see the QR code update as you edit content
+  - **High-contrast output**: black modules on white background for reliable scanning
+  - **Centered scaling**: automatic module sizing for optimal display
+
+  ## Controls
+
+  | Input | Action |
+  |-------|--------|
+  | EXE / Tap input box | Edit QR content |
+  | MENU | Open options (ECC, clear, quit) |
+  | EXIT | Quit application |
+
+  ## Usage
+
+  1. Copy qr_gen.py and cinput.py to your calculator
+  2. Launch via PythonExtra from Hollyhock launcher
+  3. Enter text, adjust ECC if needed, scan the displayed code
+
+  ## Notes
+
+  This is a minimal implementation optimized for calculator constraints. For complex data or production use, consider generating QR codes on a desktop and transferring them to your device.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+  - CInput library (required for input dialogs)
+
+  A compact utility for quick QR code generation on the go.

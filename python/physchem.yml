@@ -1,12 +1,73 @@
 id: 31
 slug: physchem
-name: "PhysChem"
-author: "Phoebe"
-description: "Physics/Chemistry solver app. Needs CInput."
-image: "https://classpaddev.github.io/python/store/images/PhysChem/cover.png"
-downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/physchem.py"
-detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/physchem.py"
-format: ".py"
+name: PhysChem
+author: Phoebe
+description: Physics/Chemistry solver app. Needs CInput.
+longDescription: |-
+  > Requires PythonExtra runtime and CInput library. Install both before using this application.
+  > CInput: https://classpaddev.github.io/store/p/cinput | Direct download: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cinput.py
+
+  PhysChem is a comprehensive equation solver for physics and chemistry problems on the CASIO ClassPad II. Select from dozens of formulas, enter known values, and instantly compute the unknown—perfect for homework, labs, and exam prep.
+
+  ## Features
+
+  - **40+ equations**: kinematics, Newton's laws, energy, circuits, waves, gas laws, stoichiometry, and more
+  - **Bidirectional solving**: pick any variable as the target; formulas auto-rearrange
+  - **Unit labels**: each variable displays its expected unit for clarity
+  - **Built-in constants**: g, R, c, k, G pre-loaded for quick access
+  - **Scrollable input form**: clean layout adapts to equation complexity
+  - **Mint theme**: custom light UI optimized for readability
+
+  ## Equation Categories
+
+  - **Mechanics**: 1-D kinematics, Newton's 2nd law, kinetic/potential energy, centripetal force, momentum
+  - **Electricity**: Ohm's law, power, Coulomb's law, capacitor equations
+  - **Waves & Light**: wave equation, period/frequency, Snell's law
+  - **Chemistry**: molar mass, molarity, ideal gas law, density, heat transfer
+
+  ## Controls
+
+  | Input | Action |
+  | --- | --- |
+  | Menu icon (top-left) | Switch category or quit |
+  | Tap equation | Open solver |
+  | Tap variable field | Enter numeric value |
+  | Tap target selector | Choose which variable to solve for |
+  | Tap SOLVE | Compute result |
+  | DEL / Back arrow | Return to list |
+  | UP/DOWN keys | Navigate form fields |
+  | EXE | Confirm selection or solve |
+
+  ## Usage
+
+  1. Copy physchem.py and cinput.py to your calculator
+  2. Launch via PythonExtra from Hollyhock launcher
+  3. Select a category → pick an equation → enter known values → tap SOLVE
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+  - CInput library (required for input dialogs and list views)
+
+  A practical reference tool for STEM students on the go.
+image: https://classpaddev.github.io/python/store/images/PhysChem/cover.png
+screenshots:
+  - /store/images/physchem/physchem.png
+  - /store/images/physchem/physchem2.png
+  - /store/images/physchem/physchem3.png
+  - /store/images/physchem/physchem4.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/physchem.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/physchem.py
+format: .py
 tags:
   - Physics_Chemistry
   - Education
+position: ''
+website: ''
+contact: ''
+privacy: ''
+rating: 4.5
+ratingCount: '42'
+downloads: 820+

@@ -1,12 +1,70 @@
 id: 23
 slug: cinput
-name: "CInput"
-author: "Phoebe"
-description: "Standalone library to add touchscreen keyboard. Check the wiki for more details"
-image: "https://classpaddev.github.io/python/store/images/CInput/cover.png"
-downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cinput.py"
-detailsUrl: "https://classpaddev.github.io/wiki/python/reference/cinput/"
-format: ".py"
+name: CInput
+author: Phoebe
+description: Standalone library to add touchscreen keyboard. Check the wiki for more details
+image: https://classpaddev.github.io/python/store/images/CInput/cover.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cinput.py
+detailsUrl: https://classpaddev.github.io/wiki/python/reference/cinput/
+format: .py
 tags:
   - Utility
   - Development
+screenshots:
+  - /store/images/cinput/cinput1.png
+  - /store/images/cinput/cinput2.png
+  - /store/images/cinput/cinput3.png
+  - /store/images/cinput/cinput4.png
+  - /store/images/cinput/cinput5.png
+  - /store/images/cinput/cinput6.png
+  - /store/images/cinput/cinput7.png
+rating: 4.6
+ratingCount: 31
+downloads: 1.4k+
+longDescription: |
+  > Requires PythonExtra runtime to execute.
+
+  CInput is a standalone UI library for PythonExtra that adds touchscreen keyboard input, themed dialogs, and list pickers to ClassPad II applications. Build interactive apps with minimal boilerplate.
+
+  ## Features
+
+  - **Touchscreen keyboard**: QWERTY, AZERTY, QWERTZ, and ABC layouts
+  - **Themed UI**: light, dark, and grey themes with consistent styling
+  - **Input dialogs**: text, integer, and float entry with validation
+  - **List pickers**: single and multi-select list interfaces
+  - **Modal system**: non-blocking dialogs that integrate with event loops
+  - **Lightweight**: single-file dependency, ~10 KB footprint
+
+  ## Quick Start
+
+  ```python
+  import cinput
+
+  # Text input
+  name = cinput.input("Enter your name:", type="text", theme="dark")
+
+  # List picker
+  choice = cinput.pick(["Option A", "Option B", "Option C"], "Select one")
+
+  # Multi-select
+  items = cinput.pick(["Item 1", "Item 2", "Item 3"], "Pick many", multi=True)
+  ```
+
+  ## Documentation
+
+  - **Wiki overview**: https://classpaddev.github.io/wiki/python/reference/cinput/
+  - **Reference manual**: https://classpaddev.github.io/wiki/python/reference/cinput/reference/
+
+  Consult the reference for full API details: `input()`, `pick()`, `Keyboard`, `get_theme()`, and theme customization.
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+
+  ## Used By
+
+  CInput powers UI components in apps like CED (ClassPad Editor), CPaint, and CPTime. Copy cinput.py to your calculator root directory to enable imports in your own scripts.
+
+  A practical foundation for touch-enabled Python apps on calculator hardware.

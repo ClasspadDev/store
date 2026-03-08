@@ -1,12 +1,58 @@
 id: 24
 slug: ced
-name: "CED"
-author: "Phoebe"
-description: "Classpad Editor - A Python code editor for the calculator. Needs CInput."
-image: "https://classpaddev.github.io/python/store/images/CED/cover.png"
-downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/ced_new.py"
-detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/ced_new.py"
-format: ".py"
+name: CED
+author: Phoebe
+description: Classpad Editor - A Python code editor for the calculator. Needs CInput.
+image: https://classpaddev.github.io/python/store/images/CED/cover.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/ced_new.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/ced_new.py
+format: .py
 tags:
   - Utility
   - Development
+rating: 4.5
+ratingCount: 29
+downloads: 980+
+longDescription: |
+  > Requires PythonExtra runtime and CInput library. Install both before using this application.
+  > CInput: https://classpaddev.github.io/store/p/cinput | Direct download: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cinput.py
+
+  CED is a lightweight Python source code editor for the CASIO ClassPad II (fx-CP400). Edit scripts directly on your calculator with syntax highlighting, themed UI, and an integrated on-screen keyboard. Ideal for quick edits, learning, or coding on the go.
+
+  ## Features
+
+  - **Syntax highlighting**: keywords, strings, comments, numbers, and operators color-coded
+  - **Theme support**: toggle between light, dark, and grey themes
+  - **Word wrap**: optional line wrapping for easier reading
+  - **File operations**: new, open, save, and save-as via CInput dialogs
+  - **On-screen keyboard**: QWERTY layout with touch input via CInput
+  - **Cursor navigation**: arrow keys for precise movement, touch to place cursor
+  - **Indentation guides**: subtle visual cues for code structure
+
+  ## Controls
+
+  | Input | Action |
+  |-------|--------|
+  | Arrow keys | Navigate cursor |
+  | EXE | Insert newline |
+  | DEL | Delete character |
+  | MENU / F1 | Open file menu |
+  | EXIT / KBD | Toggle on-screen keyboard |
+  | Touch header icons | Menu / Keyboard toggle |
+  | Touch text area | Place cursor at position |
+
+  ## Usage
+
+  1. Install PythonExtra and CInput on your calculator
+  2. Copy ced_new.py and cinput.py to your calculator storage
+  3. Launch via PythonExtra from the Hollyhock launcher
+  4. Use touch or keys to edit code; save with Menu → Save
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+  - CInput library (required for keyboard and dialogs)
+
+  A practical tool for Python development on calculator hardware.

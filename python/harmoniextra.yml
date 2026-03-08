@@ -1,13 +1,69 @@
 id: 25
 slug: harmoniextra
-name: "HarmoniExtra"
-author: "Phoebe"
-description: "A music chord viewer for Classpad. Needs CInput."
-image: "https://classpaddev.github.io/python/store/images/HarmoniExtra/cover.png"
-downloadUrl: "https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/HarmoniExtra.py"
-detailsUrl: "https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/HarmoniExtra.py"
-format: ".py"
+name: HarmoniExtra
+author: Phoebe
+description: A music chord viewer for Classpad. Needs CInput.
+image: https://classpaddev.github.io/python/store/images/HarmoniExtra/cover.png
+downloadUrl: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/HarmoniExtra.py
+detailsUrl: https://github.com/TheRainbowPhoenix/MiscPythonExtra/blob/master/HarmoniExtra.py
+format: .py
 tags:
   - Utility
   - Music
   - Education
+screenshots:
+  - /store/images/harmoniextra/harmoniextra1.png
+  - /store/images/harmoniextra/harmoniextra2.png
+  - /store/images/harmoniextra/harmoniextra3.png
+rating: 4.4
+ratingCount: 23
+downloads: 710+
+longDescription: |
+  > Requires PythonExtra runtime and CInput library. Install both before using this application.
+  > CInput: https://classpaddev.github.io/store/p/cinput | Direct download: https://raw.githubusercontent.com/TheRainbowPhoenix/MiscPythonExtra/master/cinput.py
+
+  HarmoniExtra is a comprehensive music theory reference tool for the CASIO ClassPad II. Explore scales, view guitar chord diagrams, and visualize notes on piano keyboard and musical staff. Perfect for musicians learning theory on the go.
+
+  ## Features
+
+  - **Scale explorer**: 15+ scale types including Major, Minor, Modes, Pentatonic, Blues, and more
+  - **Guitar chord library**: 20+ chord qualities with multiple voicings and barre shapes
+  - **Piano visualization**: interactive keyboard display showing scale notes
+  - **Staff notation**: treble clef rendering with proper accidentals
+  - **Note naming**: toggle between flat (♭) and sharp (♯) notation
+  - **Root selection**: tap any of 12 chromatic notes to transpose
+  - **Chord variants**: cycle through alternative fingerings for guitar chords
+
+  ## Pages
+
+  - **Main**: Scale notes display with piano keyboard
+  - **Piano Chords**: Musical staff notation with keyboard reference
+  - **Guitar Tabs**: Fretboard diagrams with fingering positions
+
+  ## Controls
+
+  | Input | Action |
+  |-------|--------|
+  | Menu icon (top-left) | Open page selector |
+  | ♯/♭ button (top-right) | Toggle note naming mode |
+  | Center title | Select scale/chord type |
+  | Root note bar | Tap to change root note |
+  | Prev/Next (guitar) | Cycle chord voicings |
+  | EXIT | Quit application |
+
+  ## Scales Included
+
+  Major, Minor (Aeolian), Dominant (Mixolydian), Dorian, Phrygian, Lydian, Locrian, Harmonic Minor, Melodic Minor, Pentatonic Major/Minor, Blues, Whole Tone, Diminished, Augmented
+
+  ## Guitar Chords
+
+  Major, Minor, 5, 7, Major 7th, Minor 7th, Sus2, Sus4, 6, m6, Add2, Add9, 9, m9, Maj9, 7sus4, 9sus4, Dim, Dim7, Aug, m7b5, 11, m11, 13, m13
+
+  ## Requirements
+
+  - CASIO ClassPad II (fx-CP400)
+  - Hollyhock-3 firmware
+  - PythonExtra runtime
+  - CInput library (required for menus and dialogs)
+
+  A practical music theory companion for students and musicians.
