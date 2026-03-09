@@ -3,23 +3,27 @@
 	import Header from '$lib/Header.svelte';
 	import AppCard from '$lib/AppCard.svelte';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	/** @type {{ data: import('./$types').PageData }} */
+	let { data } = $props();
 
-	const { dev, apps, featuredApp } = data;
+	const dev = $derived(data.dev);
+	const apps = $derived(data.apps);
+	const featuredApp = $derived(data.featuredApp);
 
-	const featuredSlides = featuredApp?.screenshots?.length
-		? featuredApp.screenshots
-		: featuredApp?.image
-			? [featuredApp.image]
-			: [];
+	const featuredSlides = $derived(
+		featuredApp?.screenshots?.length
+			? featuredApp.screenshots
+			: featuredApp?.image
+				? [featuredApp.image]
+				: []
+	);
 
 	import { getImageUrl } from '$lib/utils.js';
 	// Filmstrip scroll
 	/** @type {HTMLElement|null} */
-	let filmstrip = null;
-	let filmCanScrollLeft = false;
-	let filmCanScrollRight = false;
+	let filmstrip = $state(null);
+	let filmCanScrollLeft = $state(false);
+	let filmCanScrollRight = $state(false);
 
 	function updateScrollState() {
 		if (!filmstrip) return;
@@ -39,10 +43,41 @@
 		await tick();
 		updateScrollState();
 	});
+
+	const devSchema = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'ProfilePage',
+			mainEntity: {
+				'@type': 'Person',
+				name: dev.name,
+				url: `https://store.classpad.dev/dev/${dev.name}`,
+				description: dev.headline || 'Developer on ClassPad.Dev Store'
+			}
+		})
+	);
 </script>
 
 <svelte:head>
 	<title>{dev.name} - ClassPad Store</title>
+	<meta property="url" content={`https://store.classpad.dev/dev/${dev.name}`} />
+	<meta property="og:url" content={`https://store.classpad.dev/dev/${dev.name}`} />
+	<meta property="og:site_name" content="ClassPad.Dev Store" />
+	<meta property="og:title" content={`${dev.name} - ClassPad Store`} />
+	<meta property="og:description" content={dev.headline || 'Developer on ClassPad.Dev Store'} />
+	<meta property="og:type" content="profile" />
+	<meta property="og:image" content="https://classpaddev.github.io/favicon.ico" />
+	<meta property="twitter:card" content="summary" />
+	<meta property="twitter:title" content={`${dev.name} - ClassPad Store`} />
+	<meta
+		property="twitter:description"
+		content={dev.headline || 'Developer on ClassPad.Dev Store'}
+	/>
+	<meta property="twitter:image" content="https://classpaddev.github.io/favicon.ico" />
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	<script type="application/ld+json">
+{@html devSchema}
+	</script>
 </svelte:head>
 
 <Header />
@@ -95,7 +130,10 @@
 						<button
 							class="film-arrow film-prev"
 							class:visible={filmCanScrollLeft}
-							on:click|preventDefault={() => scrollFilmstrip(-1)}
+							onclick={(e) => {
+								e.preventDefault();
+								scrollFilmstrip(-1);
+							}}
 							aria-label="Scroll left"
 						>
 							<svg
@@ -114,7 +152,7 @@
 						class:fade-left={filmCanScrollLeft}
 						class:fade-right={filmCanScrollRight}
 						bind:this={filmstrip}
-						on:scroll={updateScrollState}
+						onscroll={updateScrollState}
 					>
 						{#each featuredSlides as slide}
 							<div class="film-slide">
@@ -136,7 +174,10 @@
 						<button
 							class="film-arrow film-next"
 							class:visible={filmCanScrollRight}
-							on:click|preventDefault={() => scrollFilmstrip(1)}
+							onclick={(e) => {
+								e.preventDefault();
+								scrollFilmstrip(1);
+							}}
 							aria-label="Scroll right"
 						>
 							<svg

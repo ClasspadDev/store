@@ -83,11 +83,64 @@
 		const dx = e.changedTouches[0].clientX - lbTouchX;
 		if (Math.abs(dx) > 50) dx < 0 ? lightboxNext() : lightboxPrev();
 	}
+
+	const appSchema = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': categorySlug === 'game' ? 'VideoGame' : 'SoftwareApplication',
+			name: app.name,
+			url: `https://store.classpad.dev/p/${app.slug}`,
+			description: app.description,
+			operatingSystem: 'ClassPad II (fx-CP400)',
+			applicationCategory: categorySlug === 'game' ? 'Game' : 'Utility',
+			image: app.image ? `https://classpaddev.github.io${app.image}` : undefined,
+			author: (app.author || '').split(',').map((/** @type {string} */ a) => ({
+				'@type': 'Person',
+				name: a.trim(),
+				url: `https://store.classpad.dev/dev/${a.trim()}`
+			})),
+			aggregateRating: app.rating
+				? {
+						'@type': 'AggregateRating',
+						ratingValue: String(app.rating),
+						ratingCount: String(app.ratingCount || 1)
+					}
+				: undefined,
+			offers: [
+				{
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'USD',
+					availability: 'https://schema.org/InStock'
+				}
+			]
+		})
+	);
 </script>
 
 <svelte:head>
 	<title>{app.name} | ClassPad.Dev Store</title>
 	<meta name="description" content={app.description} />
+	<meta property="url" content={`https://store.classpad.dev/p/${app.slug}`} />
+	<meta property="og:url" content={`https://store.classpad.dev/p/${app.slug}`} />
+	<meta property="og:site_name" content="ClassPad.Dev Store" />
+	<meta property="og:title" content={`${app.name} | ClassPad.Dev Store`} />
+	<meta property="og:description" content={app.description} />
+	<meta property="og:type" content="website" />
+	{#if app.image}
+		<meta property="og:image" content={`https://classpaddev.github.io${app.image}`} />
+		<meta property="twitter:image" content={`https://classpaddev.github.io${app.image}`} />
+	{:else}
+		<meta property="og:image" content="https://classpaddev.github.io/favicon.ico" />
+		<meta property="twitter:image" content="https://classpaddev.github.io/favicon.ico" />
+	{/if}
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:title" content={`${app.name} | ClassPad.Dev Store`} />
+	<meta property="twitter:description" content={app.description} />
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	<script type="application/ld+json">
+{@html appSchema}
+	</script>
 </svelte:head>
 <svelte:window onkeydown={onKeydown} />
 

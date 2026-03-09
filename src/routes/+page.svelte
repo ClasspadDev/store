@@ -67,7 +67,9 @@
 		activeFilter === 'all'
 			? data.apps
 			: data.apps.filter((a) =>
-					(a.tags ?? []).some((t) => t.toLowerCase() === activeFilter.toLowerCase())
+					(a.tags ?? []).some(
+						(/** @type {string} */ t) => t.toLowerCase() === activeFilter.toLowerCase()
+					)
 				)
 	);
 
@@ -89,6 +91,25 @@
 		name="description"
 		content="Discover and install apps for your Casio ClassPad II calculator."
 	/>
+	<meta property="url" content="https://store.classpad.dev/" />
+	<meta property="og:url" content="https://store.classpad.dev/" />
+	<meta property="og:site_name" content="ClassPad.Dev Store" />
+	<meta property="og:title" content="App Store | HollyHock on ClassPad II" />
+	<meta
+		property="og:description"
+		content="Discover and install apps for your Casio ClassPad II calculator."
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://classpaddev.github.io/favicon.ico" />
+	<meta property="og:image:alt" content="ClassPad.Dev Store" />
+	<meta property="twitter:card" content="summary" />
+	<meta property="twitter:title" content="App Store | HollyHock on ClassPad II" />
+	<meta
+		property="twitter:description"
+		content="Discover and install apps for your Casio ClassPad II calculator."
+	/>
+	<meta property="twitter:image" content="https://classpaddev.github.io/favicon.ico" />
+	<meta property="twitter:image:alt" content="ClassPad.Dev Store" />
 </svelte:head>
 
 <Header variant="home" />
