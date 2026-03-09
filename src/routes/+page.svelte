@@ -87,6 +87,7 @@
 
 <svelte:head>
 	<title>App Store | HollyHock on ClassPad II</title>
+	<link rel="canonical" href="https://store.classpad.dev/" />
 	<meta
 		name="description"
 		content="Discover and install apps for your Casio ClassPad II calculator."
@@ -115,6 +116,7 @@
 <Header variant="home" />
 
 <div class="container section">
+	<h1 class="sr-only">App Store | HollyHock on ClassPad II</h1>
 	<div class="filter-container">
 		<div style="width:100%">
 			<!-- <div class="filter-label">Categories</div> -->
@@ -192,6 +194,18 @@
 </div>
 
 <style>
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
+
 	.python-banner {
 		background: rgba(8, 126, 255, 0.1);
 		border-left: 4px solid var(--cp-accent);
