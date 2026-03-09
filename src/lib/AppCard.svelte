@@ -11,7 +11,15 @@
 	<div class="app-header">
 		<div class="app-header-text">
 			<div class="app-title">{app.name}</div>
-			<div class="app-author">by {app.author}</div>
+			<div class="app-author">
+				by
+				{#each (app.author || '').split(',') as author, i}
+					{@const a = author.trim()}
+					{#if i > 0},
+					{/if}
+					<a href="{base}/dev/{a}" class="author-link">{a}</a>
+				{/each}
+			</div>
 		</div>
 		{#if app.format === '.py'}
 			<div class="app-format-icon" title="Python App">
@@ -83,6 +91,13 @@
 </div>
 
 <style>
+	.author-link {
+		color: inherit;
+		text-decoration: none;
+	}
+	.author-link:hover {
+		text-decoration: underline;
+	}
 	/* Make tags on the home grid clickable */
 	.app-tag-link {
 		text-decoration: none;

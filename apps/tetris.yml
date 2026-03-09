@@ -1,7 +1,7 @@
 id: 8
 slug: tetris
 name: Tetris
-author: Hollyhock Team
+author: De_Coder, Hollyhock Team
 description: Simple Tetris game.
 longDescription: |-
   Tetris is a minimalist implementation of the iconic block-stacking puzzle game, built natively for the CASIO ClassPad II using the Hollyhock-3 SDK. Arrange falling tetrominoes to complete horizontal lines, clear them from the playfield, and rack up points as the pace gradually increases. A faithful, no-frills experience optimized for calculator hardware.

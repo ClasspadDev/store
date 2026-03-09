@@ -130,7 +130,13 @@
 		<div class="store-header">
 			<div class="store-header-left">
 				<h1 class="app-title-detail">{app.name}</h1>
-				<a href="{base}/dev/{app.author}" class="app-developer">{app.author}</a>
+				<div class="app-developer-grp">
+					{#each (app.author || '').split(',') as author, i}
+						{@const a = author.trim()}
+						{#if i > 0}<span class="bc-sep">, </span>{/if}
+						<a href="{base}/dev/{a}" class="app-developer">{a}</a>
+					{/each}
+				</div>
 			</div>
 
 			{#if hasStats}
@@ -507,11 +513,13 @@
 		line-height: 1.1;
 		color: var(--cp-white);
 	}
+	.app-developer-grp {
+		margin: 0;
+	}
 	.app-developer {
 		display: inline-block;
 		font-size: 0.92rem;
 		color: var(--cp-accent);
-		margin: 0;
 		font-weight: 500;
 		text-decoration: none;
 		transition:

@@ -1,7 +1,7 @@
 id: 5
 slug: cpboy
 name: CPBoy
-author: QBos07
+author: diddyholz,QBos07
 description: A Game Boy (DMG) emulator for the Classpad II. You need roms. Check the details
 longDescription: |-
   CPBoy is a work-in-progress Game Boy (DMG) emulator for the CASIO ClassPad II (fx-CP400), built on the Peanut-GB core by deltabeard and ported for Hollyhock-3. It enables playback of classic Game Boy titles on calculator hardware with performance optimizations tailored to the device's constraints.

@@ -1,7 +1,7 @@
 id: 2
 slug: python
 name: Python
-author: Hollyhock Team
+author: Lephe, Hollyhock Team
 description: The REAL snake game. Python interpreter for the Classpad II, create apps and games.
 longDescription: |-
   Python is a full-featured Python 3 interpreter for the CASIO ClassPad II (fx-CP400), built on the Gint framework and PythonExtra runtime. Write, test, and execute Python scripts directly on your calculator, from simple utilities to interactive games and graphical applications. Break free from BASIC and leverage a modern, expressive language optimized for calculator hardware.

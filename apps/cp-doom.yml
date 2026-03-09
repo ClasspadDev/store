@@ -1,7 +1,7 @@
 id: 4
 slug: cp-doom
 name: CP Doom
-author: QBos07
+author: diddyholz,QBos07
 description: A Doom source port for the Classpad II. You also need the WAD. Check the details
 longDescription: |-
   CP Doom is a source port of the classic first-person shooter Doom, built specifically for the CASIO ClassPad II (fx-CP400) running Hollyhock-3. Experience the iconic gameplay on your calculator with optimized performance for the device's hardware.

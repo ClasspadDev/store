@@ -1,7 +1,7 @@
 id: 3
 slug: cp-pong
 name: CP Pong
-author: PyCSharp
+author: SnailMath, PyCSharp
 description: A simple Ping Pong Game for the Casio FX-CP400.
 longDescription: |-
   CP Pong is a lightweight two-player Pong game built for the CASIO ClassPad II (fx-CP400) running Hollyhock-3. Designed for quick sessions and local multiplayer, it delivers responsive controls and classic arcade gameplay optimized for calculator hardware.
