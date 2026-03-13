@@ -75,9 +75,7 @@
 	/>
 	<meta property="twitter:image" content="https://classpaddev.github.io/favicon.ico" />
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<script type="application/ld+json">
-{@html devSchema}
-	</script>
+	{@html `<script type="application/ld+json">${devSchema}</script>`}
 </svelte:head>
 
 <Header />

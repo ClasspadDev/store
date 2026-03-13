@@ -31,9 +31,7 @@
 <svelte:head>
 	<link rel="icon" href="https://classpaddev.github.io/favicon.ico" />
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<script type="application/ld+json">
-{@html orgSchema}
-	</script>
+	{@html `<script type="application/ld+json">${orgSchema}</script>`}
 </svelte:head>
 
 {@render children()}

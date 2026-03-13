@@ -138,9 +138,7 @@
 	<meta property="twitter:title" content={`${app.name} | ClassPad.Dev Store`} />
 	<meta property="twitter:description" content={app.description} />
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<script type="application/ld+json">
-{@html appSchema}
-	</script>
+	{@html `<script type="application/ld+json">${appSchema}</script>`}
 </svelte:head>
 <svelte:window onkeydown={onKeydown} />
 
