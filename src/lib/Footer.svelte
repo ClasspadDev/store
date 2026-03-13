@@ -42,7 +42,7 @@
 					/>
 				</svg>
 			</a>
-			<a href="/wiki" class="social-link" aria-label="Wiki">
+			<a href="https://classpaddev.github.io/wiki/" class="social-link" aria-label="Wiki" rel="external">
 				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
 					<path
 						d="M12 2L2 7L12 12L22 7L12 2Z"
