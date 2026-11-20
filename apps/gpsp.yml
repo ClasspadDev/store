@@ -3,7 +3,7 @@ slug: gpsp
 name: gpSP GBA Emulator
 author: KaraRyougi
 description: A fast GBA emulator with an SH-4A dynamic recompiler (JIT) for ClassPad II.
-downloadUrl: https://github.com/KaraRyougi/gpsp-sh4-jit/releases/
+downloadUrl: https://github.com/KaraRyougi/gpsp-sh4-jit/releases/latest/download/gpSP-classpad.hh3
 detailsUrl: https://github.com/KaraRyougi/gpsp-sh4-jit
 format: .hh3
 image: /store/images/cover/gpsp.png
