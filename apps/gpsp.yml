@@ -1,0 +1,30 @@
+id: 43
+slug: gpsp
+name: gpSP GBA Emulator
+author: KaraRyougi
+description: A fast GBA emulator with an SH-4A dynamic recompiler (JIT) for ClassPad II.
+downloadUrl: https://github.com/KaraRyougi/gpsp-sh4-jit/releases/latest/download/gpSP-classpad.hh3
+detailsUrl: https://github.com/KaraRyougi/gpsp-sh4-jit
+format: .hh3
+image: /store/images/cover/gpsp.png
+position: center
+screenshots:
+  - /store/images/gpsp/classpad-pause-menu.png
+  - /store/images/gpsp/classpad-games-list.png
+  - /store/images/gpsp/classpad-settings-display.png
+  - /store/images/gpsp/classpad-settings-appearance.png
+  - /store/images/gpsp/classpad-settings-theme-violet.png
+  - /store/images/gpsp/classpad-settings-landscape.png
+  - /store/images/gpsp/classpad-zelda-landscape-1.5x.png
+  - /store/images/gpsp/classpad-zelda-title-landscape-2x.png
+tags:
+  - Emulator
+  - Game
+longDescription: |
+  The fast GBA emulator with SH-4A JIT for CASIO graphing calculators, now comes to ClassPad!
+  - Touch-friendly Material 3 UI + physical keypad support
+  - In-app Backlighting / PWM / Overclocking settings
+  - V-Sync support for a smooth gameplay
+  - Portrait & Landscape layouts with on-screen controls
+  - 10 per-game savestate slots, SRAM/Flash/EEPROM saves, and RTC support
+  - Bundled open-source GBA BIOS (no external BIOS required)
