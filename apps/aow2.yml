@@ -1,0 +1,24 @@
+id: 44
+slug: aow2
+name: Art of War 2
+author: KaraRyougi
+description: Port of the J2ME real-time strategy game series Art of War 2.
+downloadUrl: https://github.com/KaraRyougi/aow2-classpad/releases/latest/download/Art-of-War-2.zip
+detailsUrl: https://github.com/KaraRyougi/aow2-classpad
+format: .hh3
+image: /store/images/art-of-war-2/aow2-fed-1.png
+position: center
+screenshots:
+  - /store/images/art-of-war-2/aow2-fed-menu.png
+  - /store/images/art-of-war-2/aow2-fed-1.png
+  - /store/images/art-of-war-2/aow2-peru-1.png
+  - /store/images/art-of-war-2/aow2-peru-menu.png
+tags:
+  - Game
+longDescription: |
+  The J2ME real-time strategy game, now on ClassPad!
+  There are two versions of the game: Art of War 2: Global Confederation, where the player plays the Confederation army, and Art of War 2: Liberation of Peru, where the player plays the Liberation army.
+  You will need both .hh3 (program) and .pix (resources) files under the root directory to play.
+  - Use arrow keys or 2/4/6/8 to navigate.
+  - Keyboard & Backspace functions as left & right softkey.
+  - Full touchscreen support. tap to select or order, drag to pan, hold then drag to box-select, long press on selected unit for action menus, etc. Touchscreen keys (Settings/Menu/Main & Swap/Rotate/Esc) also work as left & right softkeys.
