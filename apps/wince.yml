@@ -1,0 +1,24 @@
+id: 45
+slug: wince
+name: Windows CE for ClassPad
+author: KaraRyougi
+description: Windows CE 5.0
+downloadUrl: https://github.com/KaraRyougi/wince-classpad/releases/latest/download/wince-classpad.zip
+detailsUrl: https://github.com/KaraRyougi/wince-classpad
+format: .hh3
+image: /store/images/windows-ce/boot.png
+position: center
+screenshots:
+  - /store/images/windows-ce/loader-menu.png
+  - /store/images/windows-ce/loader-flash.png
+  - /store/images/windows-ce/boot.png
+  - /store/images/windows-ce/desktop.png
+  - /store/images/windows-ce/programs.png
+  - /store/images/windows-ce/system.png
+  - /store/images/windows-ce/plotterz.png
+  - /store/images/windows-ce/fugue.png
+  - /store/images/windows-ce/backlight.png
+tags:
+  - Utilities
+longDescription: |
+  A fully usable Windows CE 5.0 on ClassPad. Supports touchscreen, backlight adjustment, hibernation, USB (both Storage mode and Serial mode), storage access.
